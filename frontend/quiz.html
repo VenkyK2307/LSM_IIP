@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Quiz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text color */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .sidebar {
+            width: 10vw; /* Sidebar occupies 20vw of the viewport width */
+            height: 90vh; /* Sidebar occupies 100vh of the viewport height */
+            background-color: #1e1e1e; /* Dark sidebar background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin-right: 20px; /* Space between sidebar and quiz container */
+            overflow-y: auto; /* Allow scrolling if content exceeds height */
+        }
+        .quiz-container {
+            background-color: #1e1e1e; /* Dark background for the quiz container */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            width: 80%; /* Quiz container occupies 80% of the width */
+        }
+        .question {
+            background-color: #2c2c2c; /* Darker question background */
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-size: 40px; /* Increased font size */
+        }
+        .options {
+            list-style: none;
+            padding: 0;
+            font-size: 40px; /* Increased font size for options */
+        }
+        .options li {
+            padding: 10px;
+            background: #333333; /* Dark background for options */
+            border-radius: 5px;
+            margin: 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border: 1px solid #007BFF; /* Light blue border */
+            color: #e0e0e0; /* Light text color */
+        }
+        .options li:hover {
+            background-color: #444444; /* Slightly lighter on hover */
+        }
+        .options li.selected {
+            background-color: #007BFF; /* Blue for selected */
+            color: white;
+        }
+        .progress {
+            width: 100%;
+            background-color: #444444; /* Dark progress background */
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .progress-bar {
+            height: 20px;
+            background-color: #007BFF; /* Blue progress bar */
+            width: 0;
+            border-radius: 5px;
+            transition: width 0.3s;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .arrow-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #007BFF; /* Blue color for buttons */
+            padding: 10px;
+            transition: color 0.3s;
+        }
+        .arrow-button:hover {
+            color: #0056b3; /* Darker blue on hover */
+        }
+        #submit {
+            display: none;
+            padding: 10px;
+            background-color: #007BFF; /* Blue background for submit */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 35px; /* Increased font size for result */
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #007BFF; /* Light blue border */
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 50px; /* Increased font size for sidebar items */
+            color: #e0e0e0; /* Light text color */
+        }
+        .sidebar li:hover {
+            background-color: #444444; /* Slightly lighter on hover */
+        }
+        .sidebar li.selected {
+            background-color: #007BFF; /* Blue for selected */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <ul id="questionList"></ul>
+    </div>
+    
+    <div class="quiz-container">
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <form id="quizForm">
+            <div class="question" id="questionContainer">
+                <!-- Questions will be injected here -->
+            </div>
+
+            <div class="buttons">
+                <button type="button" id="prevButton" class="arrow-button">&#9664;</button>
+                <button type="button" id="nextButton" class="arrow-button">&#9654;</button>
+            </div>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const questions = [
+            { question: "1. What is your age?", options: ["a. 15-30", "b. 30-45", "c. 45-60", "d. 60 plus"], values: [1, 2, 3, 4] },
+            { question: "2. Net annual income of the family combined?", options: [">18+ lakhs", "14-18 lakhs", "10-14 lakhs", "<10 lakhs"], values: [4, 3, 2, 1] },
+            { question: "3. Ideal Preferred mode of investing?", options: ["a. Stocks", "b. Mutual Fund’s", "c. Gold", "d. FD/ETF’s"], values: [4, 3, 2, 1] },
+            { question: "4. Any ongoing SIP > 5000 rupees?", options: ["a. Yes", "b. No"], values: [2, 1] },
+            { question: "5. Investment time horizon?", options: ["a. Short term(1-2 years)", "b. Medium term(2-5 years)", "c. Long term(5+ years)"], values: [1, 2, 3] },
+            { question: "6. Are you a tax payer and have job security?", options: ["a. Yes", "b. No"], values: [2, 1] },
+            { question: "7. If NIFTY50 drops by 10% in one day?", options: ["a. Sell off every stock", "b. Sell some, keep some", "c. Buy more after drop"], values: [1, 2, 4] },
+            { question: "8. You are an active investor or passive investor?", options: ["a. Active", "b. Passive"], values: [4, 2] },
+            { question: "9. Emergency fund for next 6 months (30% of Monthly Income) x 6?", options: ["a. Yes", "b. No"], values: [2, 1] },
+            { question: "10. Have term insurance?", options: ["a. Yes", "b. No"], values: [2, 1] }
+        ];
+
+        let currentQuestionIndex = 0;
+        const questionContainer = document.getElementById('questionContainer');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const progressBar = document.getElementById('progressBar');
+        const resultDiv = document.getElementById('result');
+        const questionList = document.getElementById('questionList');
+
+        // Initialize quiz
+        function loadQuestion() {
+            const question = questions[currentQuestionIndex];
+            questionContainer.innerHTML = `
+                <div class="question">
+                    <p>${question.question}</p>
+                    <ul class="options">
+                        ${question.options.map((opt, index) => `<li data-value="${question.values[index]}">${opt}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+            updateProgress();
+            updateSidebar();
+        }
+
+        // Update progress bar
+        function updateProgress() {
+            const progressPercentage = ((currentQuestionIndex + 1) / questions.length) * 100;
+            progressBar.style.width = `${progressPercentage}%`;
+            prevButton.style.display = currentQuestionIndex === 0 ? 'none' : 'inline-block';
+            nextButton.textContent = currentQuestionIndex === questions.length - 1 ? 'Submit' : 'Next';
+        }
+
+        // Update sidebar
+        function updateSidebar() {
+            questionList.innerHTML = questions.map((_, index) => 
+                `<li class="${currentQuestionIndex === index ? 'selected' : ''}" data-index="${index}">${index + 1}</li>`
+            ).join('');
+        }
+
+        // Option selection
+        questionContainer.addEventListener('click', (e) => {
+            if (e.target.tagName === 'LI') {
+                const options = questionContainer.querySelectorAll('.options li');
+                options.forEach(opt => opt.classList.remove('selected'));
+                e.target.classList.add('selected');
+            }
+        });
+
+        // Sidebar navigation
+        questionList.addEventListener('click', (e) => {
+            if (e.target.tagName === 'LI') {
+                currentQuestionIndex = parseInt(e.target.getAttribute('data-index'));
+                loadQuestion();
+            }
+        });
+
+        // Navigation buttons
+        prevButton.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion();
+            } else {
+                calculateResult();
+            }
+        });
+
+        // Calculate total score
+        function calculateResult() {
+            let totalScore = 0;
+            questions.forEach((question) => {
+                const selectedOption = questionContainer.querySelector('.selected');
+                if (selectedOption) {
+                    totalScore += parseInt(selectedOption.getAttribute('data-value'));
+                }
+            });
+            resultDiv.textContent = `Your total impact score is: ${totalScore}`;
+            resultDiv.style.display = 'block';
+        }
+
+        // Load the first question on page load
+        loadQuestion();
+    </script>
+</body>
+</html>
