@@ -4,139 +4,292 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investment Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #155bd5;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #121212; /* Dark background */
-            color: #e0e0e0; /* Light text color */
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
             margin: 0;
-            padding: 20px;
-            display: flex;
-            align-items: flex-start;
-        }
-        .sidebar {
-            width: 10vw; /* Sidebar occupies 20vw of the viewport width */
-            height: 90vh; /* Sidebar occupies 100vh of the viewport height */
-            background-color: #1e1e1e; /* Dark sidebar background */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            margin-right: 20px; /* Space between sidebar and quiz container */
-            overflow-y: auto; /* Allow scrolling if content exceeds height */
-        }
-        .quiz-container {
-            background-color: #1e1e1e; /* Dark background for the quiz container */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            width: 80%; /* Quiz container occupies 80% of the width */
-        }
-        .question {
-            background-color: #2c2c2c; /* Darker question background */
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-            font-size: 40px; /* Increased font size */
-        }
-        .options {
-            list-style: none;
             padding: 0;
-            font-size: 40px; /* Increased font size for options */
-        }
-        .options li {
-            padding: 10px;
-            background: #333333; /* Dark background for options */
-            border-radius: 5px;
-            margin: 5px 0;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            border: 1px solid #007BFF; /* Light blue border */
-            color: #e0e0e0; /* Light text color */
-        }
-        .options li:hover {
-            background-color: #444444; /* Slightly lighter on hover */
-        }
-        .options li.selected {
-            background-color: #007BFF; /* Blue for selected */
-            color: white;
-        }
-        .progress {
-            width: 100%;
-            background-color: #444444; /* Dark progress background */
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-        .progress-bar {
-            height: 20px;
-            background-color: #007BFF; /* Blue progress bar */
-            width: 0;
-            border-radius: 5px;
-            transition: width 0.3s;
-        }
-        .buttons {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        .arrow-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 24px;
-            color: #007BFF; /* Blue color for buttons */
-            padding: 10px;
-            transition: color 0.3s;
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 150px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 3px 0 6px rgba(0, 0, 0, 0.1);
         }
-        .arrow-button:hover {
-            color: #0056b3; /* Darker blue on hover */
-        }
-        #submit {
-            display: none;
-            padding: 10px;
-            background-color: #007BFF; /* Blue background for submit */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-            width: 100%;
-        }
-        #result {
-            margin-top: 20px;
-            font-weight: bold;
-            text-align: center;
-            font-size: 35px; /* Increased font size for result */
-        }
+
         .sidebar ul {
             list-style: none;
             padding: 0;
         }
+
         .sidebar li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            text-align: center;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar li:hover {
+            background-color: var(--primary);
+        }
+
+        .sidebar li.selected {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Main Quiz Container */
+        .quiz-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            width: 90%;
+            min-height: 400px;
+            margin-left: 20px;
+            position: relative;
+            height: 550px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+        }
+
+        .question {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-size: 20px;
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+            font-size: 18px;
+        }
+
+        .options li {
+            padding: 15px;
+            background: #e4e4e4;
+            border-radius: 5px;
             margin: 5px 0;
             cursor: pointer;
-            padding: 5px;
-            text-align: center;
-            border: 1px solid #007BFF; /* Light blue border */
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-size: 50px; /* Increased font size for sidebar items */
-            color: #e0e0e0; /* Light text color */
+            transition: background-color 0.3s, transform 0.2s;
+            border: 1px solid var(--primary);
+            color: #333;
         }
-        .sidebar li:hover {
-            background-color: #444444; /* Slightly lighter on hover */
+
+        .options li:hover {
+            background-color: #d1d1d1;
+            transform: translateY(-2px);
         }
-        .sidebar li.selected {
-            background-color: #007BFF; /* Blue for selected */
+
+        .options li.selected {
+            background-color: var(--primary);
             color: white;
+        }
+
+        .progress {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background-color: var(--primary);
+            width: 0;
+            border-radius: 5px;
+            transition: width 0.3s;
+        }
+
+        /* Button container to fix position */
+        .buttons {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Styling for Previous and Next buttons */
+        .arrow-button {
+            background-color: var(--primary);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            padding: 12px 24px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .arrow-button:hover {
+            background-color: #004ca3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .arrow-button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Results Styling */
+        .results-container {
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .results-container h1 {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .score {
+            font-size: 48px;
+            color: var(--primary);
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .results-container p {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .start-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        .instructions {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .start-button {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .start-button:hover {
+            background-color: #004ca3;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 30vw;
+            }
+
+            .quiz-container {
+                width: 100%;
+            }
+
+            .question, .options li {
+                font-size: 16px;
+            }
+
+            .sidebar li {
+                font-size: 16px;
+            }
+
+            .score {
+                font-size: 24px;
+            }
+        }
+
+        .instructions{
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);;
+            font-size: 20px;
+        }
+
+        .instructions p span{
+            color: red;
+        }
+        .results-container p{
+            font-size: 40px;
+            color: black;
+        }
+        .results-container h2{
+            font-size: 30px;
+            color: rgb(186, 9, 9);
         }
     </style>
 </head>
 <body>
 
-    <div class="sidebar">
-        <ul id="questionList"></ul>
+    <!-- Start Quiz Page -->
+    <div class="start-container" id="startContainer">
+        <div class="instructions">
+            <h1>Welcome to Risk Analysis Test!</h1>
+            <p><span>Note:</span> There is no correct/Wrong answers,<br> Try to give most Relevant answer!</p>
+            <p>Click "Start RAT" to begin.</p>
+        </div>
+        <button class="start-button" id="startButton">Start RAT</button>
     </div>
-    
-    <div class="quiz-container">
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar" style="display:none;">
+        <h2 style="text-align: center; color: #333; font-size: 20px;">Quiz Navigation</h2>
+        <ul id="questionList">
+            <!-- Question list will be dynamically injected here -->
+        </ul>
+    </div>
+
+    <!-- Main Quiz Container -->
+    <div class="quiz-container" id="quizContainer" style="display:none;">
         <div class="progress">
             <div class="progress-bar" id="progressBar"></div>
         </div>
@@ -145,117 +298,143 @@
             <div class="question" id="questionContainer">
                 <!-- Questions will be injected here -->
             </div>
-
-            <div class="buttons">
-                <button type="button" id="prevButton" class="arrow-button">&#9664;</button>
-                <button type="button" id="nextButton" class="arrow-button">&#9654;</button>
-            </div>
         </form>
 
-        <div id="result"></div>
+        <div class="buttons">
+            <button type="button" id="prevButton" class="arrow-button" style="display:none;">Previous</button>
+            <button type="button" id="nextButton" class="arrow-button">Next</button>
+            <button type="button" id="finishButton" class="arrow-button" style="display:none;">Finish Quiz</button>
+        </div>
+    </div>
+
+    <!-- Results Container -->
+    <div class="results-container" id="resultsContainer">
+        <h1>Quiz Finished!</h1>
+        <h2>Your RAT Score : </h2>
+        <p id="scoreText" class="score"></p>
     </div>
 
     <script>
         const questions = [
-            { question: "1. What is your age?", options: ["a. 15-30", "b. 30-45", "c. 45-60", "d. 60 plus"], values: [1, 2, 3, 4] },
-            { question: "2. Net annual income of the family combined?", options: [">18+ lakhs", "14-18 lakhs", "10-14 lakhs", "<10 lakhs"], values: [4, 3, 2, 1] },
-            { question: "3. Ideal Preferred mode of investing?", options: ["a. Stocks", "b. Mutual Fund’s", "c. Gold", "d. FD/ETF’s"], values: [4, 3, 2, 1] },
-            { question: "4. Any ongoing SIP > 5000 rupees?", options: ["a. Yes", "b. No"], values: [2, 1] },
-            { question: "5. Investment time horizon?", options: ["a. Short term(1-2 years)", "b. Medium term(2-5 years)", "c. Long term(5+ years)"], values: [1, 2, 3] },
-            { question: "6. Are you a tax payer and have job security?", options: ["a. Yes", "b. No"], values: [2, 1] },
-            { question: "7. If NIFTY50 drops by 10% in one day?", options: ["a. Sell off every stock", "b. Sell some, keep some", "c. Buy more after drop"], values: [1, 2, 4] },
-            { question: "8. You are an active investor or passive investor?", options: ["a. Active", "b. Passive"], values: [4, 2] },
-            { question: "9. Emergency fund for next 6 months (30% of Monthly Income) x 6?", options: ["a. Yes", "b. No"], values: [2, 1] },
-            { question: "10. Have term insurance?", options: ["a. Yes", "b. No"], values: [2, 1] }
+            { question: "1. What is your age?", options: ["a. 15-30", "b. 30-45", "c. 45-60", "d. 60+"], values: [9, 8, 7, 6] },
+            { question: "2. Net annual income of the family combined?", options: [">18+ lakhs", "14-18 lakhs", "10-14 lakhs", ">10 lakhs"], values: [9, 7, 6, 5] },
+            { question: "3. Ideal Preferred mode of investing?", options: ["a. Stocks", "b. Mutual Fund’s", "c. Gold", "d. FD/ETF’s"], values: [8, 6, 5, 4] },
+            { question: "4. Any ongoing SIP > 5000 rupees?", options: ["a. Yes", "b. No"], values: [9, 5] },
+            { question: "5. Investment time horizon?", options: ["a. Short term(1-2 years)", "b. Medium term(2-5 years)", "c. Long term(5+ years)"], values: [6, 7, 8] },
+            { question: "6. Are you a tax payer and have job security?", options: ["a. Yes", "b. No"], values: [8, 5] },
+            { question: "7. If NIFTY50 drops by 10% in one day?", options: ["a. Sell off every stock", "b. Sell some, keep some", "c. Buy more after drop"], values: [6, 7, 8] },
+            { question: "8. You are an active investor or passive investor?", options: ["a. Active", "b. Passive"], values: [8, 5] },
+            { question: "9. Savings for next 6 months (30% of Monthly Income) x 6?", options: ["a. Yes", "b. No"], values: [9, 5] },
+            { question: "10. Have term insurance?", options: ["a. Yes", "b. No"], values: [8, 5] }
         ];
 
         let currentQuestionIndex = 0;
+        const selectedAnswers = new Array(questions.length).fill(null);
         const questionContainer = document.getElementById('questionContainer');
         const prevButton = document.getElementById('prevButton');
         const nextButton = document.getElementById('nextButton');
+        const finishButton = document.getElementById('finishButton');
         const progressBar = document.getElementById('progressBar');
-        const resultDiv = document.getElementById('result');
         const questionList = document.getElementById('questionList');
+        const resultsContainer = document.getElementById('resultsContainer');
+        const scoreText = document.getElementById('scoreText');
+        const startContainer = document.getElementById('startContainer');
+        const quizContainer = document.getElementById('quizContainer');
+        const sidebar = document.getElementById('sidebar');
 
-        // Initialize quiz
+        // Load question
         function loadQuestion() {
             const question = questions[currentQuestionIndex];
             questionContainer.innerHTML = `
                 <div class="question">
                     <p>${question.question}</p>
                     <ul class="options">
-                        ${question.options.map((opt, index) => `<li data-value="${question.values[index]}">${opt}</li>`).join('')}
+                        ${question.options.map((opt, index) => {
+                            const isSelected = selectedAnswers[currentQuestionIndex] === question.values[index] ? 'selected' : '';
+                            return `<li data-value="${question.values[index]}" class="${isSelected}">${opt}</li>`;
+                        }).join('')}
                     </ul>
                 </div>
             `;
             updateProgress();
             updateSidebar();
+            updateButtons();
         }
 
-        // Update progress bar
+        // Update Progress Bar
         function updateProgress() {
-            const progressPercentage = ((currentQuestionIndex + 1) / questions.length) * 100;
-            progressBar.style.width = `${progressPercentage}%`;
-            prevButton.style.display = currentQuestionIndex === 0 ? 'none' : 'inline-block';
-            nextButton.textContent = currentQuestionIndex === questions.length - 1 ? 'Submit' : 'Next';
+            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+            progressBar.style.width = `${progress}%`;
         }
 
-        // Update sidebar
+        // Update Sidebar Navigation
         function updateSidebar() {
-            questionList.innerHTML = questions.map((_, index) => 
-                `<li class="${currentQuestionIndex === index ? 'selected' : ''}" data-index="${index}">${index + 1}</li>`
-            ).join('');
+            questionList.innerHTML = questions.map((_, index) => {
+                const isSelected = index === currentQuestionIndex ? 'selected' : '';
+                return `<li data-index="${index}" class="${isSelected}">Q${index + 1}</li>`;
+            }).join('');
         }
 
-        // Option selection
-        questionContainer.addEventListener('click', (e) => {
-            if (e.target.tagName === 'LI') {
-                const options = questionContainer.querySelectorAll('.options li');
-                options.forEach(opt => opt.classList.remove('selected'));
-                e.target.classList.add('selected');
-            }
-        });
+        // Update Buttons visibility
+        function updateButtons() {
+            prevButton.style.display = currentQuestionIndex === 0 ? 'inline-block' : 'inline-block';
+            finishButton.style.display = currentQuestionIndex === questions.length - 1 ? 'inline-block' : 'none';
+            nextButton.style.display = currentQuestionIndex === questions.length - 1 ? 'none' : 'inline-block';
+            prevButton.style.visibility = currentQuestionIndex === 0 ? 'hidden' : 'visible';
 
-        // Sidebar navigation
-        questionList.addEventListener('click', (e) => {
-            if (e.target.tagName === 'LI') {
-                currentQuestionIndex = parseInt(e.target.getAttribute('data-index'));
+
+
+        }
+
+        // Handle Option Selection
+        function handleOptionClick(event) {
+            if (event.target.tagName === 'LI') {
+                const value = parseInt(event.target.getAttribute('data-value'));
+                selectedAnswers[currentQuestionIndex] = value;
                 loadQuestion();
             }
-        });
+        }
 
-        // Navigation buttons
-        prevButton.addEventListener('click', () => {
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--;
-                loadQuestion();
-            }
-        });
-
-        nextButton.addEventListener('click', () => {
-            if (currentQuestionIndex < questions.length - 1) {
+        // Handle Navigation
+        function handleNavigation(direction) {
+            if (direction === 'next' && currentQuestionIndex < questions.length - 1) {
                 currentQuestionIndex++;
-                loadQuestion();
-            } else {
-                calculateResult();
+            } else if (direction === 'prev' && currentQuestionIndex > 0) {
+                currentQuestionIndex--;
             }
-        });
 
-        // Calculate total score
-        function calculateResult() {
-            let totalScore = 0;
-            questions.forEach((question) => {
-                const selectedOption = questionContainer.querySelector('.selected');
-                if (selectedOption) {
-                    totalScore += parseInt(selectedOption.getAttribute('data-value'));
-                }
-            });
-            resultDiv.textContent = `Your total impact score is: ${totalScore}`;
-            resultDiv.style.display = 'block';
+            if (currentQuestionIndex === questions.length) {
+                showResults();
+            } else {
+                loadQuestion();
+            }
         }
 
-        // Load the first question on page load
-        loadQuestion();
+        // Show Results
+        function showResults() {
+            let score = 0;
+            selectedAnswers.forEach(answer => {
+                score += answer || 0;
+            });
+
+            quizContainer.style.display = 'none';
+            resultsContainer.style.display = 'block';
+            sidebar.style.display='none';
+            scoreText.innerHTML = ` ${score} / 100 `;
+        }
+
+        document.getElementById('startButton').addEventListener('click', () => {
+            startContainer.style.display = 'none';
+            quizContainer.style.display = 'block';
+            sidebar.style.display = 'block';
+            loadQuestion();
+        });
+
+        prevButton.addEventListener('click', () => handleNavigation('prev'));
+        nextButton.addEventListener('click', () => handleNavigation('next'));
+        finishButton.addEventListener('click', showResults);
+        questionContainer.addEventListener('click', handleOptionClick);
     </script>
+
 </body>
 </html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sign-In</title>
+    
+    <!-- Load the Google Identity Services Script -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* General reset and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0 20px;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .g_id_signin {
+            width: 100%;
+            display: inline-block;
+            margin-bottom: 20px; /* Space between Google button and Guest button */
+        }
+
+        .g_id_onload {
+            display: none;
+        }
+
+        /* Custom Google Sign-In button style */
+        .g_id_signin {
+            width: 100%;
+            padding: 12px;
+            background-color: #4285F4;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .g_id_signin:hover {
+            background-color: #357ae8;
+        }
+
+        .g_id_signin:focus {
+            outline: none;
+        }
+
+        /* Guest Sign-In button style */
+        .guest-signin-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: #e4e4e4;
+            border-radius: 5px;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .guest-signin-btn:hover {
+            background-color: #d1d1d1;
+        }
+
+        .guest-signin-btn i {
+            font-size: 20px;
+        }
+
+        /* Signing in message */
+        .signing-message {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #0077cc;
+            font-weight: bold;
+            display: none;
+        }
+
+        /* Footer for links */
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .footer a {
+            color: #4285F4;
+            text-decoration: none;
+        }
+
+        /* Responsive design for small screens */
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 30px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+        .guest-signin-btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(145deg, #6a5acd, #836fff); /* Gradient background */
+        border-radius: 8px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease-in-out;
+        border: none; /* Remove default border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
+
+    .guest-signin-btn:hover {
+        background: linear-gradient(145deg, #836fff, #6a5acd); /* Reverse gradient on hover */
+        transform: translateY(-3px); /* Button lift effect on hover */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    }
+
+    .guest-signin-btn:active {
+        transform: translateY(1px); /* Button pressed effect */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow when clicked */
+    }
+
+    .guest-signin-btn i {
+        font-size: 22px; /* Icon size */
+    }
+
+    /* Optional: Add a smooth animation to the text when hovered */
+    .guest-signin-btn:hover i,
+    .guest-signin-btn:hover span {
+        animation: iconBounce 0.3s ease-in-out;
+    }
+    .login-container h2{
+        font-size: 30px;
+    
+    }
+
+    /* Keyframes for the bounce animation */
+    @keyframes iconBounce {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    
+    </style>
+</head>
+<body>
+
+    <!-- Login Container -->
+    <div class="login-container">
+        <h2>Sign in.</h2>
+        
+        <!-- Google Identity onload triggers login flow -->
+        <div id="g_id_onload"
+            data-client_id="922227147549-i051v7sen3a447diic40i90p4fjbg5nm.apps.googleusercontent.com"
+            data-login_uri="http://localhost:8000/"
+            data-callback="handleCredentialResponse">
+        </div>
+
+        <!-- Google Sign-In Button -->
+        <div class="g_id_signin" data-type="standard"></div>
+
+        <!-- Sign In as Guest Button -->
+        <button class="guest-signin-btn" onclick="signInAsGuest()">
+            <i class="fas fa-user-alt"></i> Sign in as Guest
+        </button>
+
+        <!-- Signing in as Guest message -->
+        <div class="signing-message" id="signingMessage">
+            Signing in as Guest...
+        </div>
+
+        <div class="footer">
+            <p>By signing in, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        // This function will be called once the user successfully signs in with Google
+        function handleCredentialResponse(response) {
+            // Get the ID token from the response (this is the credential to verify the user)
+            const idToken = response.credential;
+
+            // Save the ID token in localStorage (so it persists across pages)
+            localStorage.setItem('google-id-token', idToken);
+
+            // Redirect the user to auth.html after successful sign-in
+            window.location.href = 'auth.html';
+        }
+
+        // Function to handle Guest Sign-In
+        function signInAsGuest() {
+            // Show the "Signing in as Guest..." message
+            const messageElement = document.getElementById('signingMessage');
+            messageElement.style.display = 'block';
+
+            // Show the message for 2 seconds, then redirect to index.html
+            setTimeout(function() {
+                // Redirect directly to index.html for guest access after 2 seconds
+                window.location.href = 'index.html';
+            }, 2000); // 2000 milliseconds = 2 seconds
+        }
+    </script>
+
+</body>
+</html>

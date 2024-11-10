@@ -1,0 +1,145 @@
+/* Button to trigger the popup with an icon */
+.open-chatbot-btn {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    z-index: 9999; /* Make sure it's above other content */
+    margin: 20px;
+}
+
+.open-chatbot-btn i {
+    margin-right: 8px;
+}
+
+.open-chatbot-btn:hover {
+    background: #0056b3;
+}
+
+/* Popup / Chatbot container */
+.chat-container {
+    width: 360px;
+    max-width: 100%;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    position: fixed; /* Fixed position */
+    bottom: 70px; /* Distance from the bottom of the page */
+    right: 20px; /* Distance from the right of the page */
+    z-index: 9998; /* Ensure it's below the button */
+    display: none; /* Hidden by default */
+    margin: 30px;
+}
+
+/* Close button at the top-right corner */
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+    color: #888;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+
+}
+
+.close-btn:hover {
+    color: #ff0000;
+}
+
+/* Chatbox and messages */
+.chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+}
+
+.chat-message {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative; /* Changed from fixed to relative */
+    word-wrap: break-word;
+}
+
+.user-message {
+    background: #dcf8c6;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background: #ffffff;
+    align-self: flex-start;
+    border: 1px solid #ddd;
+}
+
+.typing-indicator {
+    display: none;
+    align-self: flex-start;
+    font-size: 14px;
+    color: #888;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+input[type="text"] {
+    border: none;
+    padding: 10px;
+    flex: 1;
+    font-size: 16px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    background: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

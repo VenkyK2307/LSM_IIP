@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Successful</title>
+    <style>
+        /* General reset and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .auth-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .user-card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .user-card img {
+            border-radius: 50%;
+            margin-bottom: 20px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .user-card p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .user-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #4285F4; /* Google blue */
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background-color: #4285F4;
+            color: #fff;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #357ae8;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer a {
+            color: #4285F4;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .auth-container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .user-card img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .user-card h3 {
+                font-size: 18px;
+            }
+
+            .user-card p {
+                font-size: 14px;
+            }
+
+            .button {
+                width: 100%;
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-container">
+        <h1>Welcome to the Auth Page!</h1>
+        <p>You are signed in with Google!</p>
+
+        <div class="user-card" id="user-info">
+            <!-- User info will be injected here by JavaScript -->
+        </div>
+
+        <!-- Go to Dashboard Button -->
+        <button class="button" onclick="window.location.href='index.html'">Go to Dashboard</button>
+
+        <div class="footer">
+            <p>By continuing, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve the ID token from localStorage
+        const idToken = localStorage.getItem('google-id-token');
+
+        // If the token exists, decode it and display user information
+        if (idToken) {
+            // Decode the ID token (JWT format)
+            const base64Url = idToken.split('.')[1];
+            const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+
+            const userData = JSON.parse(jsonPayload);
+
+            // Display user data (e.g., name and email)
+            document.getElementById('user-info').innerHTML = `
+                <img src="${userData.picture}" alt="Profile Picture">
+                <h3>${userData.name}</h3>
+                <p><strong>Email:</strong> ${userData.email}</p>
+            `;
+        } else {
+            document.getElementById('user-info').innerText = "No user information found. Please sign in.";
+        }
+    </script>
+
+</body>
+</html>
