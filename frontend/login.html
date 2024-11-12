@@ -135,64 +135,6 @@
                 font-size: 24px;
             }
         }
-        .guest-signin-btn {
-        width: 100%;
-        padding: 14px;
-        background: linear-gradient(145deg, #6a5acd, #836fff); /* Gradient background */
-        border-radius: 8px;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        text-align: center;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        transition: all 0.3s ease-in-out;
-        border: none; /* Remove default border */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    }
-
-    .guest-signin-btn:hover {
-        background: linear-gradient(145deg, #836fff, #6a5acd); /* Reverse gradient on hover */
-        transform: translateY(-3px); /* Button lift effect on hover */
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
-    }
-
-    .guest-signin-btn:active {
-        transform: translateY(1px); /* Button pressed effect */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow when clicked */
-    }
-
-    .guest-signin-btn i {
-        font-size: 22px; /* Icon size */
-    }
-
-    /* Optional: Add a smooth animation to the text when hovered */
-    .guest-signin-btn:hover i,
-    .guest-signin-btn:hover span {
-        animation: iconBounce 0.3s ease-in-out;
-    }
-    .login-container h2{
-        font-size: 30px;
-    
-    }
-
-    /* Keyframes for the bounce animation */
-    @keyframes iconBounce {
-        0% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-5px);
-        }
-        100% {
-            transform: translateY(0);
-        }
-    }
-
-    
     </style>
 </head>
 <body>
@@ -205,7 +147,8 @@
         <div id="g_id_onload"
             data-client_id="922227147549-i051v7sen3a447diic40i90p4fjbg5nm.apps.googleusercontent.com"
             data-login_uri="http://localhost:8000/"
-            data-callback="handleCredentialResponse">
+            data-callback="handleCredentialResponse"
+            data-scope="profile email">  <!-- Add scope here -->
         </div>
 
         <!-- Google Sign-In Button -->
@@ -227,29 +170,90 @@
     </div>
 
     <script>
-        // This function will be called once the user successfully signs in with Google
-        function handleCredentialResponse(response) {
-            // Get the ID token from the response (this is the credential to verify the user)
-            const idToken = response.credential;
+function handleCredentialResponse(response) {
+    const idToken = response.credential;
+    localStorage.setItem('google-id-token', idToken);
 
-            // Save the ID token in localStorage (so it persists across pages)
-            localStorage.setItem('google-id-token', idToken);
+    const userInfo = parseJwt(idToken);
+    console.log('User info from Google:', userInfo);
 
-            // Redirect the user to auth.html after successful sign-in
-            window.location.href = 'auth.html';
+    const userName = userInfo.name; // Full name from Google
+    const userEmail = userInfo.email; // Email from Google
+
+    // Split the full name into first name and last name
+    const nameParts = userName.trim().split(' ');
+
+    let firstName = nameParts[0] || ''; 
+    let lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
+    
+    console.log('First Name:', firstName, 'Last Name:', lastName, 'Email:', userEmail);
+
+    // Send data to the server to check if the user exists in the database
+    fetch('http://localhost:8000/check-user', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            email: userEmail
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('User check response:', data);
+        if (data.exists) {
+            console.log('User exists, fetch their data:', data.user);
+        } else {
+            // User doesn't exist, insert new user data
+            console.log('User does not exist, saving new user...');
+            fetch('http://localhost:8000/save-user', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    first_name: firstName,
+                    last_name: lastName,
+                    email: userEmail
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('New user saved:', data);
+            })
+            .catch(error => console.error('Error saving user data:', error));
+        }
+
+        // Redirect to the next page after sign-in
+        window.location.href = 'auth.html';
+    })
+    .catch(error => console.error('Error checking user existence:', error));
+}
+
+
+        function parseJwt(token) {
+            try {
+                const base64Url = token.split('.')[1];
+                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
+
+                return JSON.parse(jsonPayload);
+            } catch (e) {
+                console.error("Error decoding JWT:", e);
+                return null;
+            }
         }
 
         // Function to handle Guest Sign-In
         function signInAsGuest() {
-            // Show the "Signing in as Guest..." message
             const messageElement = document.getElementById('signingMessage');
             messageElement.style.display = 'block';
 
-            // Show the message for 2 seconds, then redirect to index.html
             setTimeout(function() {
-                // Redirect directly to index.html for guest access after 2 seconds
                 window.location.href = 'index.html';
-            }, 2000); // 2000 milliseconds = 2 seconds
+            }, 2000); 
         }
     </script>
 
