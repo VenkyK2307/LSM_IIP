@@ -1,0 +1,8 @@
+#FRONTEND
+#Node
+node_modules/
+package.json
+package-lock.json
+
+#VultrDB env
+.env

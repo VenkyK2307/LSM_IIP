@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require('dotenv').config(); // Load environment variables from .env file
 
 // Create a new Express application
 const app = express();
@@ -12,14 +13,14 @@ app.use(cors());
 // Middleware to parse JSON request bodies
 app.use(bodyParser.json());
 
-// Set up the MySQL connection
+// Set up the MySQL connection using environment variables
 const db = mysql.createConnection({
-  host: 'vultr-prod-524b3e4c-63eb-40d6-9583-d56b4edf368a-vultr-prod-7755.vultrdb.com',
-  user: 'vultradmin',
-  password: 'AVNS_MdiGSflFTd5HfQXTDuN',
-  database: 'PortAlchemyDB',
-  port: 16751,
-  connectTimeout: 30000 
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
+  connectTimeout: 30000
 });
 
 // Check MySQL connection when the server starts
@@ -60,7 +61,7 @@ app.post('/save-user', (req, res) => {
   const { first_name, last_name, email } = req.body;
 
   // SQL query to insert a new user
-  const query = 'INSERT INTO USERS VALUES (?, ?, ?);';
+  const query = 'INSERT INTO USERS (first_name, last_name, email) VALUES (?, ?, ?);';
 
   db.query(query, [first_name, last_name, email], (err, results) => {
     if (err) {
