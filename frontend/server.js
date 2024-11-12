@@ -61,7 +61,7 @@ app.post('/save-user', (req, res) => {
   const { first_name, last_name, email } = req.body;
 
   // SQL query to insert a new user
-  const query = 'INSERT INTO USERS (first_name, last_name, email) VALUES (?, ?, ?);';
+  const query = 'INSERT INTO USERS VALUES (?, ?, ?);';
 
   db.query(query, [first_name, last_name, email], (err, results) => {
     if (err) {
