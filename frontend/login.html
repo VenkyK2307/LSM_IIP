@@ -1,34 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Sign-In</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Sign Up</title>
+     <!-- Load the Google Identity Services Script -->
+     <script src="https://accounts.google.com/gsi/client" async defer></script>
     
-    <!-- Load the Google Identity Services Script -->
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+     <!-- Include Font Awesome for icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Custom Colors */
+    :root {
+      --primary-color: #155bd5;
+      --secondary-color: #0e49b5;
+      --background-light: #f9fafb;
+      --background-dark: #1a202c;
+      --text-light: #ffffff;
+      --text-dark: #333333;
+      --input-background-light: #ffffff;
+      --input-background-dark: #4a5568;
+      --border-light: #e2e8f0;
+      --border-dark: #2d3748;
+    }
+
+    /* Global Reset & Box-Sizing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: var(--background-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Card Container */
+    .card {
+      background-color: var(--text-light);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Form Header */
+    .card h2 {
+      text-align: center;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    /* Form Inputs */
+    .input-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem 2rem 0.75rem 1rem; /* Padding to accommodate the icon inside */
+      margin-bottom: 1rem;
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: var(--input-background-light);
+      transition: all 0.3s ease;
+    }
+
+    input:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+
+    .eye-icon {
+      position: absolute;
+      right: 10px;
+      top: 22px;
     
-    <!-- Include Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      transform: translateY(-50%);
+      font-size: 1.25rem;
+      cursor: pointer;
+      color: #6b7280;
+      transition: color 0.3s ease;
+      margin-bottom: 15px;
 
-    <style>
-        /* General reset and box-sizing */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 0 20px;
-        }
+    .eye-icon:hover {
+      color: var(--primary-color);
+    }
 
+    /* Button Styling */
+    .btn {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: var(--primary-color);
+      color: var(--text-light);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--secondary-color);
+    }
+
+    /* Links */
+    .link {
+      text-align: center;
+      display: block;
+      margin-top: 1rem;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+
+    /* Small Text */
+    .small-text {
+      text-align: center;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: var(--background-dark);
+      color: var(--text-light);
+    }
+
+    .card.dark-mode {
+      background-color: #2d3748;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    input.dark-mode {
+      background-color: var(--input-background-dark);
+      color: var(--text-light);
+      border: 1px solid var(--border-dark);
+    }
+
+    .btn.dark-mode {
+      background-color: var(--secondary-color);
+    }
+
+    .link.dark-mode {
+      color: #63b3ed;
+    }
+
+    label input{
+        font-size: 50px;}
+
+    
+
+       
+/* 
         .login-container {
             background-color: #fff;
             padding: 40px;
@@ -37,7 +186,7 @@
             text-align: center;
             width: 100%;
             max-width: 400px;
-        }
+        } */
 
         h2 {
             font-size: 28px;
@@ -59,8 +208,7 @@
         /* Custom Google Sign-In button style */
         .g_id_signin {
             width: 100%;
-            padding: 12px;
-            background-color: #4285F4;
+            padding: 2px;
             border-radius: 5px;
             color: white;
             font-size: 16px;
@@ -81,7 +229,7 @@
         /* Guest Sign-In button style */
         .guest-signin-btn {
             width: 100%;
-            padding: 14px;
+            padding: px;
             background-color: #e4e4e4;
             border-radius: 5px;
             color: #333;
@@ -135,127 +283,227 @@
                 font-size: 24px;
             }
         }
-    </style>
+        .guest-signin-btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(145deg, #6a5acd, #836fff); /* Gradient background */
+        border-radius: 8px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease-in-out;
+        border: none; /* Remove default border */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
+
+    .guest-signin-btn:hover {
+        background: linear-gradient(145deg, #836fff, #6a5acd); /* Reverse gradient on hover */
+        transform: translateY(-3px); /* Button lift effect on hover */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+    }
+
+    .guest-signin-btn:active {
+        transform: translateY(1px); /* Button pressed effect */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow when clicked */
+    }
+
+    .guest-signin-btn i {
+        font-size: 22px; /* Icon size */
+    }
+
+    /* Optional: Add a smooth animation to the text when hovered */
+    .guest-signin-btn:hover i,
+    .guest-signin-btn:hover span {
+        animation: iconBounce 0.3s ease-in-out;
+    }
+    .login-container h2{
+        font-size: 30px;
+    
+    }
+
+    /* Keyframes for the bounce animation */
+    @keyframes iconBounce {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+
+
+  </style>
 </head>
 <body>
 
-    <!-- Login Container -->
+  <!-- Card Container -->
+  <div class="card" id="login-card">
+    <h2>Sign In</h2>
+    <!-- Login Form -->
+    <form id="login-form">
+      <div>
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+      </div>
+      <div class="input-container">
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <i class="fas fa-eye eye-icon" id="toggle-password" onclick="togglePassword()"></i>
+      </div>
+      <div>
+        <a href="#" class="link" id="forgot-password-link">Forgot password?</a>
+      </div>
+      <br>
+      <button type="submit" class="btn">Sign In</button>
+    </form>
+    <br>
     <div class="login-container">
-        <h2>Sign in.</h2>
+       
         
         <!-- Google Identity onload triggers login flow -->
         <div id="g_id_onload"
             data-client_id="922227147549-i051v7sen3a447diic40i90p4fjbg5nm.apps.googleusercontent.com"
             data-login_uri="http://localhost:8000/"
-            data-callback="handleCredentialResponse"
-            data-scope="profile email">  <!-- Add scope here -->
+            data-callback="handleCredentialResponse">
         </div>
 
         <!-- Google Sign-In Button -->
         <div class="g_id_signin" data-type="standard"></div>
-
-        <!-- Sign In as Guest Button -->
+<!-- 
         <button class="guest-signin-btn" onclick="signInAsGuest()">
             <i class="fas fa-user-alt"></i> Sign in as Guest
         </button>
 
-        <!-- Signing in as Guest message -->
         <div class="signing-message" id="signingMessage">
             Signing in as Guest...
         </div>
 
-        <div class="footer">
-            <p>By signing in, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>.</p>
-        </div>
+       -->
     </div>
+    <br>
+    <p class="small-text">Don’t have an account? <a href="#" class="link" id="signup-link">Sign Up</a></p>
+  </div>
 
-    <script>
-function handleCredentialResponse(response) {
-    const idToken = response.credential;
-    localStorage.setItem('google-id-token', idToken);
+  <!-- Sign Up Form (Hidden by default) -->
+  <div class="card" id="signup-card" style="display: none;">
+    <h2>Create an Account</h2>
+    <!-- Sign Up Form -->
+    <form id="signup-form">
+      <div>
+        <input type="text" id="name" name="name" placeholder="Full Name" required>
+      </div>
+      <div>
+        <input type="email" id="signup-email" name="email" placeholder="Email Address" required>
+      </div>
+      <div class="input-container">
+        <input type="password" id="signup-password" name="password" placeholder="Password" required>
+        <i class="fas fa-eye eye-icon" id="toggle-signup-password" onclick="togglePassword('signup')"></i>
+      </div>
+      <div class="input-container">
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+        <i class="fas fa-eye eye-icon" id="toggle-confirm-password" onclick="togglePassword('confirm')"></i>
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+    <p class="small-text">Already have an account? <a href="#" class="link" id="signin-link">Sign In</a></p>
+  </div>
 
-    const userInfo = parseJwt(idToken);
-    console.log('User info from Google:', userInfo);
+  <!-- Forgot Password Form (Hidden by default) -->
+  <div class="card" id="forgot-password-card" style="display: none;">
+    <h2>Reset Password</h2>
+    <form id="forgot-password-form">
+      <div>
+        <input type="email" id="reset-email" name="email" placeholder="Enter your email" required>
+      </div>
+      <button type="submit" class="btn">Reset Password</button>
+    </form>
+    <p class="small-text"><a href="#" class="link" id="back-to-signin">Back to Sign In</a></p>
+  </div>
 
-    const userName = userInfo.name; // Full name from Google
-    const userEmail = userInfo.email; // Email from Google
+  <script>
+    // Toggle password visibility
+    function togglePassword(formType = 'login') {
+      const passwordField = formType === 'signup' ? document.getElementById('signup-password') :
+                            formType === 'confirm' ? document.getElementById('confirm-password') :
+                            document.getElementById('password');
 
-    // Split the full name into first name and last name
-    const nameParts = userName.trim().split(' ');
+      const passwordIcon = formType === 'signup' ? document.getElementById('toggle-signup-password') :
+                            formType === 'confirm' ? document.getElementById('toggle-confirm-password') :
+                            document.getElementById('toggle-password');
 
-    let firstName = nameParts[0] || ''; 
-    let lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : '';
-    
-    console.log('First Name:', firstName, 'Last Name:', lastName, 'Email:', userEmail);
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        passwordIcon.classList.remove('fa-eye');
+        passwordIcon.classList.add('fa-eye-slash');
+      } else {
+        passwordField.type = "password";
+        passwordIcon.classList.remove('fa-eye-slash');
+        passwordIcon.classList.add('fa-eye');
+      }
+    }
 
-    // Send data to the server to check if the user exists in the database
-    fetch('http://localhost:8000/check-user', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            email: userEmail
-        }),
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('User check response:', data);
-        if (data.exists) {
-            console.log('User exists, fetch their data:', data.user);
-        } else {
-            // User doesn't exist, insert new user data
-            console.log('User does not exist, saving new user...');
-            fetch('http://localhost:8000/save-user', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    first_name: firstName,
-                    last_name: lastName,
-                    email: userEmail
-                }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('New user saved:', data);
-            })
-            .catch(error => console.error('Error saving user data:', error));
-        }
+    // Switch between forms
+    document.getElementById('signup-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('login-card').style.display = 'none';
+      document.getElementById('signup-card').style.display = 'block';
+    });
 
-        // Redirect to the next page after sign-in
+    document.getElementById('signin-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('signup-card').style.display = 'none';
+      document.getElementById('login-card').style.display = 'block';
+    });
+
+    // Forgot Password Form
+    document.getElementById('forgot-password-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('login-card').style.display = 'none';
+      document.getElementById('forgot-password-card').style.display = 'block';
+    });
+
+    document.getElementById('back-to-signin').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('forgot-password-card').style.display = 'none';
+      document.getElementById('login-card').style.display = 'block';
+    });
+
+  </script>
+
+<script>
+    // This function will be called once the user successfully signs in with Google
+    function handleCredentialResponse(response) {
+        // Get the ID token from the response (this is the credential to verify the user)
+        const idToken = response.credential;
+
+        // Save the ID token in localStorage (so it persists across pages)
+        localStorage.setItem('google-id-token', idToken);
+
+        // Redirect the user to auth.html after successful sign-in
         window.location.href = 'auth.html';
-    })
-    .catch(error => console.error('Error checking user existence:', error));
-}
+    }
 
+    // Function to handle Guest Sign-In
+    function signInAsGuest() {
+        // Show the "Signing in as Guest..." message
+        const messageElement = document.getElementById('signingMessage');
+        messageElement.style.display = 'block';
 
-        function parseJwt(token) {
-            try {
-                const base64Url = token.split('.')[1];
-                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-                const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-                }).join(''));
-
-                return JSON.parse(jsonPayload);
-            } catch (e) {
-                console.error("Error decoding JWT:", e);
-                return null;
-            }
-        }
-
-        // Function to handle Guest Sign-In
-        function signInAsGuest() {
-            const messageElement = document.getElementById('signingMessage');
-            messageElement.style.display = 'block';
-
-            setTimeout(function() {
-                window.location.href = 'index.html';
-            }, 2000); 
-        }
-    </script>
+        // Show the message for 2 seconds, then redirect to index.html
+        setTimeout(function() {
+            // Redirect directly to index.html for guest access after 2 seconds
+            window.location.href = 'index.html';
+        }, 2000); // 2000 milliseconds = 2 seconds
+    }
+</script>
 
 </body>
 </html>
