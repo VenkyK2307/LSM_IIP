@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      background-color: #f4f7fc;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #34495e;
+      color: white;
+      position: fixed;
+      top: 0; /* Ensure the sidebar starts at the top of the page */
+      left: 0; /* Align the sidebar to the left */
+      height: 100%; /* Full height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+    }
+
+    .sidebar ul li {
+      padding: 15px 20px;
+      cursor: pointer;
+      display: block;
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #16a085;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .main-content {
+      margin-left: 250px;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .header {
+      width: calc(100% - 250px);
+      background-color: #3498db;
+      padding: 15px;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 250px;
+      z-index: 10;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .main-content {
+      margin-top: 70px;
+    }
+
+    /* Stock Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table th, table td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    table th {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .btn-custom {
+      padding: 10px 20px;
+      background-color: #009688;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .btn-custom:hover {
+      background-color: #00796b;
+    }
+
+    /* Modal Styling */
+    #add-stock-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none; /* Hidden by default */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      width: 400px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-content input, .modal-content button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+    }
+
+    .modal-content button {
+      cursor: pointer;
+    }
+
+    .modal-content button[type="button"] {
+      background-color: red;
+      color: white;
+    }
+
+    .modal-content button[type="submit"] {
+      background-color: green;
+      color: white;
+    }
+  </style>
+</head>
+<body class="light-mode">
+
+<div class="sidebar">
+  <ul>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="dashboard.html">Stock Performance</a></li>
+    <li><a href="dashboard.html">Optimization</a></li>
+    <li><a href="dashboard.html">Logout</a></li>
+  </ul>
+</div>
+
+<div class="main-content">
+  <div class="header">
+    <h1>Stock Portfolio Management</h1>
+  </div>
+
+  <div class="content">
+    <h2>Your Portfolio</h2>
+
+    <!-- Portfolio Table -->
+    <table>
+      <thead>
+      <tr>
+        <th>Stock Name</th>
+        <th>Quantity</th>
+        <th>Avg Purchase Cost</th>
+        <th>Current Value</th>
+      </tr>
+      </thead>
+      <tbody id="portfolio-table-body">
+      <!-- Portfolio data will be dynamically populated here -->
+      </tbody>
+    </table>
+
+    <button class="btn-custom" id="add-stock-btn">Add New Stock</button>
+
+  </div>
+
+  <!-- Modal for Adding New Stock -->
+  <div id="add-stock-modal" style="display:none;">
+    <div class="modal-content">
+      <h3>Add New Stock</h3>
+      <form id="add-stock-form">
+        <label for="stock-name">Stock Name</label>
+        <input type="text" id="stock-name" required><br>
+
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" required><br>
+
+        <label for="avg-cost">Avg Purchase Cost</label>
+        <input type="number" id="avg-cost" required><br>
+
+        <label for="current-value">Current Value</label>
+        <input type="number" id="current-value" required><br>
+
+        <button type="submit">Add Stock</button>
+        <button type="button" id="cancel-add">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Dummy data for stock portfolio
+  const portfolio = [
+    { name: 'ACC', quantity: 100, avgCost: 1500, currentValue: 1600 },
+    { name: 'RELIANCE', quantity: 50, avgCost: 2500, currentValue: 2800 },
+    { name: 'INFY', quantity: 200, avgCost: 1200, currentValue: 1250 },
+  ];
+
+  // Function to render portfolio table
+  function renderPortfolioTable() {
+    const tableBody = document.getElementById('portfolio-table-body');
+    tableBody.innerHTML = '';
+
+    portfolio.forEach(stock => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+      <td>${stock.name}</td>
+      <td>${stock.quantity}</td>
+      <td>${stock.avgCost}</td>
+      <td>${stock.currentValue}</td>
+    `;
+      tableBody.appendChild(row);
+    });
+  }
+
+  // Open modal when 'Add New Stock' button is clicked
+  document.getElementById('add-stock-btn').addEventListener('click', () => {
+    document.getElementById('add-stock-modal').style.display = 'flex';
+  });
+
+  // Cancel button in modal
+  document.getElementById('cancel-add').addEventListener('click', () => {
+    document.getElementById('add-stock-modal').style.display = 'none';
+  });
+
+  // Handle form submission to add a new stock
+  document.getElementById('add-stock-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Get values from form inputs
+    const stockName = document.getElementById('stock-name').value;
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const avgCost = parseFloat(document.getElementById('avg-cost').value);
+    const currentValue = parseFloat(document.getElementById('current-value').value);
+
+    // Add new stock to portfolio
+    portfolio.push({
+      name: stockName,
+      quantity: quantity,
+      avgCost: avgCost,
+      currentValue: currentValue,
+    });
+
+    // Close the modal
+    document.getElementById('add-stock-modal').style.display = 'none';
+
+    // Re-render the portfolio table
+    renderPortfolioTable();
+  });
+
+  // Initial rendering of portfolio
+  renderPortfolioTable();
+</script>
+
+</body>
+</html>
