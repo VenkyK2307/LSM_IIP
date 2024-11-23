@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login / Sign Up</title>
+      <script src="./routes/auth.js" defer></script>
      <!-- Load the Google Identity Services Script -->
-     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    
-     <!-- Include Font Awesome for icons -->
+      <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+
+  <!-- Include Font Awesome for icons -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
- 
+
   <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -94,7 +96,7 @@
       position: absolute;
       right: 10px;
       top: 22px;
-    
+
       transform: translateY(-50%);
       font-size: 1.25rem;
       cursor: pointer;
@@ -174,10 +176,10 @@
     label input{
         font-size: 50px;}
 
-    
 
-       
-/* 
+
+
+/*
         .login-container {
             background-color: #fff;
             padding: 40px;
@@ -229,7 +231,6 @@
         /* Guest Sign-In button style */
         .guest-signin-btn {
             width: 100%;
-            padding: px;
             background-color: #e4e4e4;
             border-radius: 5px;
             color: #333;
@@ -324,7 +325,7 @@
     }
     .login-container h2{
         font-size: 30px;
-    
+
     }
 
     /* Keyframes for the bounce animation */
@@ -346,164 +347,122 @@
 </head>
 <body>
 
-  <!-- Card Container -->
-  <div class="card" id="login-card">
-    <h2>Sign In</h2>
-    <!-- Login Form -->
-    <form id="login-form">
-      <div>
-        <input type="email" id="email" name="email" placeholder="Email Address" required>
-      </div>
-      <div class="input-container">
-        <input type="password" id="password" name="password" placeholder="Password" required>
-        <i class="fas fa-eye eye-icon" id="toggle-password" onclick="togglePassword()"></i>
-      </div>
-      <div>
-        <a href="#" class="link" id="forgot-password-link">Forgot password?</a>
-      </div>
-      <br>
-      <button type="submit" class="btn">Sign In</button>
-    </form>
-    <br>
-    <div class="login-container">
-       
-        
-        <!-- Google Identity onload triggers login flow -->
-        <div id="g_id_onload"
-            data-client_id="922227147549-i051v7sen3a447diic40i90p4fjbg5nm.apps.googleusercontent.com"
-            data-login_uri="http://localhost:8000/"
-            data-callback="handleCredentialResponse">
-        </div>
-
-        <!-- Google Sign-In Button -->
-        <div class="g_id_signin" data-type="standard"></div>
-<!-- 
-        <button class="guest-signin-btn" onclick="signInAsGuest()">
-            <i class="fas fa-user-alt"></i> Sign in as Guest
-        </button>
-
-        <div class="signing-message" id="signingMessage">
-            Signing in as Guest...
-        </div>
-
-       -->
+<!-- Card Container -->
+<div class="card" id="login-card">
+  <h2>Sign In</h2>
+  <!-- Login Form -->
+  <form id="login-form">
+    <div>
+      <input type="email" id="email" name="email" placeholder="Email Address" required>
+    </div>
+    <div class="input-container">
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <i class="fas fa-eye eye-icon" id="toggle-password" onclick="togglePassword()"></i>
+    </div>
+    <div>
+      <a href="#" class="link" id="forgot-password-link">Forgot password?</a>
     </div>
     <br>
-    <p class="small-text">Don’t have an account? <a href="#" class="link" id="signup-link">Sign Up</a></p>
+    <button type="submit" class="btn">Sign In</button>
+  </form>
+  <br>
+  <div class="login-container">
+    <!-- Google Identity onload triggers login flow -->
+    <div id="g_id_onload"
+         data-client_id="YOUR_GOOGLE_CLIENT_ID"
+         data-login_uri="http://localhost:8000/"
+         data-callback="handleCredentialResponse">
+    </div>
+
+    <!-- Google Sign-In Button -->
+    <div class="g_id_signin" data-type="standard"></div>
   </div>
+  <br>
+  <p class="small-text">Don’t have an account? <a href="#" class="link" id="signup-link">Sign Up</a></p>
+</div>
 
-  <!-- Sign Up Form (Hidden by default) -->
-  <div class="card" id="signup-card" style="display: none;">
-    <h2>Create an Account</h2>
-    <!-- Sign Up Form -->
-    <form id="signup-form">
-      <div>
-        <input type="text" id="name" name="name" placeholder="Full Name" required>
-      </div>
-      <div>
-        <input type="email" id="signup-email" name="email" placeholder="Email Address" required>
-      </div>
-      <div class="input-container">
-        <input type="password" id="signup-password" name="password" placeholder="Password" required>
-        <i class="fas fa-eye eye-icon" id="toggle-signup-password" onclick="togglePassword('signup')"></i>
-      </div>
-      <div class="input-container">
-        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
-        <i class="fas fa-eye eye-icon" id="toggle-confirm-password" onclick="togglePassword('confirm')"></i>
-      </div>
-      <button type="submit" class="btn">Sign Up</button>
-    </form>
-    <p class="small-text">Already have an account? <a href="#" class="link" id="signin-link">Sign In</a></p>
-  </div>
-
-  <!-- Forgot Password Form (Hidden by default) -->
-  <div class="card" id="forgot-password-card" style="display: none;">
-    <h2>Reset Password</h2>
-    <form id="forgot-password-form">
-      <div>
-        <input type="email" id="reset-email" name="email" placeholder="Enter your email" required>
-      </div>
-      <button type="submit" class="btn">Reset Password</button>
-    </form>
-    <p class="small-text"><a href="#" class="link" id="back-to-signin">Back to Sign In</a></p>
-  </div>
-
-  <script>
-    // Toggle password visibility
-    function togglePassword(formType = 'login') {
-      const passwordField = formType === 'signup' ? document.getElementById('signup-password') :
-                            formType === 'confirm' ? document.getElementById('confirm-password') :
-                            document.getElementById('password');
-
-      const passwordIcon = formType === 'signup' ? document.getElementById('toggle-signup-password') :
-                            formType === 'confirm' ? document.getElementById('toggle-confirm-password') :
-                            document.getElementById('toggle-password');
-
-      if (passwordField.type === "password") {
-        passwordField.type = "text";
-        passwordIcon.classList.remove('fa-eye');
-        passwordIcon.classList.add('fa-eye-slash');
-      } else {
-        passwordField.type = "password";
-        passwordIcon.classList.remove('fa-eye-slash');
-        passwordIcon.classList.add('fa-eye');
-      }
-    }
-
-    // Switch between forms
-    document.getElementById('signup-link').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('login-card').style.display = 'none';
-      document.getElementById('signup-card').style.display = 'block';
-    });
-
-    document.getElementById('signin-link').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('signup-card').style.display = 'none';
-      document.getElementById('login-card').style.display = 'block';
-    });
-
-    // Forgot Password Form
-    document.getElementById('forgot-password-link').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('login-card').style.display = 'none';
-      document.getElementById('forgot-password-card').style.display = 'block';
-    });
-
-    document.getElementById('back-to-signin').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('forgot-password-card').style.display = 'none';
-      document.getElementById('login-card').style.display = 'block';
-    });
-
-  </script>
-
+<!-- Sign Up Form (Hidden by default) -->
+<div class="card" id="signup-card" style="display: none;">
+  <h2>Create an Account</h2>
+  <form id="signup-form">
+    <div>
+      <input type="text" id="signup-username" name="username" placeholder="User Name" required>
+      <input type="email" id="signup-email" name="email" placeholder="Email Address" required>
+    </div>
+    <div class="input-container">
+      <input type="password" id="signup-password" name="password" placeholder="Password" required>
+      <i class="fas fa-eye eye-icon" id="toggle-signup-password" onclick="togglePassword('signup-password')"></i>
+    </div>
+    <br>
+    <button type="submit" class="btn">Sign Up</button>
+  </form>
+  <br>
+  <p class="small-text">Already have an account? <a href="#" class="link" id="signin-link">Sign In</a></p>
+</div>
+<div id="error-message" style="display:none; color: red;"></div>
 <script>
-    // This function will be called once the user successfully signs in with Google
-    function handleCredentialResponse(response) {
-        // Get the ID token from the response (this is the credential to verify the user)
-        const idToken = response.credential;
+  // Function to handle form submission for login
+  function submitLogin(event) {
+    event.preventDefault(); // Prevent the default form submission
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
-        // Save the ID token in localStorage (so it persists across pages)
-        localStorage.setItem('google-id-token', idToken);
+    // Call the loginUser function from auth.js
+    loginUser(email, password);
+  }
 
-        // Redirect the user to auth.html after successful sign-in
-        window.location.href = 'auth.html';
+  // Function to handle form submission for signup
+  function submitSignup(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const email = document.getElementById('signup-email').value;
+    const username = document.getElementById('signup-username').value;
+    const password = document.getElementById('signup-password').value;
+
+    // Call the signupUser function from auth.js
+    signupUser(email, username, password);
+  }
+
+  // Attach event listeners after the DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Login form submission
+    const loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', submitLogin);
+
+    // Signup form submission
+    const signupForm = document.getElementById('signup-form');
+    signupForm.addEventListener('submit', submitSignup);
+  });
+
+
+  // Toggle password visibility
+  function togglePassword(inputId) {
+    const passwordField = document.getElementById(inputId || 'password');
+    const icon = document.getElementById('toggle-password');
+    if (passwordField.type === 'password') {
+      passwordField.type = 'text';
+      icon.classList.remove('fa-eye');
+      icon.classList.add('fa-eye-slash');
+    } else {
+      passwordField.type = 'password';
+      icon.classList.remove('fa-eye-slash');
+      icon.classList.add('fa-eye');
     }
+  }
 
-    // Function to handle Guest Sign-In
-    function signInAsGuest() {
-        // Show the "Signing in as Guest..." message
-        const messageElement = document.getElementById('signingMessage');
-        messageElement.style.display = 'block';
+  // Switch between Sign In and Sign Up forms
+  document.getElementById('signup-link').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('login-card').style.display = 'none';
+    document.getElementById('signup-card').style.display = 'block';
+  });
 
-        // Show the message for 2 seconds, then redirect to index.html
-        setTimeout(function() {
-            // Redirect directly to index.html for guest access after 2 seconds
-            window.location.href = 'index.html';
-        }, 2000); // 2000 milliseconds = 2 seconds
-    }
+  document.getElementById('signin-link').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('signup-card').style.display = 'none';
+    document.getElementById('login-card').style.display = 'block';
+  });
+
 </script>
-
 </body>
 </html>

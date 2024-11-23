@@ -15,11 +15,11 @@ app.use(bodyParser.json());
 
 // Use the routes for handling specific API paths
 app.use('/auth', authRoutes.router);   // Mount the authentication routes
-app.use('/stocks', stocksRoutes);      // Mount the stock management routes
+app.use('/stocks', stocksRoutes);  // Make sure this is correctly set
 
 // Start the server
 const startServer = () => {
-  const PORT = process.env.PORT || 8000;
+  const PORT = 8000;
   app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
   });

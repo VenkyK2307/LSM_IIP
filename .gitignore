@@ -1,11 +1,10 @@
 #WebStorm IDE
 .idea/
 
-#FRONTEND
 #Node
 node_modules/
 package.json
 package-lock.json
 
-#VultrDB env
+#AWS EC2 & JSON WEB TOKEN env
 .env

@@ -1,7 +1,7 @@
 // stocks.js
 const express = require('express');
 const db = require('../db');
-const { authenticate } = require('./auth');  // Import authenticate middleware
+const { authenticate } = require('./auth');  // Ensure this path is correct
 const router = express.Router();
 
 // Add Stock to Portfolio

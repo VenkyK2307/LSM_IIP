@@ -1,92 +1,75 @@
-const express = require('express');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-require('dotenv').config();  // Load environment variables from the .env file
-const db = require('../db');
-const router = express.Router();
-
-// Ensure JWT_SECRET is loaded from environment
-if (!process.env.JWT_SECRET) {
-    console.error('Error: JWT_SECRET is missing in .env file');
-    process.exit(1); // Exit the process if the secret is missing
+function loginUser(email, password) {
+    fetch('http://localhost:8000/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.token) {
+                sessionStorage.setItem('token', data.token);
+                window.location.href = 'dashboard.html'; // Redirect to dashboard
+            } else {
+                showError(data.error || 'Login failed');
+            }
+        })
+        .catch(err => {
+            console.error('Login Error:', err);
+            showError('An error occurred during login');
+        });
 }
 
-// User Registration
-router.post('/register', async (req, res) => {
-    const { email, username, password } = req.body;
-
-    try {
-        // Check if email already exists
-        const [existingUser] = await db.execute('SELECT * FROM users WHERE email = ?', [email]);
-        if (existingUser.length > 0) {
-            return res.status(400).send({ error: 'Email already in use!' });
-        }
-
-        // Hash password before storing
-        const hashedPassword = await bcrypt.hash(password, 10);
-
-        // Insert the user into the database
-        const [result] = await db.execute(
-            'INSERT INTO users (email, username, password) VALUES (?, ?, ?)',
-            [email, username, hashedPassword]
-        );
-
-        res.status(201).send({ message: 'User registered successfully!', userId: result.insertId });
-    } catch (err) {
-        console.error('Registration error:', err);
-        res.status(500).send({ error: 'Server error during registration' });
-    }
-});
-
-// User Login
-router.post('/login', async (req, res) => {
-    const { email, password } = req.body;
-
-    try {
-        // Check if user exists by email
-        const [rows] = await db.execute('SELECT * FROM users WHERE email = ?', [email]);
-        if (rows.length === 0) {
-            return res.status(400).send({ error: 'User not found!' });
-        }
-
-        const user = rows[0];
-
-        // Compare password with hashed password
-        const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch) {
-            return res.status(400).send({ error: 'Invalid credentials!' });
-        }
-
-        // Generate JWT token
-        const token = jwt.sign(
-            { userId: user.id, email: user.email, username: user.username },
-            process.env.JWT_SECRET,
-            { expiresIn: process.env.JWT_EXPIRY}
-        );
-
-        res.status(200).send({ message: 'Login successful!', token });
-    } catch (err) {
-        console.error('Login error:', err);
-        res.status(500).send({ error: 'Server error during login' });
-    }
-});
-
-// Middleware to authenticate JWT token
-function authenticate(req, res, next) {
-    const token = req.header('Authorization')?.replace('Bearer ', '');
-
-    if (!token) {
-        return res.status(401).send({ error: 'Access denied, token is required' });
-    }
-
-    try {
-        // Verify the JWT token using the secret
-        req.user = jwt.verify(token, process.env.JWT_SECRET);
-        next();  // Proceed to the next middleware or route handler
-    } catch (err) {
-        console.error('Token verification error:', err);
-        return res.status(400).send({ error: 'Invalid or expired token' });
-    }
+// Define the signupUser function in auth.js
+function signupUser(email, username, password) {
+    fetch('http://localhost:8000/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, username, password })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message) {
+                alert('Registration successful!');
+                window.location.href = 'login.html';
+            } else {
+                showError(data.error || 'Registration failed');
+            }
+        })
+        .catch(err => {
+            console.error('Registration Error:', err);
+            showError('An error occurred during registration');
+        });
 }
 
-module.exports = { router, authenticate };
+// Google Sign-In handling function
+function handleCredentialResponse(response) {
+    const idToken = response.credential;  // Extract the ID token from the response
+
+    // Send the ID token to your backend server to verify the user's identity
+    fetch('http://localhost:8000/auth/google-login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ idToken })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.token) {
+                sessionStorage.setItem('token', data.token); // Store the JWT token
+                window.location.href = 'dashboard.html'; // Redirect to the dashboard
+            } else {
+                showError('Google login failed.');
+            }
+        })
+        .catch(err => {
+            console.error('Error during Google login:', err);
+            showError('An error occurred during Google login.');
+        });
+}
+
+// Display error message
+function showError(message) {
+    const errorMessage = document.getElementById('error-message');
+
+    errorMessage.textContent = message;
+    errorMessage.style.display = 'block';
+}
