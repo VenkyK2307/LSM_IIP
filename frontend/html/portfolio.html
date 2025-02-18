@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stock Portfolio</title>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    * {
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+      font-family: Arial, sans-serif;
+      display: flex;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      min-height: 100vh;
-      background-color: #f4f7fc;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
+    /* Sidebar Styles */
     .sidebar {
       width: 250px;
       background-color: #34495e;
       color: white;
       position: fixed;
-      top: 0; /* Ensure the sidebar starts at the top of the page */
-      left: 0; /* Align the sidebar to the left */
-      height: 100%; /* Full height */
+      top: 0;
+      left: 0;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
       padding-top: 20px;
+      z-index: 1;
     }
 
     .sidebar ul {
@@ -59,111 +59,162 @@
       transition: background-color 0.3s;
     }
 
-    .main-content {
-      margin-left: 250px;
+    /* Portfolio Container */
+    .container {
+      margin-left: 270px; /* Add space after sidebar */
+      margin-right: 20px;
       padding: 20px;
-      min-height: 100vh;
+      max-width: calc(100% - 270px); /* Adjust container width to take the remaining space */
+      background-color: white;
+      border-radius: 20px;
+      margin-top: 50px;
+      flex-grow: 1;
     }
 
-    .header {
-      width: calc(100% - 250px);
-      background-color: #3498db;
+    h2 {
+      color: #212529;
+    }
+
+    .portfolio-item {
+      background-color: #f1f1f1;
+      border: 1px solid #ddd;
       padding: 15px;
-      color: white;
-      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 15px;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+    }
+
+    .portfolio-item .stock-name {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .portfolio-item .quantity,
+    .portfolio-item .avg-cost {
+      color: #666;
+    }
+
+    .btn-custom {
+      padding: 10px 20px;
+      border-radius: 8px;
+      background-color: #155bd5;
+      color: white;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #104a92;
+    }
+
+    /* Popup Styles */
+    .popup {
+      display: none;
       position: fixed;
       top: 0;
-      left: 250px;
-      z-index: 10;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
     }
 
-    .header h1 {
-      margin: 0;
-      font-size: 24px;
+    .popup-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%;
+      max-width: 500px;
+      text-align: center;
+      color: #212529;
     }
 
-    .main-content {
-      margin-top: 70px;
-    }
-
-    /* Stock Table Styles */
-    table {
+    .popup-content table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
     }
 
-    table th, table td {
-      padding: 10px;
-      text-align: left;
-      border-bottom: 1px solid #ccc;
+    .popup-content table,
+    th,
+    td {
+      border: 1px solid #ced4da;
     }
 
-    table th {
-      background-color: #3498db;
-      color: white;
+    th,
+    td {
+      padding: 8px;
+      color: #212529;
     }
 
-    .btn-custom {
-      padding: 10px 20px;
-      background-color: #009688;
+    th {
+      background-color: #f1f1f1;
+    }
+
+    .popup button {
+      margin-top: 10px;
+    }
+
+    .btn-popup {
+      padding: 8px 20px;
+      background-color: #155bd5;
       color: white;
       border: none;
       border-radius: 5px;
-      cursor: pointer;
-      margin-top: 20px;
+      width: 45%;
     }
 
-    .btn-custom:hover {
-      background-color: #00796b;
+    .btn-popup:hover {
+      background-color: #104a92;
     }
 
-    /* Modal Styling */
-    #add-stock-modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: none; /* Hidden by default */
-      justify-content: center;
-      align-items: center;
+    .btn-cancel {
+      background-color: #d9534f;
     }
 
-    .modal-content {
-      background-color: white;
-      padding: 20px;
-      border-radius: 5px;
-      width: 400px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    .btn-cancel:hover {
+      background-color: #c82333;
     }
 
-    .modal-content input, .modal-content button {
-      width: 100%;
-      margin: 10px 0;
-      padding: 10px;
+    /* Ensure responsiveness */
+    @media (max-width: 768px) {
+      .popup-content {
+        width: 90%;
+      }
+
+      .btn-custom,
+      .btn-popup {
+        width: 100%;
+      }
+
+      .container {
+        margin-left: 0;
+        max-width: 100%;
+      }
+
+      .sidebar {
+        width: 200px;
+      }
     }
 
-    .modal-content button {
-      cursor: pointer;
-    }
+    @media (max-width: 480px) {
+      .sidebar {
+        width: 150px;
+      }
 
-    .modal-content button[type="button"] {
-      background-color: red;
-      color: white;
-    }
-
-    .modal-content button[type="submit"] {
-      background-color: green;
-      color: white;
+      .container {
+        margin-left: 0;
+        max-width: 100%;
+      }
     }
   </style>
 </head>
-<body class="light-mode">
+
+<body>
 
 <div class="sidebar">
   <ul>
@@ -175,121 +226,98 @@
   </ul>
 </div>
 
-<div class="main-content">
-  <div class="header">
-    <h1>Stock Portfolio Management</h1>
-  </div>
+<div class="container">
+  <h2>Your Portfolio</h2>
 
-  <div class="content">
-    <h2>Your Portfolio</h2>
-
-    <!-- Portfolio Table -->
-    <table>
-      <thead>
-      <tr>
-        <th>Stock Name</th>
-        <th>Quantity</th>
-        <th>Avg Purchase Cost</th>
-        <th>Current Value</th>
-      </tr>
-      </thead>
-      <tbody id="portfolio-table-body">
-      <!-- Portfolio data will be dynamically populated here -->
-      </tbody>
-    </table>
-
-    <button class="btn-custom" id="add-stock-btn">Add New Stock</button>
-
-  </div>
-
-  <!-- Modal for Adding New Stock -->
-  <div id="add-stock-modal" style="display:none;">
-    <div class="modal-content">
-      <h3>Add New Stock</h3>
-      <form id="add-stock-form">
-        <label for="stock-name">Stock Name</label>
-        <input type="text" id="stock-name" required><br>
-
-        <label for="quantity">Quantity</label>
-        <input type="number" id="quantity" required><br>
-
-        <label for="avg-cost">Avg Purchase Cost</label>
-        <input type="number" id="avg-cost" required><br>
-
-        <label for="current-value">Current Value</label>
-        <input type="number" id="current-value" required><br>
-
-        <button type="submit">Add Stock</button>
-        <button type="button" id="cancel-add">Cancel</button>
-      </form>
+  <!-- Portfolio Dashboard -->
+  <div id="portfolio-dashboard">
+    <div class="portfolio-item">
+      <div>
+        <span class="stock-name">ACC</span><br>
+        <span class="quantity">Quantity: 10</span><br>
+        <span class="avg-cost">Avg Purchase Cost: $1500</span>
+      </div>
+      <button class="btn-custom">Edit</button>
     </div>
+
+    <div class="portfolio-item">
+      <div>
+        <span class="stock-name">RELIANCE</span><br>
+        <span class="quantity">Quantity: 5</span><br>
+        <span class="avg-cost">Avg Purchase Cost: $2200</span>
+      </div>
+      <button class="btn-custom">Edit</button>
+    </div>
+    <!-- Add more portfolio items here -->
   </div>
 
+  <div class="mt-3">
+    <button type="button" class="btn-custom" id="add-stock-btn">Add New Stock</button>
+  </div>
+</div>
+
+<!-- Popup for adding a new stock -->
+<div class="popup" id="stocks-popup">
+  <div class="popup-content">
+    <h4>Add New Stock</h4>
+    <form id="stock-form">
+      <div class="mb-3">
+        <label for="stock-name" class="form-label">Stock Name</label>
+        <input type="text" class="form-control" id="stock-name" placeholder="Stock Name" required>
+      </div>
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Quantity</label>
+        <input type="number" class="form-control" id="quantity" placeholder="Quantity" required>
+      </div>
+      <div class="mb-3">
+        <label for="avg-cost" class="form-label">Avg Purchase Cost</label>
+        <input type="number" class="form-control" id="avg-cost" placeholder="Avg Purchase Cost" required>
+      </div>
+      <button type="submit" class="btn-popup">Add Stock</button>
+      <button type="button" class="btn-popup btn-cancel" onclick="closePopup()">Cancel</button>
+    </form>
+  </div>
 </div>
 
 <script>
-  // Dummy data for stock portfolio
-  const portfolio = [
-    { name: 'ACC', quantity: 100, avgCost: 1500, currentValue: 1600 },
-    { name: 'RELIANCE', quantity: 50, avgCost: 2500, currentValue: 2800 },
-    { name: 'INFY', quantity: 200, avgCost: 1200, currentValue: 1250 },
-  ];
+  // Open the popup when 'Add New Stock' is clicked
+  document.getElementById('add-stock-btn').addEventListener('click', function() {
+    document.getElementById('stocks-popup').style.display = 'flex';
+  });
 
-  // Function to render portfolio table
-  function renderPortfolioTable() {
-    const tableBody = document.getElementById('portfolio-table-body');
-    tableBody.innerHTML = '';
-
-    portfolio.forEach(stock => {
-      const row = document.createElement('tr');
-      row.innerHTML = `
-      <td>${stock.name}</td>
-      <td>${stock.quantity}</td>
-      <td>${stock.avgCost}</td>
-      <td>${stock.currentValue}</td>
-    `;
-      tableBody.appendChild(row);
-    });
+  // Close the popup when 'Cancel' is clicked
+  function closePopup() {
+    document.getElementById('stocks-popup').style.display = 'none';
   }
 
-  // Open modal when 'Add New Stock' button is clicked
-  document.getElementById('add-stock-btn').addEventListener('click', () => {
-    document.getElementById('add-stock-modal').style.display = 'flex';
-  });
+  // Handle the form submission
+  document.getElementById('stock-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-  // Cancel button in modal
-  document.getElementById('cancel-add').addEventListener('click', () => {
-    document.getElementById('add-stock-modal').style.display = 'none';
-  });
-
-  // Handle form submission to add a new stock
-  document.getElementById('add-stock-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Get values from form inputs
     const stockName = document.getElementById('stock-name').value;
-    const quantity = parseInt(document.getElementById('quantity').value);
-    const avgCost = parseFloat(document.getElementById('avg-cost').value);
-    const currentValue = parseFloat(document.getElementById('current-value').value);
+    const quantity = document.getElementById('quantity').value;
+    const avgCost = document.getElementById('avg-cost').value;
 
-    // Add new stock to portfolio
-    portfolio.push({
-      name: stockName,
-      quantity: quantity,
-      avgCost: avgCost,
-      currentValue: currentValue,
-    });
+    // Create a new portfolio item and append it to the dashboard
+    const portfolioItem = document.createElement('div');
+    portfolioItem.classList.add('portfolio-item');
+    portfolioItem.innerHTML = `
+        <div>
+            <span class="stock-name">${stockName}</span><br>
+            <span class="quantity">Quantity: ${quantity}</span><br>
+            <span class="avg-cost">Avg Purchase Cost: $${avgCost}</span>
+        </div>
+        <button class="btn-custom">Edit</button>
+      `;
+    document.getElementById('portfolio-dashboard').appendChild(portfolioItem);
 
-    // Close the modal
-    document.getElementById('add-stock-modal').style.display = 'none';
+    // Clear the form
+    document.getElementById('stock-form').reset();
 
-    // Re-render the portfolio table
-    renderPortfolioTable();
+    // Close the popup
+    closePopup();
   });
-
-  // Initial rendering of portfolio
-  renderPortfolioTable();
 </script>
-
 </body>
+
 </html>
