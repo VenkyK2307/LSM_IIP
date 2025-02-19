@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Stock Info</title>
+    <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Light Mode Styling */
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        .container {
+            max-width: 900px;
+            margin-top: 50px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #212529;
+        }
+
+        /* Instruction section */
+        .instruction {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            background-color: #ffffff;
+            color: black;
+            border: 1px solid #ced4da;
+        }
+
+        .form-control:focus {
+            border-color: #155bd5;
+            box-shadow: 0 0 0 0.2rem rgba(21, 91, 213, 0.5);
+        }
+
+        .stock-entry {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .remove-btn {
+            position: absolute;
+            top: 0;
+            right: -30px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            display: none;
+            border-radius: 100%;
+        }
+
+        .stock-entry:hover .remove-btn {
+            display: block;
+        }
+
+        .btn-custom {
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #155bd5;
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #104a92;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            color: #212529;
+        }
+
+        .popup-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .popup-content table,
+        th,
+        td {
+            border: 1px solid #ced4da;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            color: #212529;
+        }
+
+        th {
+            background-color: #f1f1f1;
+        }
+
+        .popup button {
+            margin-top: 10px;
+        }
+
+        .btn-popup {
+            padding: 8px 20px;
+            background-color: #155bd5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 45%;
+        }
+
+        .btn-popup:hover {
+            background-color: #104a92;
+        }
+
+        .btn-cancel {
+            background-color: #d9534f;
+        }
+
+        .btn-cancel:hover {
+            background-color: #c82333;
+        }
+
+        /* Ensure responsiveness */
+        @media (max-width: 768px) {
+            .popup-content {
+                width: 90%;
+            }
+
+            .btn-custom,
+            .btn-popup {
+                width: 100%;
+            }
+
+            .stock-entry {
+                flex-direction: column;
+            }
+
+            /* Adjust buttons in mobile mode */
+            .btn-container {
+                display: flex;
+                gap: 5px;
+                flex-direction: column;
+            }
+
+            .btn-container .btn-custom {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Custom Datalist and Suggestions */
+        datalist {
+            background-color: white !important;
+            border: 1px solid #ced4da;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .suggestions {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        datalist {
+            background-color: white;
+            color: black;
+        }
+
+        /* Style the input field */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            background-color: #ffffff;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        /* Style the input field when focused */
+        input[type="text"]:focus {
+            border-color: #155bd5;
+            /* Border color on focus */
+            outline: none;
+        }
+
+        /* Style the datalist dropdown */
+        datalist {
+            font-size: 14px;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ced4da;
+            border-top: none;
+            background-color: #ffffff;
+            position: absolute;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style each suggestion in the datalist */
+        datalist option {
+            padding: 10px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #f1f1f1;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Highlight a suggestion on hover */
+        datalist option:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Style for no results found */
+        .datalist-no-results {
+            padding: 10px;
+            color: #999;
+            font-style: italic;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        h3 {
+            color: #155bd5;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        input {
+            width: 45%;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .autocomplete-suggestions {
+            border: 1px solid #ccc;
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            background-color: white;
+            z-index: 1000;
+            width: 300px;
+        }
+
+        .autocomplete-suggestion {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .autocomplete-suggestion:hover {
+            background-color: #f0f0f0;
+        }
+
+        #company-info {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #graph-container {
+            margin-top: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Company Stock Information</h1>
+
+        <!-- Company Name Autocomplete, Quantity, and Price -->
+        <div class="form-group">
+            <label for="company-name" class="block text-gray-700 font-medium">Company Name:</label>
+            <input type="text" id="company-name" name="company-name" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" autocomplete="off">
+            <div id="autocomplete-list" class="autocomplete-suggestions mt-2"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity" class="block text-gray-700 font-medium">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+
+        <div class="form-group">
+            <label for="price" class="block text-gray-700 font-medium">Price:</label>
+            <input type="number" id="price" name="price" min="0" step="1" class="block w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+
+        <!-- Add Stock Button -->
+        <div class="form-group">
+            <button id="add-stock" class="button">Add Stock</button>
+        </div>
+
+        <!-- Bar Chart for Stock Values -->
+        <div id="graph-container">
+            <canvas id="stockChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Confirmation Popup -->
+    <div id="confirmation-popup" class="popup">
+        <div class="popup-content">
+            <h3>Confirm Your Stock Information</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stock Name</th>
+                        <th>Quantity</th>
+                        <th>Avg Purchase Cost</th>
+                    </tr>
+                </thead>
+                <tbody id="stock-table-body">
+                    <!-- Stock information will go here -->
+                </tbody>
+            </table>
+            <button id="save-portfolio" class="btn-popup">Save Portfolio</button>
+            <button id="cancel-popup" class="btn-cancel btn-popup">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        // Add stock entry functionality
+        document.getElementById('add-stock').addEventListener('click', function() {
+            const stockEntry = document.createElement('div');
+            stockEntry.classList.add('stock-entry');
+            stockEntry.innerHTML = `
+                <input type="text" class="form-control stock-name" placeholder="Stock Name" required>
+                <input type="number" class="form-control quantity" placeholder="Quantity" required>
+                <input type="number" class="form-control avg-cost" placeholder="Avg Purchase Cost" required>
+                <button class="remove-btn">X</button>
+            `;
+            document.querySelector('.container').appendChild(stockEntry);
+
+            // Add remove button functionality
+            stockEntry.querySelector('.remove-btn').addEventListener('click', function() {
+                stockEntry.remove();
+            });
+        });
+
+        // Submit portfolio and show confirmation popup
+        document.getElementById('save-portfolio').addEventListener('click', function() {
+            const stocks = [];
+            const stockEntries = document.querySelectorAll('.stock-entry');
+            stockEntries.forEach(function(entry) {
+                const stockName = entry.querySelector('.stock-name').value;
+                const quantity = entry.querySelector('.quantity').value;
+                const avgCost = entry.querySelector('.avg-cost').value;
+                stocks.push({ stockName, quantity, avgCost });
+            });
+
+            // Populate the confirmation popup table
+            const tableBody = document.getElementById('stock-table-body');
+            tableBody.innerHTML = '';
+            stocks.forEach(function(stock) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${stock.stockName}</td>
+                    <td>${stock.quantity}</td>
+                    <td>${stock.avgCost}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+
+            // Show confirmation popup
+            document.getElementById('confirmation-popup').style.display = 'flex';
+        });
+
+        // Close confirmation popup
+        document.getElementById('cancel-popup').addEventListener('click', function() {
+            document.getElementById('confirmation-popup').style.display = 'none';
+        });
+
+        // Save portfolio and display graph
+        document.getElementById('save-portfolio').addEventListener('click', function() {
+            // Show the graph
+            const ctx = document.getElementById('stockChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Stock 1', 'Stock 2'], // Replace with dynamic stock names
+                    datasets: [{
+                        label: 'Stock Value',
+                        data: [150, 200], // Replace with dynamic stock values
+                        backgroundColor: 'rgba(0, 123, 255, 0.5)',
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                    },
+                }
+            });
+
+            // Close popup after saving
+            document.getElementById('confirmation-popup').style.display = 'none';
+        });
+    </script>
+
+    <script src="./scripts/calculate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
+</body>
+
+</html>

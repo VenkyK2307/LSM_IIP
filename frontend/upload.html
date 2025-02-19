@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Manager</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <style>
+        /* Light Mode Styling */
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+          
+        }
+
+        .container {
+            max-width: 900px;
+            margin-top: 50px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #212529;
+        }
+
+        /* Instruction section */
+        .instruction {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            background-color: #ffffff;
+            color: black;
+            border: 1px solid #ced4da;
+        }
+
+        .form-control:focus {
+            border-color: #155bd5;
+            box-shadow: 0 0 0 0.2rem rgba(21, 91, 213, 0.5);
+        }
+
+        .stock-entry {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .remove-btn {
+            position: absolute;
+            top: 0;
+            right: -30px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            display: none;
+            border-radius: 100%;
+        }
+
+        .stock-entry:hover .remove-btn {
+            display: block;
+        }
+
+        .btn-custom {
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #155bd5;
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #104a92;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            color: #212529;
+        }
+
+        .popup-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .popup-content table,
+        th,
+        td {
+            border: 1px solid #ced4da;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            color: #212529;
+        }
+
+        th {
+            background-color: #f1f1f1;
+        }
+
+        .popup button {
+            margin-top: 10px;
+        }
+
+        .btn-popup {
+            padding: 8px 20px;
+            background-color: #155bd5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 45%;
+        }
+
+        .btn-popup:hover {
+            background-color: #104a92;
+        }
+
+        .btn-cancel {
+            background-color: #d9534f;
+        }
+
+        .btn-cancel:hover {
+            background-color: #c82333;
+        }
+
+        /* Ensure responsiveness */
+        @media (max-width: 768px) {
+            .popup-content {
+                width: 90%;
+            }
+
+            .btn-custom,
+            .btn-popup {
+                width: 100%;
+            }
+
+            .stock-entry {
+                flex-direction: column;
+            }
+
+            /* Adjust buttons in mobile mode */
+            .btn-container {
+                display: flex;
+                gap: 5px;
+                flex-direction: column;
+            }
+
+            .btn-container .btn-custom {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Custom Datalist and Suggestions */
+        datalist {
+            background-color: white !important;
+            border: 1px solid #ced4da;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .suggestions {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        datalist {
+            background-color: white;
+            color: black;
+        }
+        /* Style the input field */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            background-color: #ffffff;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        /* Style the input field when focused */
+        input[type="text"]:focus {
+            border-color: #155bd5; /* Border color on focus */
+            outline: none;
+        }
+
+        /* Style the datalist dropdown */
+        datalist {
+            font-size: 14px;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ced4da;
+            border-top: none;
+            background-color: #ffffff;
+            position: absolute;
+            z-index: 10;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style each suggestion in the datalist */
+        datalist option {
+            padding: 10px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #f1f1f1;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Highlight a suggestion on hover */
+        datalist option:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Style for no results found */
+        .datalist-no-results {
+            padding: 10px;
+            color: #999;
+            font-style: italic;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        h3{
+            color: #155bd5;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        
+        input{
+            width: 45%;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">
+        <!-- Announcement Banner -->
+<div class="bg-gradient-to-r from-red-500 via-purple-400 to-blue-500">
+    <div class="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 mx-auto">
+      <!-- Grid -->
+      <div class="grid justify-center md:grid-cols-2 md:justify-between md:items-center gap-2">
+        <div class="text-center md:text-start">
+          <p class="text-xs text-white/80 uppercase tracking-wider">
+            Project port-alchemy
+          </p>
+          <p class="mt-1 text-white font-medium">
+            Get Customizable Investment Recommondations
+          </p>
+        </div>
+        <!-- End Col -->
+  
+        <div class="mt-3 text-center md:text-start md:flex md:justify-end md:items-center">
+          <a class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none" href="recom.html">
+            Recomondations 
+          </a>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Grid -->
+    </div>
+  </div>
+  <!-- End Announcement Banner -->
+    </div>
+
+    <div class="head">
+        <!-- Hero -->
+<div class="relative overflow-hidden">
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-24">
+      <div class="text-center">
+        <h3 class="text-4xl sm:text-6xl font-bold text-#155bd5-800">
+          Upload Portfolio!
+        </h3>
+  
+        <p class="mt-3 text-gray-600">
+          Get the Deatiled Insights of your Portfolio.
+        </p>
+  
+        <div class="mt-7 sm:mt-12 mx-auto max-w-xl relative">
+          <!-- Form -->
+          <div class="container">
+          
+            <form id="stock-form">
+                <div id="stocks-container">
+                    <div class="stock-entry">
+                        <input type="text" class="form-control stock-name" placeholder="Stock Name" list="stock-list" required>
+                        <input type="number" class="form-control quantity" placeholder="Quantity" required>
+                        <input type="number" class="form-control avg-cost" placeholder="Avg Purchase Cost" required>
+                        <button class="remove-btn">X</button>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button type="button" class="btn-custom" id="add-stock-btn">Add Stock</button>
+                    <button type="button" class="btn-custom" id="submit-btn">Submit</button>
+                </div>
+            </form>
+        
+            <!-- Autocomplete List -->
+             <!-- Datalist for stock suggestions with Indian companies -->
+             <datalist id="stock-list">
+                <option value="RELIANCE">
+                <option value="TCS">
+                <option value="HDFCBANK">
+                <option value="BHARTIARTL">
+                <option value="ICICIBANK">
+                <option value="INFY">
+                <option value="SBIN">
+                <option value="HINDUNILVR">
+                <option value="BAJFINANCE">
+                <option value="ITC">
+                <option value="LICI">
+                <option value="HCLTECH">
+                <option value="LT">
+                <option value="SUNPHARMA">
+                <option value="MARUTI">
+                <option value="KOTAKBANK">
+                <option value="M&M">
+                <option value="ULTRACEMCO">
+                <option value="WIPRO">
+                <option value="AXISBANK">
+                <option value="NTPC">
+                <option value="ONGC">
+                <option value="BAJAJFINSV">
+                <option value="TITAN">
+                <option value="ADANIENT">
+                <option value="TATAMOTORS">
+                <option value="HAL">
+                <option value="BAJAJ-AUTO">
+                <option value="POWERGRID">
+                <option value="DMART">
+                <option value="ADANIPORTS">
+                <option value="JSWSTEEL">
+                <option value="COALINDIA">
+                <option value="ASIANPAINT">
+                <option value="NESTLEIND">
+                <option value="ZOMATO">
+                <option value="ADANIPOWER">
+                <option value="BEL">
+                <option value="TRENT">
+                <option value="SIEMENS">
+                <option value="HINDZINC">
+                <option value="VBL">
+                <option value="TATASTEEL">
+                <option value="IOC">
+                <option value="GRASIM">
+                <option value="INDIGO">
+                <option value="DLF">
+                <option value="LTIM">
+                <option value="VEDL">
+                <option value="IRFC">
+                <option value="TECHM">
+                <option value="DIVISLAB">
+                <option value="SBILIFE">
+                <option value="JIOFIN">
+                <option value="ADANIGREEN">
+                <option value="PIDILITIND">
+                <option value="HDFCLIFE">
+                <option value="BAJAJHLDNG">
+                <option value="HINDALCO">
+                <option value="EICHERMOT">
+                <option value="PFC">
+                <option value="AMBUJACEM">
+                <option value="CIPLA">
+                <option value="BRITANNIA">
+                <option value="TVSMOTOR">
+                <option value="LODHA">
+                <option value="CHOLAFIN">
+                <option value="ABB">
+                <option value="TATAPOWER">
+                <option value="BPCL">
+                <option value="BANKBARODA">
+                <option value="PNB">
+                <option value="RECLTD">
+                <option value="GODREJCP">
+                <option value="GAIL">
+                <option value="INDHOTEL">
+                <option value="TORNTPHARM">
+                <option value="MANKIND">
+                <option value="SHRIRAMFIN">
+                <option value="DRREDDY">
+                <option value="SHREECEM">
+                <option value="UNITDSPR">
+                <option value="TATACONSUM">
+                <option value="NAUKRI">
+                <option value="MAXHEALTH">
+                <option value="HAVELLS">
+                <option value="ZYDUSLIFE">
+                <option value="LUPIN">
+                <option value="MUTHOOTFIN">
+                <option value="DABUR">
+                <option value="INDUSTOWER">
+                <option value="APOLLOHOSP">
+                <option value="MOTHERSON">
+                <option value="IOB">
+                <option value="ADANIENSOL">
+                <option value="MAZDOCK">
+                <option value="CGPOWER">
+                <option value="DIXON">
+                <option value="ICICIGI">
+                <option value="PERSISTENT">
+                <option value="UNIONBANK">
+                <option value="ICICIPRULI">
+                <option value="JINDALSTEL">
+                <option value="SRF">
+                <option value="POLYCAB">
+                <option value="MARICO">
+                <option value="SBICARD">
+                <option value="JSWENERGY">
+                <option value="INDUSINDBK">
+                <option value="BOSCHLTD">
+                <option value="CANBK">
+                <option value="HDFCAMC">
+                <option value="IDBI">
+                <option value="SOLARINDS">
+                <option value="HEROMOTOCO">
+                <option value="RVNL">
+                <option value="OFSS">
+                <option value="CUMMINSIND">
+                <option value="GMRAIRPORT">
+                <option value="NHPC">
+                <option value="POLICYBZR">
+                <option value="SUZLON">
+                <option value="BSE">
+                <option value="BHEL">
+                <option value="INDIANB">
+                <option value="AUROPHARMA">
+                <option value="BHARTIHEXA">
+                <option value="HINDPETRO">
+                <option value="GICRE">
+                <option value="COLPAL">
+                <option value="OIL">
+                <option value="PATANJALI">
+                <option value="ATGL">
+                <option value="ASHOKLEY">
+                <option value="TORNTPOWER">
+                <option value="LLOYDSME">
+                <option value="IDEA">
+                <option value="GODREJPROP">
+                <option value="ABBOTINDIA">
+                <option value="IRCTC">
+                <option value="OBEROIRLTY">
+                <option value="PHOENIXLTD">
+                <option value="YESBANK">
+                <option value="BERGEPAINT">
+                <option value="ALKEM">
+                <option value="NMDC">
+                <option value="COROMANDEL">
+                <option value="UNOMINDA">
+                <option value="KALYANKJIL">
+                <option value="UBL">
+                <option value="PRESTIGE">
+                <option value="LTTS">
+                <option value="COFORGE">
+                <option value="TIINDIA">
+                <option value="FACT">
+                <option value="BHARATFORG">
+                <option value="BALKRISIND">
+                <option value="JSL">
+                <option value="JSWINFRA">
+                <option value="POWERINDIA">
+                <option value="UPL">
+                <option value="SUNDARMFIN">
+                <option value="MPHASIS">
+                <option value="SUPREMEIND">
+                <option value="PIIND">
+                <option value="NYKAA">
+                <option value="LINDEINDIA">
+                <option value="PAYTM">
+                <option value="UCOBANK">
+                <option value="IREDA">
+                <option value="SCHAEFFLER">
+                <option value="MRF">
+                <option value="PAGEIND">
+                <option value="FORTIS">
+                <option value="BANKINDIA">
+                <option value="PGHH">
+                <option value="SAIL">
+                <option value="IDFCFIRSTB">
+                <option value="FEDERALBNK">
+                <option value="PETRONET">
+                <option value="JUBLFOOD">
+                <option value="TATACOMM">
+                <option value="BIOCON">
+                <option value="BDL">
+                <option value="CONCOR">
+                <option value="CENTRALBK">
+                <option value="ABCAPITAL">
+                <option value="FLUOROCHEM">
+                <option value="VOLTAS">
+                <option value="AUBANK">
+                <option value="BLUESTARCO">
+                <option value="GLENMARK">
+                <option value="GVT&D">
+                <option value="MOTILALOFS">
+                <option value="HUDCO">
+                <option value="TATAELXSI">
+                <option value="APLAPOLLO">
+                <option value="IPCALAB">
+                <option value="MAHABANK">
+                <option value="360ONE">
+                <option value="CRISIL">
+                <option value="MFSL">
+                <option value="JKCEMENT">
+                <option value="ASTRAL">
+                <option value="KPITTECH">
+                <option value="SJVN">
+                <option value="ACC">
+                <option value="THERMAX">
+                <option value="NATIONALUM">
+                <option value="LTF">
+                <option value="NAM-INDIA">
+                <option value="M&MFIN">
+                <option value="COCHINSHIP">
+                <option value="GLAXO">
+                <option value="DALBHARAT">
+                <option value="ESCORTS">
+                <option value="AIAENG">
+                <option value="KEI">
+                <option value="LAURUSLABS">
+                <option value="SONACOMS">
+                <option value="AWL">
+                <option value="METROBRAND">
+                <option value="EXIDEIND">
+                <option value="HONAUT">
+                <option value="AJANTPHARM">
+                <option value="3MINDIA">
+                <option value="DEEPAKNTR">
+                <option value="LICHSGFIN">
+                <option value="MEDANTA">
+                <option value="TATATECH">
+                <option value="KPRMILL">
+                <option value="IRB">
+                <option value="ABFRL">
+                <option value="MCX">
+                <option value="SUVENPHAR">
+                <option value="RADICO">
+                <option value="CHOLAHLDNG">
+                <option value="SYNGENE">
+                <option value="NLCINDIA">
+                <option value="GODREJIND">
+                <option value="GUJGASLTD">
+                <option value="GODIGIT">
+                <option value="ITI">
+                <option value="APARINDS">
+                <option value="ISEC">
+                <option value="TATAINVEST">
+                <option value="NH">
+                <option value="ENDURANCE">
+                <option value="IGL">
+                <option value="NIACL">
+                <option value="APOLLOTYRE">
+                <option value="KAYNES">
+                <option value="PPLPHARMA">
+                <option value="JBCHEPHARM">
+                <option value="GILLETTE">
+                <option value="GODFRYPHLP">
+                <option value="AEGISLOG">
+                <option value="CDSL">
+                <option value="BRIGADE">
+                <option value="FSL">
+                <option value="GLAND">
+                <option value="JYOTICNC">
+                <option value="SUMICHEM">
+                <option value="KIMS">
+                <option value="SUNTV">
+                <option value="EMAMILTD">
+                <option value="STARHEALTH">
+                <option value="ABREL">
+                <option value="NBCC">
+                <option value="POONAWALLA">
+                <option value="INOXWIND">
+                <option value="MSUMI">
+                <option value="BANDHANBNK">
+                <option value="POLYMED">
+                <option value="TATACHEM">
+                <option value="CONCORDBIO">
+                <option value="CROMPTON">
+                <option value="LALPATHLAB">
+                <option value="AFFLE">
+                <option value="HINDCOPPER">
+                <option value="MANYAVAR">
+                <option value="HSCL">
+                <option value="PEL">
+                <option value="ASTERDM">
+                <option value="CHAMBLFERT">
+                <option value="FIVESTAR">
+                <option value="DELHIVERY">
+                <option value="EIHOTEL">
+                <option value="PNBHOUSING">
+                <option value="ANGELONE">
+                <option value="WELCORP">
+                <option value="AMBER">
+                <option value="PTCIL">
+                <option value="KEC">
+                <option value="SUNDRMFAST">
+                <option value="ZFCVINDIA">
+                <option value="SHYAMMETL">
+                <option value="CASTROLIND">
+                <option value="ANANTRAJ">
+                <option value="NAVINFLUOR">
+                <option value="RAMCOCEM">
+                <option value="MRPL">
+                <option value="EMCURE">
+                <option value="TIMKEN">
+                <option value="NUVAMA">
+                <option value="BAYERCROP">
+                <option value="ZENSARTECH">
+                <option value="CARBORUNIV">
+                <option value="DEVYANI">
+                <option value="REDINGTON">
+                <option value="PFIZER">
+                <option value="ABSLAMC">
+                <option value="KANSAINER">
+                <option value="ASTRAZEN">
+                <option value="BASF">
+                <option value="GRINDWELL">
+                <option value="SKFINDIA">
+                <option value="KARURVYSYA">
+                <option value="TRITURBINE">
+                <option value="ARE&M">
+                <option value="RATNAMANI">
+                <option value="NATCOPHARM">
+                <option value="ERIS">
+                <option value="KFINTECH">
+                <option value="CENTURYPLY">
+                <option value="SIGNATURE">
+                <option value="BATAINDIA">
+                <option value="TBOTEK">
+                <option value="VINATIORGA">
+                <option value="AADHARHFC">
+                <option value="CAMS">
+                <option value="KPIL">
+                <option value="CESC">
+                <option value="CREDITACC">
+                <option value="ELGIEQUIP">
+                <option value="GSPL">
+                <option value="ATUL">
+                <option value="MANAPPURAM">
+                <option value="BLS">
+                <option value="APLLTD">
+                <option value="CIEINDIA">
+                <option value="GRSE">
+                <option value="CYIENT">
+                <option value="SCHNEIDER">
+                <option value="IRCON">
+                <option value="AARTIIND">
+                <option value="JINDALSAW">
+                <option value="ASAHIINDIA">
+                <option value="DOMS">
+                <option value="APTUS">
+                <option value="CAPLIPOINT">
+                <option value="FINCABLES">
+                <option value="JUBLPHARMA">
+                <option value="SWANENERGY">
+                <option value="IEX">
+                <option value="ANANDRATHI">
+                <option value="BIKAJI">
+                <option value="VGUARD">
+                <option value="JBMA">
+                <option value="KAJARIACER">
+                <option value="CHALET">
+                <option value="ACE">
+                <option value="PCBL">
+                <option value="ECLERX">
+                <option value="TEJASNET">
+                <option value="INDGN">
+                <option value="BLUEDART">
+                <option value="TRIDENT">
+                <option value="GODREJAGRO">
+                <option value="IIFL">
+                <option value="BSOFT">
+                <option value="CLEAN">
+                <option value="KIRLOSBROS">
+                <option value="EIDPARRY">
+                <option value="NEWGEN">
+                <option value="JWL">
+                <option value="CGCL">
+                <option value="HBLENGINE">
+                <option value="CELLO">
+                <option value="BBTC">
+                <option value="DEEPAKFERT">
+                <option value="AAVAS">
+                <option value="TTML">
+                <option value="JYOTHYLAB">
+                <option value="RAINBOW">
+                <option value="INDIAMART">
+                <option value="HFCL">
+                <option value="GRANULES">
+                <option value="GESHIP">
+                <option value="WHIRLPOOL">
+                <option value="RRKABEL">
+                <option value="MGL">
+                <option value="UTIAMC">
+                <option value="VTL">
+                <option value="IFCI">
+                <option value="MINDACORP">
+                <option value="NCC">
+                <option value="FINPIPE">
+                <option value="SANOFI">
+                <option value="SOBHA">
+                <option value="CUB">
+                <option value="BEML">
+                <option value="FINEORG">
+                <option value="RKFORGE">
+                <option value="SONATSOFTW">
+                <option value="NUVOCO">
+                <option value="GPIL">
+                <option value="WELSPUNLIV">
+                <option value="WESTLIFE">
+                <option value="TITAGARH">
+                <option value="TECHNOE">
+                <option value="NSLNISP">
+                <option value="ELECON">
+                <option value="J&KBANK">
+                <option value="CEATLTD">
+                <option value="LEMONTREE">
+                <option value="KSB">
+                <option value="HAPPSTMNDS">
+                <option value="JUBLINGREA">
+                <option value="PVRINOX">
+                <option value="KIRLOSENG">
+                <option value="RAILTEL">
+                <option value="GRINFRA">
+                <option value="PRAJIND">
+                <option value="RITES">
+                <option value="SAMMAANCAP">
+                <option value="INTELLECT">
+                <option value="OLECTRA">
+                <option value="RBLBANK">
+                <option value="SAREGAMA">
+                <option value="VIJAYA">
+                <option value="JMFINANCIL">
+                <option value="JPPOWER">
+                <option value="ZEEL">
+                <option value="CRAFTSMAN">
+                <option value="AVANTIFEED">
+                <option value="SAPPHIRE">
+                <option value="RAYMOND">
+                <option value="PERSISTENT">
+                <option value="MAZAGON">
+                <option value="TITAN">
+                <option value="HINDZINC">
+                <option value="JSWSTEEL">
+                <option value="JUBLINGREA">
+                <option value="NHPC">
+                <option value="CIPLA">
+            </datalist>
+            
+
+      
+        
+            <!-- Popup for Submitted Stocks -->
+            <div class="popup" id="stocks-popup">
+                <div class="popup-content">
+                    <h4>Your Portfolio</h4>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Stock Name</th>
+                            <th>Quantity</th>
+                            <th>Avg Purchase Cost</th>
+                        </tr>
+                        </thead>
+                        <tbody id="stock-table-body"></tbody>
+                    </table>
+                    <div>
+                        <button class="btn-popup btn-cancel" onclick="closePopup()">Close</button>
+                        <button class="btn-popup" onclick="savePortfolio()">Submit Portfolio</button>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+          <!-- End Form -->
+  
+          <!-- SVG Element -->
+          <div class="hidden md:block absolute top-0 end-0 -translate-y-12 translate-x-20">
+            <svg class="w-16 h-auto text-orange-500" width="121" height="135" viewBox="0 0 121 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 16.4754C11.7688 27.4499 21.2452 57.3224 5 89.0164" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+              <path d="M33.6761 112.104C44.6984 98.1239 74.2618 57.6776 83.4821 5" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+              <path d="M50.5525 130C68.2064 127.495 110.731 117.541 116 78.0874" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <!-- End SVG Element -->
+  
+          <!-- SVG Element -->
+          <div class="hidden md:block absolute bottom-0 start-0 translate-y-10 -translate-x-32">
+            <svg class="w-40 h-auto text-cyan-500" width="347" height="188" viewBox="0 0 347 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 82.4591C54.7956 92.8751 30.9771 162.782 68.2065 181.385C112.642 203.59 127.943 78.57 122.161 25.5053C120.504 2.2376 93.4028 -8.11128 89.7468 25.5053C85.8633 61.2125 130.186 199.678 180.982 146.248L214.898 107.02C224.322 95.4118 242.9 79.2851 258.6 107.02C274.299 134.754 299.315 125.589 309.861 117.539L343 93.4426" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <!-- End SVG Element -->
+        </div>
+  
+       
+      </div>
+    </div>
+  </div>
+
+  <!-- End Hero -->
+    </div>
+
+
+
+<script>
+    // Add stock entry functionality
+    document.getElementById('add-stock-btn').addEventListener('click', function() {
+        const stockEntry = document.createElement('div');
+        stockEntry.classList.add('stock-entry');
+        stockEntry.innerHTML = `
+                <input type="text" class="form-control stock-name" placeholder="Stock Name" list="stock-list" required>
+                <input type="number" class="form-control quantity" placeholder="Quantity" required>
+                <input type="number" class="form-control avg-cost" placeholder="Avg Purchase Cost" required>
+                <button class="remove-btn">X</button>
+            `;
+        document.getElementById('stocks-container').appendChild(stockEntry);
+
+        // Add remove button functionality
+        stockEntry.querySelector('.remove-btn').addEventListener('click', function() {
+            stockEntry.remove();
+        });
+    });
+
+    // Submit portfolio and show popup
+    document.getElementById('submit-btn').addEventListener('click', function() {
+        const stocks = [];
+        const stockEntries = document.querySelectorAll('.stock-entry');
+        stockEntries.forEach(function(entry) {
+            const stockName = entry.querySelector('.stock-name').value;
+            const quantity = entry.querySelector('.quantity').value;
+            const avgCost = entry.querySelector('.avg-cost').value;
+            stocks.push({ stockName, quantity, avgCost });
+        });
+
+        // Populate the popup table
+        const tableBody = document.getElementById('stock-table-body');
+        tableBody.innerHTML = '';
+        stocks.forEach(function(stock) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                    <td>${stock.stockName}</td>
+                    <td>${stock.quantity}</td>
+                    <td>${stock.avgCost}</td>
+                `;
+            tableBody.appendChild(row);
+        });
+
+        // Show the popup
+        document.getElementById('stocks-popup').style.display = 'flex';
+    });
+
+    // Close popup
+    function closePopup() {
+        document.getElementById('stocks-popup').style.display = 'none';
+    }
+
+    // Save portfolio (placeholder)
+    function savePortfolio() {
+        alert("Portfolio saved!");
+        closePopup();
+    }
+</script>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Autocomplete and Capability Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #stock-results {
+            margin-top: 20px;
+        }
+        #stock-results .grid-container {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr); /* 5 columns */
+            grid-gap: 10px;
+            padding: 10px;
+            overflow: auto;
+        }
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+            margin: px;
+        }
+        .grid-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid blueviolet;
+
+        }
+        .grid-item .content {
+            padding: 16px;
+        }
+        .grid-item .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .grid-item .avatar-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .grid-item img {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+        }
+        .grid-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+        }
+        .grid-item svg {
+            width: 24px;
+            height: 24px;
+            color: #333;
+        }
+        .input, .select {
+            padding: 5px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Stock Search and Filter</h2>
+
+    <div>
+        <label for="stock-name">Search Stock by Name: </label>
+        <input type="text" id="stock-name" class="input" placeholder="Type a stock name...">
+    </div>
+
+    <div>
+        <label for="capability">Select Capability: </label>
+        <select id="capability" class="select">
+            <!-- Capabilities will be populated here dynamically -->
+        </select>
+    </div>
+
+    <div id="stock-results">
+        <div class="grid-container" id="stock-list">
+            <!-- Stock results will be displayed here in a grid -->
+        </div>
+    </div>
+
+    <script>
+        // Function to fetch JSON data from main.json
+        async function fetchStockData() {
+            try {
+                const response = await fetch('json/main.json'); // Adjust the path if needed
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching JSON data:', error);
+                return [];
+            }
+        }
+
+        // Function to display stock names in a grid with custom styles
+        function displayStockNames(stocks) {
+            const stockList = document.getElementById("stock-list");
+            stockList.innerHTML = ''; // Clear previous results
+            
+
+            if (stocks.length > 0) {
+                stocks.forEach(stock => {
+                    const gridItem = document.createElement("div");
+                    gridItem.classList.add("grid-item");
+
+                    gridItem.innerHTML = `
+                        <div class="content">
+                            <div class="header">
+                                <div class="avatar-container">
+                                    <div>
+                                        <h3 class="group-hover:text-blue-600">${stock.Name}</h3>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="m9 18 6-6-6-6"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+
+                    stockList.appendChild(gridItem);
+                });
+            } else {
+                stockList.innerHTML = '<div class="grid-item">No matching stocks found</div>';
+            }
+        }
+
+        // Function to filter stocks based on name and capability
+        function filterStocks(stocks) {
+            const searchTerm = document.getElementById("stock-name").value.toLowerCase();
+            const selectedCapability = document.getElementById("capability").value;
+
+            const filteredStocks = stocks.filter(stock => 
+                stock.Name.toLowerCase().includes(searchTerm) && stock.Capability === selectedCapability
+            );
+
+            displayStockNames(filteredStocks);
+        }
+
+        // Function to populate the capability dropdown
+        function populateCapabilities(stocks) {
+            const capabilities = new Set(stocks.map(stock => stock.Capability)); // Get unique capabilities
+            const capabilitySelect = document.getElementById("capability");
+            
+            capabilities.forEach(cap => {
+                const option = document.createElement("option");
+                option.value = cap;
+                option.textContent = cap;
+                capabilitySelect.appendChild(option);
+            });
+        }
+
+        // Event listeners for filtering
+        document.getElementById("stock-name").addEventListener("input", async () => {
+            const stocks = await fetchStockData();
+            filterStocks(stocks);
+        });
+
+        document.getElementById("capability").addEventListener("change", async () => {
+            const stocks = await fetchStockData();
+            filterStocks(stocks);
+        });
+
+        // Initial data load and populate capabilities
+        (async () => {
+            const stocks = await fetchStockData();
+            populateCapabilities(stocks);
+            filterStocks(stocks);
+        })();
+    </script>
+
+</body>
+</html>
