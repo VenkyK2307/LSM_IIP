@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty List with Autocomplete & Details</title>
+  <style>
+    .autocomplete-items {
+      border: 1px solid #d4d4d4;
+      max-height: 150px;
+      overflow-y: auto;
+      position: absolute;
+      z-index: 99;
+      background-color: #fff;
+    }
+
+    .autocomplete-items div {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .autocomplete-items div:hover {
+      background-color: #e9e9e9;
+    }
+
+    .faculty-list {
+      margin-top: 20px;
+    }
+
+    .faculty-item {
+      padding: 10px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      margin-bottom: 5px;
+    }
+
+    .faculty-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    .faculty-details {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .faculty-item:hover .faculty-details {
+      display: block;
+    }
+
+    .dropdown {
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Faculty List with Autocomplete</h2>
+
+  <!-- Autocomplete input for names -->
+  <input id="nameInput" type="text" placeholder="Search for faculty name..." oninput="autocompleteName()">
+  <div id="autocomplete-list" class="autocomplete-items"></div>
+
+  <!-- Dropdown for schools -->
+  <div class="dropdown">
+    <label for="schoolDropdown">Select School:</label>
+    <select id="schoolDropdown" onchange="filterBySchool()">
+      <option value="">Select a School</option>
+    </select>
+  </div>
+
+  <!-- List of faculty members -->
+  <div id="facultyList" class="faculty-list"></div>
+
+  <script>
+    let facultyData = []; // This will hold the data from the JSON file
+
+    // Fetch data from faculty.json
+    fetch('json/faculty.json')
+      .then(response => response.json())
+      .then(data => {
+        facultyData = data;
+        populateSchoolDropdown();
+      })
+      .catch(error => console.error('Error loading faculty data:', error));
+
+    // Function to populate the school dropdown
+    function populateSchoolDropdown() {
+      const schoolDropdown = document.getElementById("schoolDropdown");
+      const schoolNames = [...new Set(facultyData.map(faculty => faculty.School))]; // Get unique school names
+      schoolNames.forEach(school => {
+        const option = document.createElement("option");
+        option.value = school;
+        option.textContent = school;
+        schoolDropdown.appendChild(option);
+      });
+    }
+
+    // Function to filter faculty by selected school
+    function filterBySchool() {
+      const selectedSchool = document.getElementById("schoolDropdown").value;
+      const facultyList = document.getElementById("facultyList");
+      facultyList.innerHTML = ""; // Clear previous list
+
+      if (selectedSchool) {
+        // Filter faculty by the selected school
+        const filteredFaculty = facultyData.filter(faculty => faculty.School === selectedSchool);
+        filteredFaculty.forEach(faculty => {
+          const facultyItem = document.createElement("div");
+          facultyItem.classList.add("faculty-item");
+          facultyItem.innerHTML = faculty.Name;
+
+          // Add additional details inside a hidden div (shown on hover)
+          const detailsDiv = document.createElement("div");
+          detailsDiv.classList.add("faculty-details");
+          detailsDiv.innerHTML = `
+            <strong>Department:</strong> ${faculty.Department}<br>
+            <strong>Designation:</strong> ${faculty.Designation}<br>
+            <a href="${faculty.Profile_Link}" target="_blank">View Profile</a>
+          `;
+          facultyItem.appendChild(detailsDiv);
+
+          facultyList.appendChild(facultyItem);
+        });
+      }
+    }
+
+    // Function to autocomplete the name input
+    function autocompleteName() {
+      const input = document.getElementById("nameInput");
+      const filter = input.value.toUpperCase();
+      const autocompleteList = document.getElementById("autocomplete-list");
+      autocompleteList.innerHTML = ""; // Clear previous suggestions
+
+      if (filter) {
+        facultyData.forEach(faculty => {
+          if (faculty.Name.toUpperCase().indexOf(filter) > -1) {
+            const item = document.createElement("div");
+            item.textContent = faculty.Name;
+            item.addEventListener("click", () => {
+              input.value = faculty.Name;
+              autocompleteList.innerHTML = ""; // Clear suggestions
+              filterBySchool(); // Refilter faculty list based on the name
+            });
+            autocompleteList.appendChild(item);
+          }
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>
