@@ -789,20 +789,23 @@
             <!-- Popup for Submitted Stocks -->
             <div class="popup" id="stocks-popup">
                 <div class="popup-content">
-                    <h4>Your Portfolio</h4>
+                    <h1>Your Portfolio</h1>
                     <table>
                         <thead>
                         <tr>
                             <th>Stock Name</th>
                             <th>Quantity</th>
                             <th>Avg Purchase Cost</th>
+                            <th>Total  Invested Value</th>
                         </tr>
                         </thead>
                         <tbody id="stock-table-body"></tbody>
                     </table>
                     <div>
-                        <button class="btn-popup btn-cancel" onclick="closePopup()">Close</button>
-                        <button class="btn-popup" onclick="savePortfolio()">Submit Portfolio</button>
+                        <button class="btn-popup btn-cancel" onclick="closePopup()">Edit</button>
+                        <a href="analysis.html">
+                            <button class="btn-popup" onclick="savePortfolio()">Submit Portfolio</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -838,18 +841,40 @@
     </div>
 
 
+<!-- Script -2 -->
 
-<script>
+    <script> 
+
+    // Function to fetch the JSON data and populate the stock name list and handle the rest
+    let stockData = [];
+    fetch('json/main.json')  // Replace 'path/to/main.json' with the correct path to your JSON file
+        .then(response => response.json())
+        .then(data => {
+            stockData = data;
+            populateStockList();
+        })
+        .catch(error => console.error("Error fetching data: ", error));
+
+    // Populate the datalist with stock names from JSON
+    function populateStockList() {
+        const stockList = document.getElementById('stock-list');
+        stockData.forEach(stock => {
+            const option = document.createElement('option');
+            option.value = stock.Name;
+            stockList.appendChild(option);
+        });
+    }
+
     // Add stock entry functionality
     document.getElementById('add-stock-btn').addEventListener('click', function() {
         const stockEntry = document.createElement('div');
         stockEntry.classList.add('stock-entry');
         stockEntry.innerHTML = `
-                <input type="text" class="form-control stock-name" placeholder="Stock Name" list="stock-list" required>
-                <input type="number" class="form-control quantity" placeholder="Quantity" required>
-                <input type="number" class="form-control avg-cost" placeholder="Avg Purchase Cost" required>
-                <button class="remove-btn">X</button>
-            `;
+            <input type="text" class="form-control stock-name" placeholder="Stock Name" list="stock-list" required>
+            <input type="number" class="form-control quantity" placeholder="Quantity" required>
+            <input type="number" class="form-control avg-cost" placeholder="Avg Purchase Cost" required>
+            <button class="remove-btn">X</button>
+        `;
         document.getElementById('stocks-container').appendChild(stockEntry);
 
         // Add remove button functionality
@@ -866,7 +891,16 @@
             const stockName = entry.querySelector('.stock-name').value;
             const quantity = entry.querySelector('.quantity').value;
             const avgCost = entry.querySelector('.avg-cost').value;
-            stocks.push({ stockName, quantity, avgCost });
+            
+            // Find stock details by name from stockData
+            const stockDetails = stockData.find(stock => stock.Name === stockName);
+            if (stockDetails) {
+                const capability = stockDetails.Capability;
+                const amount = avgCost * quantity; // Calculate price * quantity
+
+                // Add stock data along with capability and calculated amount
+                stocks.push({ stockName, quantity, avgCost, capability, amount });
+            }
         });
 
         // Populate the popup table
@@ -875,16 +909,54 @@
         stocks.forEach(function(stock) {
             const row = document.createElement('tr');
             row.innerHTML = `
-                    <td>${stock.stockName}</td>
-                    <td>${stock.quantity}</td>
-                    <td>${stock.avgCost}</td>
-                `;
+                <td>${stock.stockName}</td>
+                <td>${stock.quantity}</td>
+                <td>${stock.avgCost}</td>
+                <td>${stock.amount}</td>
+           
+            `;
             tableBody.appendChild(row);
         });
 
         // Show the popup
         document.getElementById('stocks-popup').style.display = 'flex';
+
+        // Now generate charts based on the stocks array (we'll split the amounts based on capability)
+        generateChart(stocks);
     });
+
+    // Function to generate a chart showing amount distribution based on stock capabilities
+    function generateChart(stocks) {
+        const capabilityData = {};
+
+        // Calculate total amount per capability
+        stocks.forEach(stock => {
+            if (!capabilityData[stock.capability]) {
+                capabilityData[stock.capability] = 0;
+            }
+            capabilityData[stock.capability] += stock.amount;
+        });
+
+        // Prepare data for the chart
+        const chartLabels = Object.keys(capabilityData);
+        const chartValues = Object.values(capabilityData);
+
+        // Create the chart using Chart.js (make sure to include Chart.js in your project)
+        const ctx = document.getElementById('capabilityChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: chartLabels,
+                datasets: [{
+                    label: 'Amount by Capability',
+                    data: chartValues,
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'], // Different colors
+                    borderColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'],
+                    borderWidth: 1
+                }]
+            }
+        });
+    }
 
     // Close popup
     function closePopup() {
@@ -896,9 +968,9 @@
         alert("Portfolio saved!");
         closePopup();
     }
-</script>
+</script> 
 
-
+<!-- Script 3 -->
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

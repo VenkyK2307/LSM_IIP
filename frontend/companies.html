@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Autocomplete and Capability Filter</title>
+     <!-- <link rel="stylesheet" href="https://cdn.tailwindcss.com/3.4.16"> -->
+     <link rel="stylesheet" href="https://preline.co/assets/css/obfuscated.min.css">
+     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+     
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,7 +20,7 @@
         }
         #stock-results .grid-container {
             display: grid;
-            grid-template-columns: repeat(10, 1fr); /* 5 columns */
+            grid-template-columns: repeat(5, 1fr); /* 5 columns */
             grid-gap: 10px;
             padding: 10px;
             overflow: auto;
@@ -69,6 +75,27 @@
             margin: 10px;
             font-size: 16px;
         }
+        .tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10;
+
+}
+
+.tooltip.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.grid-item {
+    position: relative; }
+
     </style>
 </head>
 <body>
@@ -184,6 +211,8 @@
             filterStocks(stocks);
         })();
     </script>
+
+   
 
 </body>
 </html>
