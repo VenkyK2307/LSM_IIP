@@ -1,5 +1,8 @@
 [
     {
+        "Symbol": "RELIANCE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/reliance-industrial-infrastructure.svg",
+        "Company_Name": "RELIANCE INDUSTRIES LTD",
         "Name": "RELIANCE",
         "Market Cap": "1,645,671.87",
         "Alpha": "-4.86",
@@ -17,6 +20,9 @@
         "g": "5"
     },
     {
+        "Symbol": "TCS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/tata.svg",
+        "Company_Name": "TATA CONSULTANCY SERV LTD",
         "Name": "TCS",
         "Market Cap": "1,414,726.49",
         "Alpha": "-4.4",
@@ -34,6 +40,9 @@
         "g": "5"
     },
     {
+        "Symbol": "HDFCBANK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/hdfc-bank.svg",
+        "Company_Name": "HDFC BANK LTD",
         "Name": "HDFCBANK",
         "Market Cap": "1,298,771.00",
         "Alpha": "-5.15",
@@ -51,6 +60,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BHARTIARTL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/airtel.svg",
+        "Company_Name": "BHARTI AIRTEL LTD",
         "Name": "BHARTIARTL",
         "Market Cap": "1,026,583.48",
         "Alpha": "23.02",
@@ -68,6 +80,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ICICIBANK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/icici-bank.svg",
+        "Company_Name": "ICICI BANK LTD.",
         "Name": "ICICIBANK",
         "Market Cap": "882,070.18",
         "Alpha": "7.85",
@@ -85,6 +100,9 @@
         "g": "5"
     },
     {
+        "Symbol": "INFY",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/infosys.svg",
+        "Company_Name": "INFOSYS LTD",
         "Name": "INFY",
         "Market Cap": "763,490.30",
         "Alpha": "-3.65",
@@ -102,6 +120,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SBIN",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/state-bank.svg",
+        "Company_Name": "STATE BANK OF INDIA",
         "Name": "SBIN",
         "Market Cap": "649,399.98",
         "Alpha": "2.64",
@@ -110,7 +131,7 @@
         "D/E": "0",
         "EPS (Q)": "21.12",
         "SCORE": "24",
-        "Capability": "Moderate",
+        "Capability": "M",
         "b": "4",
         "c": "3",
         "d": "3",
@@ -119,6 +140,9 @@
         "g": "5"
     },
     {
+        "Symbol": "HINDUNILVR",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/unilever.svg",
+        "Company_Name": "HINDUSTAN UNILEVER LTD.",
         "Name": "HINDUNILVR",
         "Market Cap": "545,457.61",
         "Alpha": "-4.55",
@@ -127,7 +151,7 @@
         "D/E": "0.03",
         "EPS (Q)": "12.7",
         "SCORE": "21",
-        "Capability": "Moderate",
+        "Capability": "M",
         "b": "4",
         "c": "1",
         "d": "5",
@@ -136,6 +160,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BALKRISIND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/balkrishna.svg",
+        "Company_Name": "BALKRISHNA IND. LTD",
         "Name": "BAJFINANCE",
         "Market Cap": "520,752.38",
         "Alpha": "-2.76",
@@ -153,6 +180,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ITC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/itc.svg",
+        "Company_Name": "ITC LTD",
         "Name": "ITC",
         "Market Cap": "512,636.29",
         "Alpha": "18.37",
@@ -170,23 +200,29 @@
         "g": "4"
     },
     {
+        "Symbol": "LICI",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/life-insurance-corporation-of-india.svg",
+        "Company_Name": "LIFE INSURA CORP OF INDIA",
         "Name": "LICI",
         "Market Cap": "496,385.82",
         "Alpha": "-7.56",
         "Beta": "-",
-        "5Y CAGR": "-",
+        "5Y CAGR": "9.65",
         "D/E": "0",
         "EPS (Q)": "17.4",
-        "SCORE": "21",
-        "Capability": "M",
+        "SCORE": "18",
+        "Capability": "R",
         "b": "4",
         "c": "1",
         "d": "1",
-        "e": "5",
+        "e": "2",
         "f": "5",
         "g": "5"
     },
     {
+        "Symbol": "HCLTECH",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/hcl-technologies.svg",
+        "Company_Name": "HCL TECHNOLOGIES LTD",
         "Name": "HCLTECH",
         "Market Cap": "461,585.97",
         "Alpha": "7.68",
@@ -204,6 +240,9 @@
         "g": "5"
     },
     {
+        "Symbol": "LT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/larsen-and-toubro.svg",
+        "Company_Name": "LARSEN & TOUBRO LTD.",
         "Name": "LT",
         "Market Cap": "448,808.99",
         "Alpha": "9.96",
@@ -221,6 +260,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SUNPHARMA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/sun-pharmaceutical.svg",
+        "Company_Name": "SUN PHARMACEUTICAL IND L",
         "Name": "SUNPHARMA",
         "Market Cap": "419,007.86",
         "Alpha": "19.52",
@@ -238,6 +280,9 @@
         "g": "5"
     },
     {
+        "Symbol": "MARUTI",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/maruti-suzuki-india.svg",
+        "Company_Name": "MARUTI SUZUKI INDIA LTD.",
         "Name": "MARUTI",
         "Market Cap": "398,388.93",
         "Alpha": "7.54",
@@ -255,6 +300,9 @@
         "g": "5"
     },
     {
+        "Symbol": "KOTAKBANK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/kotak-mahindra-bank.svg",
+        "Company_Name": "KOTAK MAHINDRA BANK LTD",
         "Name": "KOTAKBANK",
         "Market Cap": "392,230.15",
         "Alpha": "-3.23",
@@ -272,6 +320,9 @@
         "g": "5"
     },
     {
+        "Symbol": "M&M",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/mahindra.svg",
+        "Company_Name": "MAHINDRA & MAHINDRA LTD",
         "Name": "M&M",
         "Market Cap": "357,115.60",
         "Alpha": "33.16",
@@ -289,6 +340,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ULTRACEMCO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/ultratech-cement.svg",
+        "Company_Name": "ULTRATECH CEMENT LTD",
         "Name": "ULTRACEMCO",
         "Market Cap": "332,719.95",
         "Alpha": "7.58",
@@ -306,6 +360,9 @@
         "g": "5"
     },
     {
+        "Symbol": "WIPRO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/wipro.svg",
+        "Company_Name": "WIPRO LTD",
         "Name": "WIPRO",
         "Market Cap": "322,731.27",
         "Alpha": "-4.16",
@@ -323,6 +380,9 @@
         "g": "4"
     },
     {
+        "Symbol": "BAJAJ_AUTO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bajaj-auto.svg",
+        "Company_Name": "BAJAJ AUTO LTD",
         "Name": "AXISBANK",
         "Market Cap": "312,140.06",
         "Alpha": "-0.3",
@@ -340,6 +400,9 @@
         "g": "5"
     },
     {
+        "Symbol": "NTPC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/ntpc.svg",
+        "Company_Name": "NTPC LTD",
         "Name": "NTPC",
         "Market Cap": "297,396.75",
         "Alpha": "22.1",
@@ -357,6 +420,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ONGC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/oil-and-natural-gas.svg",
+        "Company_Name": "OIL AND NATURAL GAS CORP.",
         "Name": "ONGC",
         "Market Cap": "295,573.66",
         "Alpha": "8.71",
@@ -374,6 +440,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BAJAJHLDNG",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bajaj-holdings-and-investment-lt.svg",
+        "Company_Name": "BAJAJ HOLDINGS & INVS LTD",
         "Name": "BAJAJFINSV",
         "Market Cap": "294,922.06",
         "Alpha": "-4.2",
@@ -391,6 +460,9 @@
         "g": "5"
     },
     {
+        "Symbol": "TITAN",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/titan-company.svg",
+        "Company_Name": "TITAN COMPANY LTD",
         "Name": "TITAN",
         "Market Cap": "286,648.68",
         "Alpha": "0.54",
@@ -408,6 +480,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ADANIENT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/adani.svg",
+        "Company_Name": "ADANI ENTERPRISES LTD",
         "Name": "ADANIENT",
         "Market Cap": "259,078.95",
         "Alpha": "11.64",
@@ -425,6 +500,9 @@
         "g": "2"
     },
     {
+        "Symbol": "TATAMOTORS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/tata.svg",
+        "Company_Name": "TATA MOTORS LTD",
         "Name": "TATAMOTORS",
         "Market Cap": "251,738.12",
         "Alpha": "2.63",
@@ -442,6 +520,9 @@
         "g": "5"
     },
     {
+        "Symbol": "HAL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/hindustan-aeronautics-limited.svg",
+        "Company_Name": "HINDUSTAN AERONAUTICS LTD",
         "Name": "HAL",
         "Market Cap": "244,791.71",
         "Alpha": "50.6",
@@ -459,6 +540,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BAJAJFINSV",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bajaj-finserv-mutual-fund.svg",
+        "Company_Name": "BAJAJ FINSERV LTD.",
         "Name": "BAJAJ-AUTO",
         "Market Cap": "242,712.56",
         "Alpha": "24.4",
@@ -476,6 +560,9 @@
         "g": "5"
     },
     {
+        "Symbol": "POWERGRID",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/power-grid.svg",
+        "Company_Name": "POWER GRID CORP. LTD.",
         "Name": "POWERGRID",
         "Market Cap": "241,025.15",
         "Alpha": "15.65",
@@ -493,6 +580,9 @@
         "g": "4"
     },
     {
+        "Symbol": "DMART",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/avenue-supermarts.svg",
+        "Company_Name": "AVENUE SUPERMARTS LTD",
         "Name": "DMART",
         "Market Cap": "240,543.48",
         "Alpha": "-9.22",
@@ -510,6 +600,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ADANIPORTS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/adani.svg",
+        "Company_Name": "ADANI PORT & SEZ LTD",
         "Name": "ADANIPORTS",
         "Market Cap": "240,110.24",
         "Alpha": "8.61",
@@ -527,6 +620,9 @@
         "g": "5"
     },
     {
+        "Symbol": "JSWSTEEL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/jsw.svg",
+        "Company_Name": "JSW STEEL LTD",
         "Name": "JSWSTEEL",
         "Market Cap": "236,625.70",
         "Alpha": "7.1",
@@ -544,6 +640,9 @@
         "g": "3"
     },
     {
+        "Symbol": "COALINDIA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/coal-india.svg",
+        "Company_Name": "COAL INDIA LTD",
         "Name": "COALINDIA",
         "Market Cap": "222,875.07",
         "Alpha": "22.02",
@@ -561,6 +660,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ASTERDM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/aster-dm-healthcare.svg",
+        "Company_Name": "ASTER DM HEALTHCARE LTD.",
         "Name": "ASIANPAINT",
         "Market Cap": "214,407.58",
         "Alpha": "-19.13",
@@ -578,6 +680,9 @@
         "g": "5"
     },
     {
+        "Symbol": "NESTLEIND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/nestle.svg",
+        "Company_Name": "NESTLE INDIA LTD",
         "Name": "NESTLEIND",
         "Market Cap": "209,950.04",
         "Alpha": "1.62",
@@ -595,6 +700,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ZOMATO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/zomato.svg",
+        "Company_Name": "ZOMATO LTD",
         "Name": "ZOMATO",
         "Market Cap": "197,498.42",
         "Alpha": "30",
@@ -612,6 +720,9 @@
         "g": "2"
     },
     {
+        "Symbol": "ADANIPOWER",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/adani-power.svg",
+        "Company_Name": "ADANI POWER LTD",
         "Name": "ADANIPOWER",
         "Market Cap": "192,133.41",
         "Alpha": "47.42",
@@ -629,6 +740,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BEL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bharat-electronics.svg",
+        "Company_Name": "BHARAT ELECTRONICS LTD",
         "Name": "BEL",
         "Market Cap": "191,187.27",
         "Alpha": "39.97",
@@ -646,6 +760,9 @@
         "g": "3"
     },
     {
+        "Symbol": "TRENT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/trent.svg",
+        "Company_Name": "TRENT LTD",
         "Name": "TRENT",
         "Market Cap": "186,872.65",
         "Alpha": "49.38",
@@ -663,6 +780,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SIEMENS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/siemens.svg",
+        "Company_Name": "SIEMENS LTD",
         "Name": "SIEMENS",
         "Market Cap": "181,808.42",
         "Alpha": "19.75",
@@ -680,6 +800,9 @@
         "g": "5"
     },
     {
+        "Symbol": "HINDZINC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/hindustan-zinc.svg",
+        "Company_Name": "HINDUSTAN ZINC LTD",
         "Name": "HINDZINC",
         "Market Cap": "173,998.64",
         "Alpha": "9.18",
@@ -697,6 +820,9 @@
         "g": "5"
     },
     {
+        "Symbol": "VBL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/varun-beverages-ltd.svg",
+        "Company_Name": "VARUN BEVERAGES LTD",
         "Name": "VBL",
         "Market Cap": "173,619.58",
         "Alpha": "44.86",
@@ -714,6 +840,9 @@
         "g": "2"
     },
     {
+        "Symbol": "TATASTEEL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/tata.svg",
+        "Company_Name": "TATA STEEL LTD",
         "Name": "TATASTEEL",
         "Market Cap": "170,088.12",
         "Alpha": "-2.96",
@@ -731,6 +860,9 @@
         "g": "2"
     },
     {
+        "Symbol": "IOC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/indian-oil.svg",
+        "Company_Name": "INDIAN OIL CORP LTD",
         "Name": "IOC",
         "Market Cap": "169,567.83",
         "Alpha": "7.07",
@@ -748,6 +880,9 @@
         "g": "3"
     },
     {
+        "Symbol": "GRASIM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/grasim.svg",
+        "Company_Name": "GRASIM INDUSTRIES LTD",
         "Name": "GRASIM",
         "Market Cap": "168,942.59",
         "Alpha": "3.55",
@@ -765,6 +900,9 @@
         "g": "5"
     },
     {
+        "Symbol": "INDIGO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/interglobe-aviatio.svg",
+        "Company_Name": "INTERGLOBE AVIATION LTD",
         "Name": "INDIGO",
         "Market Cap": "168,667.72",
         "Alpha": "17.23",
@@ -782,6 +920,9 @@
         "g": "5"
     },
     {
+        "Symbol": "DLF",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/dlf.svg",
+        "Company_Name": "DLF LTD",
         "Name": "DLF",
         "Market Cap": "168,482.09",
         "Alpha": "10.74",
@@ -799,6 +940,9 @@
         "g": "4"
     },
     {
+        "Symbol": "LTIM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/larsen-and-toubro.svg",
+        "Company_Name": "LTIMINDTREE LTD",
         "Name": "LTIM",
         "Market Cap": "165,930.11",
         "Alpha": "-8.79",
@@ -816,6 +960,9 @@
         "g": "5"
     },
     {
+        "Symbol": "VEDL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/steel-dynamics.svg",
+        "Company_Name": "VEDANTA LTD",
         "Name": "VEDL",
         "Market Cap": "165,829.89",
         "Alpha": "-0.81",
@@ -833,6 +980,9 @@
         "g": "5"
     },
     {
+        "Symbol": "IRFC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/indian-railway-finance-corporation.svg",
+        "Company_Name": "INDIAN RAILWAY FIN CORP L",
         "Name": "IRFC",
         "Market Cap": "165,408.08",
         "Alpha": "61.66",
@@ -850,6 +1000,9 @@
         "g": "3"
     },
     {
+        "Symbol": "TECHM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/mahindra-tech.svg",
+        "Company_Name": "TECH MAHINDRA LTD",
         "Name": "TECHM",
         "Market Cap": "163,984.33",
         "Alpha": "0.97",
@@ -867,6 +1020,9 @@
         "g": "5"
     },
     {
+        "Symbol": "DIVISLAB",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/divis.svg",
+        "Company_Name": "DIVI S LABORATORIES LTD",
         "Name": "DIVISLAB",
         "Market Cap": "159,559.89",
         "Alpha": "10.3",
@@ -884,6 +1040,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SBILIFE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/sbi-life-insurance.svg",
+        "Company_Name": "SBI LIFE INSURANCE CO LTD",
         "Name": "SBILIFE",
         "Market Cap": "147,357.19",
         "Alpha": "2.76",
@@ -901,6 +1060,9 @@
         "g": "5"
     },
     {
+        "Symbol": "JIOFIN",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/jio-fin-services-ltd.svg",
+        "Company_Name": "JIO FIN SERVICES LTD",
         "Name": "JIOFIN",
         "Market Cap": "144,889.75",
         "Alpha": "-",
@@ -918,6 +1080,9 @@
         "g": "2"
     },
     {
+        "Symbol": "ADANIGREEN",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/adani.svg",
+        "Company_Name": "ADANI GREEN ENERGY LTD",
         "Name": "ADANIGREEN",
         "Market Cap": "144,740.97",
         "Alpha": "-13.93",
@@ -935,6 +1100,9 @@
         "g": "3"
     },
     {
+        "Symbol": "PIDILITIND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/pidilite.svg",
+        "Company_Name": "PIDILITE INDUSTRIES LTD",
         "Name": "PIDILITIND",
         "Market Cap": "143,341.97",
         "Alpha": "-1.89",
@@ -952,6 +1120,9 @@
         "g": "5"
     },
     {
+        "Symbol": "HDFCLIFE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/hdfc-life.svg",
+        "Company_Name": "HDFC LIFE INS CO LTD",
         "Name": "HDFCLIFE",
         "Market Cap": "135,506.48",
         "Alpha": "-0.91",
@@ -969,6 +1140,9 @@
         "g": "3"
     },
     {
+        "Symbol": "BAJFINANCE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bajaj-finance.svg",
+        "Company_Name": "BAJAJ FINANCE LTD",
         "Name": "BAJAJHLDNG",
         "Market Cap": "135,139.81",
         "Alpha": "23.48",
@@ -986,6 +1160,9 @@
         "g": "5"
     },
     {
+        "Symbol": "HINDALCO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/hindalco.svg",
+        "Company_Name": "HINDALCO INDUSTRIES LTD",
         "Name": "HINDALCO",
         "Market Cap": "134,744.50",
         "Alpha": "-1.84",
@@ -1003,6 +1180,9 @@
         "g": "5"
     },
     {
+        "Symbol": "EICHERMOT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/eicher-motors.svg",
+        "Company_Name": "EICHER MOTORS LTD",
         "Name": "EICHERMOT",
         "Market Cap": "132,151.44",
         "Alpha": "13.14",
@@ -1020,6 +1200,9 @@
         "g": "5"
     },
     {
+        "Symbol": "PFC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/power-finance.svg",
+        "Company_Name": "POWER FIN CORP LTD.",
         "Name": "PFC",
         "Market Cap": "126,888.91",
         "Alpha": "39.99",
@@ -1037,6 +1220,9 @@
         "g": "5"
     },
     {
+        "Symbol": "AMBUJACEM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/ambuja-cements.svg",
+        "Company_Name": "AMBUJA CEMENTS LTD",
         "Name": "AMBUJACEM",
         "Market Cap": "123,771.95",
         "Alpha": "9.51",
@@ -1054,6 +1240,9 @@
         "g": "5"
     },
     {
+        "Symbol": "CIPLA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/cipla.svg",
+        "Company_Name": "CIPLA LTD",
         "Name": "CIPLA",
         "Market Cap": "118,892.90",
         "Alpha": "13.51",
@@ -1071,6 +1260,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BRITANNIA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/britannia.svg",
+        "Company_Name": "BRITANNIA INDUSTRIES LTD",
         "Name": "BRITANNIA",
         "Market Cap": "117,753.28",
         "Alpha": "7.8",
@@ -1088,6 +1280,9 @@
         "g": "5"
     },
     {
+        "Symbol": "TVSMOTOR",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/tvs.svg",
+        "Company_Name": "TVS MOTOR COMPANY LTD",
         "Name": "TVSMOTOR",
         "Market Cap": "117,516.18",
         "Alpha": "35.79",
@@ -1105,6 +1300,9 @@
         "g": "5"
     },
     {
+        "Symbol": "LODHA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/macrotech-developers.svg",
+        "Company_Name": "MACROTECH DEVELOPERS LTD",
         "Name": "LODHA",
         "Market Cap": "117,008.78",
         "Alpha": "15.23",
@@ -1122,6 +1320,9 @@
         "g": "5"
     },
     {
+        "Symbol": "CHOLAFIN",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/cholamandalam.svg",
+        "Company_Name": "CHOLAMANDALAM IN & FIN CO",
         "Name": "CHOLAFIN",
         "Market Cap": "116,944.74",
         "Alpha": "17.21",
@@ -1139,6 +1340,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ABB",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/abb.svg",
+        "Company_Name": "ABB INDIA LTD",
         "Name": "ABB",
         "Market Cap": "115,336.43",
         "Alpha": "29.98",
@@ -1156,6 +1360,9 @@
         "g": "5"
     },
     {
+        "Symbol": "TATAPOWER",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/tata.svg",
+        "Company_Name": "TATA POWER CO LTD",
         "Name": "TATAPOWER",
         "Market Cap": "111,149.89",
         "Alpha": "5.86",
@@ -1173,6 +1380,9 @@
         "g": "4"
     },
     {
+        "Symbol": "BPCL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bharat-petroleum.svg",
+        "Company_Name": "BHARAT PETROLEUM CORP LTD",
         "Name": "BPCL",
         "Market Cap": "110,957.28",
         "Alpha": "5.33",
@@ -1190,6 +1400,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BANKINDIA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bank-of-india.svg",
+        "Company_Name": "BANK OF INDIA",
         "Name": "BANKBARODA",
         "Market Cap": "109,012.31",
         "Alpha": "14.01",
@@ -1207,6 +1420,9 @@
         "g": "5"
     },
     {
+        "Symbol": "PNB",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/punjab-natl-bank.svg",
+        "Company_Name": "PUNJAB NATIONAL BANK",
         "Name": "PNB",
         "Market Cap": "108,769.22",
         "Alpha": "22.6",
@@ -1224,6 +1440,9 @@
         "g": "4"
     },
     {
+        "Symbol": "RECLTD",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/rec.svg",
+        "Company_Name": "REC LTD",
         "Name": "RECLTD",
         "Market Cap": "107,870.02",
         "Alpha": "45.28",
@@ -1241,6 +1460,9 @@
         "g": "5"
     },
     {
+        "Symbol": "GODREJCP",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/godrej.svg",
+        "Company_Name": "GODREJ CONSUMER PRODUCTS",
         "Name": "GODREJCP",
         "Market Cap": "107,702.28",
         "Alpha": "5.02",
@@ -1258,6 +1480,9 @@
         "g": "4"
     },
     {
+        "Symbol": "GAIL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/gail.svg",
+        "Company_Name": "GAIL (INDIA) LTD",
         "Name": "GAIL",
         "Market Cap": "106,733.27",
         "Alpha": "14.51",
@@ -1275,6 +1500,9 @@
         "g": "5"
     },
     {
+        "Symbol": "INDHOTEL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/indian-hotels.svg",
+        "Company_Name": "THE INDIAN HOTELS CO. LTD",
         "Name": "INDHOTEL",
         "Market Cap": "104,871.37",
         "Alpha": "35.4",
@@ -1292,6 +1520,9 @@
         "g": "4"
     },
     {
+        "Symbol": "TORNTPHARM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/torrent-pharmaceuticals.svg",
+        "Company_Name": "TORRENT PHARMACEUTICALS L",
         "Name": "TORNTPHARM",
         "Market Cap": "104,046.59",
         "Alpha": "26.26",
@@ -1309,6 +1540,9 @@
         "g": "5"
     },
     {
+        "Symbol": "MANKIND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/mankind-pharma-limited.svg",
+        "Company_Name": "MANKIND PHARMA LTD",
         "Name": "MANKIND",
         "Market Cap": "103,192.08",
         "Alpha": "-",
@@ -1326,6 +1560,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SHRIRAMFIN",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/shriram.svg",
+        "Company_Name": "SHRIRAM FINANCE LTD",
         "Name": "SHRIRAMFIN",
         "Market Cap": "103,162.32",
         "Alpha": "17.92",
@@ -1343,6 +1580,9 @@
         "g": "5"
     },
     {
+        "Symbol": "DRREDDY",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/dr-reddys.svg",
+        "Company_Name": "DR. REDDY S LABORATORIES",
         "Name": "DRREDDY",
         "Market Cap": "101,940.68",
         "Alpha": "9.3",
@@ -1360,6 +1600,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SHREECEM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/shree-cement.svg",
+        "Company_Name": "SHREE CEMENT LTD",
         "Name": "SHREECEM",
         "Market Cap": "101,837.91",
         "Alpha": "-1.89",
@@ -1377,6 +1620,9 @@
         "g": "5"
     },
     {
+        "Symbol": "UNITDSPR",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/united-spirits.svg",
+        "Company_Name": "UNITED SPIRITS LTD",
         "Name": "UNITDSPR",
         "Market Cap": "101,600.00",
         "Alpha": "12.05",
@@ -1394,6 +1640,9 @@
         "g": "4"
     },
     {
+        "Symbol": "TATACONSUM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/tata.svg",
+        "Company_Name": "TATA CONSUMER PRODUCT LTD",
         "Name": "TATACONSUM",
         "Market Cap": "101,205.01",
         "Alpha": "5.34",
@@ -1411,6 +1660,9 @@
         "g": "3"
     },
     {
+        "Symbol": "NAUKRI",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/info-edge.svg",
+        "Company_Name": "INFO EDGE (I) LTD",
         "Name": "NAUKRI",
         "Market Cap": "98,862.22",
         "Alpha": "8.57",
@@ -1428,6 +1680,9 @@
         "g": "5"
     },
     {
+        "Symbol": "MAXHEALTH",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/max-healthcare.svg",
+        "Company_Name": "MAX HEALTHCARE INS LTD",
         "Name": "MAXHEALTH",
         "Market Cap": "97,374.61",
         "Alpha": "32.27",
@@ -1445,6 +1700,9 @@
         "g": "3"
     },
     {
+        "Symbol": "HAVELLS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/havells.svg",
+        "Company_Name": "HAVELLS INDIA LTD",
         "Name": "HAVELLS",
         "Market Cap": "95,455.01",
         "Alpha": "2.21",
@@ -1462,6 +1720,9 @@
         "g": "4"
     },
     {
+        "Symbol": "ZYDUSLIFE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/cadila-healthcare.svg",
+        "Company_Name": "ZYDUS LIFESCIENCES LTD",
         "Name": "ZYDUSLIFE",
         "Market Cap": "94,872.77",
         "Alpha": "27.72",
@@ -1479,6 +1740,9 @@
         "g": "5"
     },
     {
+        "Symbol": "LUPIN",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/lupin.svg",
+        "Company_Name": "LUPIN LTD",
         "Name": "LUPIN",
         "Market Cap": "93,818.26",
         "Alpha": "30.28",
@@ -1496,6 +1760,9 @@
         "g": "5"
     },
     {
+        "Symbol": "MUTHOOTFIN",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/muthoot-finance.svg",
+        "Company_Name": "MUTHOOT FINANCE LTD",
         "Name": "MUTHOOTFIN",
         "Market Cap": "93,051.30",
         "Alpha": "13.88",
@@ -1513,6 +1780,9 @@
         "g": "5"
     },
     {
+        "Symbol": "DABUR",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/dabur.svg",
+        "Company_Name": "DABUR INDIA LTD",
         "Name": "DABUR",
         "Market Cap": "92,133.80",
         "Alpha": "-7.44",
@@ -1530,6 +1800,9 @@
         "g": "3"
     },
     {
+        "Symbol": "INDUSTOWER",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bharti-infratel.svg",
+        "Company_Name": "INDUS TOWERS LTD",
         "Name": "INDUSTOWER",
         "Market Cap": "91,973.64",
         "Alpha": "7.65",
@@ -1547,6 +1820,9 @@
         "g": "5"
     },
     {
+        "Symbol": "APOLLOTYRE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/apollo-tyres.svg",
+        "Company_Name": "APOLLO TYRES LTD",
         "Name": "APOLLOHOSP",
         "Market Cap": "91,622.46",
         "Alpha": "7.95",
@@ -1564,6 +1840,9 @@
         "g": "5"
     },
     {
+        "Symbol": "MOTHERSON",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/motherson.svg",
+        "Company_Name": "SAMVRDHNA MTHRSN INTL LTD",
         "Name": "MOTHERSON",
         "Market Cap": "91,338.15",
         "Alpha": "-0.33",
@@ -1581,6 +1860,9 @@
         "g": "3"
     },
     {
+        "Symbol": "IOB",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/indian-overseas-bank.svg",
+        "Company_Name": "INDIAN OVERSEAS BANK",
         "Name": "IOB",
         "Market Cap": "91,090.72",
         "Alpha": "28.35",
@@ -1598,6 +1880,9 @@
         "g": "2"
     },
     {
+        "Symbol": "ADANIENSOL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/adani-transmiss-in.svg",
+        "Company_Name": "ADANI ENERGY SOLUTION LTD",
         "Name": "ADANIENSOL",
         "Market Cap": "89,375.43",
         "Alpha": "-19.86",
@@ -1615,6 +1900,9 @@
         "g": "4"
     },
     {
+        "Symbol": "MAZDOCK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/mazagon-dock-shipbuilders-limi.svg",
+        "Company_Name": "MAZAGON DOCK SHIPBUIL LTD",
         "Name": "MAZDOCK",
         "Market Cap": "89,207.49",
         "Alpha": "95.6",
@@ -1632,6 +1920,9 @@
         "g": "5"
     },
     {
+        "Symbol": "CGPOWER",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/cg-power-and-industrial-solutions.svg",
+        "Company_Name": "CG POWER AND IND SOL LTD",
         "Name": "CGPOWER",
         "Market Cap": "88,597.98",
         "Alpha": "34.5",
@@ -1649,6 +1940,9 @@
         "g": "3"
     },
     {
+        "Symbol": "DIXON",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/dixon-technologie.svg",
+        "Company_Name": "DIXON TECHNO (INDIA) LTD",
         "Name": "DIXON",
         "Market Cap": "88,369.58",
         "Alpha": "36.99",
@@ -1666,6 +1960,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ICICIGI",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/icici-lombard-gen.svg",
+        "Company_Name": "ICICI LOMBARD GIC LTD",
         "Name": "ICICIGI",
         "Market Cap": "88,027.40",
         "Alpha": "7.45",
@@ -1683,6 +1980,9 @@
         "g": "5"
     },
     {
+        "Symbol": "PERSISTENT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/persistent-systems-ltd.svg",
+        "Company_Name": "PERSISTENT SYSTEMS LTD",
         "Name": "PERSISTENT",
         "Market Cap": "87,301.14",
         "Alpha": "29.5",
@@ -1700,6 +2000,9 @@
         "g": "5"
     },
     {
+        "Symbol": "UNIONBANK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/union-bank-of-india.svg",
+        "Company_Name": "UNION BANK OF INDIA",
         "Name": "UNIONBANK",
         "Market Cap": "86,275.01",
         "Alpha": "26.6",
@@ -1717,6 +2020,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ICICIPRULI",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/icici-prudential-life-insurance.svg",
+        "Company_Name": "ICICI PRU LIFE INS CO LTD",
         "Name": "ICICIPRULI",
         "Market Cap": "85,394.27",
         "Alpha": "-0.79",
@@ -1734,6 +2040,9 @@
         "g": "3"
     },
     {
+        "Symbol": "JINDALSTEL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/jindal.svg",
+        "Company_Name": "JINDAL STEEL & POWER LTD",
         "Name": "JINDALSTEL",
         "Market Cap": "85,040.06",
         "Alpha": "18.9",
@@ -1751,6 +2060,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SRF",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/srf.svg",
+        "Company_Name": "SRF LTD",
         "Name": "SRF",
         "Market Cap": "84,227.63",
         "Alpha": "0.63",
@@ -1768,6 +2080,9 @@
         "g": "5"
     },
     {
+        "Symbol": "POLYCAB",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/polycab.svg",
+        "Company_Name": "POLYCAB INDIA LTD",
         "Name": "POLYCAB",
         "Market Cap": "83,497.62",
         "Alpha": "25.21",
@@ -1785,6 +2100,9 @@
         "g": "5"
     },
     {
+        "Symbol": "MARICO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/marico.svg",
+        "Company_Name": "MARICO LTD",
         "Name": "MARICO",
         "Market Cap": "82,127.76",
         "Alpha": "4.47",
@@ -1802,6 +2120,9 @@
         "g": "4"
     },
     {
+        "Symbol": "SBICARD",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/sbi-cards-and-paymen.svg",
+        "Company_Name": "SBI CARDS & PAY SER LTD",
         "Name": "SBICARD",
         "Market Cap": "81,802.17",
         "Alpha": "-5.95",
@@ -1819,6 +2140,9 @@
         "g": "4"
     },
     {
+        "Symbol": "JSWENERGY",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/jsw-energy.svg",
+        "Company_Name": "JSW ENERGY LTD",
         "Name": "JSWENERGY",
         "Market Cap": "81,612.64",
         "Alpha": "9.54",
@@ -1836,6 +2160,9 @@
         "g": "2"
     },
     {
+        "Symbol": "INDUSINDBK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/indusind-bank.svg",
+        "Company_Name": "INDUSIND BANK LTD",
         "Name": "INDUSINDBK",
         "Market Cap": "81,586.19",
         "Alpha": "-5.99",
@@ -1853,6 +2180,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BOSCHLTD",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bosch.svg",
+        "Company_Name": "BOSCH LTD",
         "Name": "BOSCHLTD",
         "Market Cap": "80,666.29",
         "Alpha": "11.37",
@@ -1870,6 +2200,9 @@
         "g": "5"
     },
     {
+        "Symbol": "CANBK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/canara-bank.svg",
+        "Company_Name": "CANARA BANK",
         "Name": "CANBK",
         "Market Cap": "80,474.82",
         "Alpha": "10.1",
@@ -1887,6 +2220,9 @@
         "g": "4"
     },
     {
+        "Symbol": "HDFCAMC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/hdfc.svg",
+        "Company_Name": "HDFC AMC LTD",
         "Name": "HDFCAMC",
         "Market Cap": "80,287.30",
         "Alpha": "10.45",
@@ -1904,6 +2240,9 @@
         "g": "5"
     },
     {
+        "Symbol": "IDBI",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/idbi-bank.svg",
+        "Company_Name": "IDBI BANK LTD",
         "Name": "IDBI",
         "Market Cap": "79,804.33",
         "Alpha": "12.49",
@@ -1921,6 +2260,9 @@
         "g": "3"
     },
     {
+        "Symbol": "SOLARINDS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/solar-industries.svg",
+        "Company_Name": "SOLAR INDUSTRIES (I) LTD",
         "Name": "SOLARINDS",
         "Market Cap": "79,696.40",
         "Alpha": "44.69",
@@ -1938,6 +2280,9 @@
         "g": "5"
     },
     {
+        "Symbol": "HEROMOTOCO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/hero-motocorp.svg",
+        "Company_Name": "HERO MOTOCORP LTD",
         "Name": "HEROMOTOCO",
         "Market Cap": "79,135.29",
         "Alpha": "6.01",
@@ -1955,6 +2300,9 @@
         "g": "5"
     },
     {
+        "Symbol": "RVNL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/rail-vikas-nigam.svg",
+        "Company_Name": "RAIL VIKAS NIGAM LTD",
         "Name": "RVNL",
         "Market Cap": "79,084.81",
         "Alpha": "86.85",
@@ -1972,6 +2320,9 @@
         "g": "3"
     },
     {
+        "Symbol": "OFSS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/oracle.svg",
+        "Company_Name": "ORACLE FIN SERV SOFT LTD.",
         "Name": "OFSS",
         "Market Cap": "78,172.90",
         "Alpha": "29.4",
@@ -1989,6 +2340,9 @@
         "g": "5"
     },
     {
+        "Symbol": "CUMMINSIND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/cummins.svg",
+        "Company_Name": "CUMMINS INDIA LTD",
         "Name": "CUMMINSIND",
         "Market Cap": "77,652.04",
         "Alpha": "29.92",
@@ -2006,6 +2360,9 @@
         "g": "5"
     },
     {
+        "Symbol": "GMRAIRPORT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/gmr.svg",
+        "Company_Name": "GMR AIRPORTS LTD",
         "Name": "GMRAIRPORT",
         "Market Cap": "76,668.72",
         "Alpha": "12.46",
@@ -2023,6 +2380,9 @@
         "g": "2"
     },
     {
+        "Symbol": "NHPC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/nhpc.svg",
+        "Company_Name": "NHPC LTD",
         "Name": "NHPC",
         "Market Cap": "75,639.11",
         "Alpha": "28.9",
@@ -2040,6 +2400,9 @@
         "g": "2"
     },
     {
+        "Symbol": "POLICYBZR",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/pb-fintech.svg",
+        "Company_Name": "PB FINTECH LTD",
         "Name": "POLICYBZR",
         "Market Cap": "74,820.68",
         "Alpha": "26.57",
@@ -2057,6 +2420,9 @@
         "g": "3"
     },
     {
+        "Symbol": "SUZLON",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/suzlon-energy.svg",
+        "Company_Name": "SUZLON ENERGY LTD",
         "Name": "SUZLON",
         "Market Cap": "72,812.17",
         "Alpha": "59.66",
@@ -2074,6 +2440,9 @@
         "g": "2"
     },
     {
+        "Symbol": "BSE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bse.svg",
+        "Company_Name": "BSE LTD",
         "Name": "BSE",
         "Market Cap": "71,146.37",
         "Alpha": "65.8",
@@ -2091,6 +2460,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BHEL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bharat-heavy-electricals.svg",
+        "Company_Name": "BHEL",
         "Name": "BHEL",
         "Market Cap": "70,275.00",
         "Alpha": "38.75",
@@ -2108,6 +2480,9 @@
         "g": "2"
     },
     {
+        "Symbol": "INDIANB",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/indian-bank.svg",
+        "Company_Name": "INDIAN BANK",
         "Name": "INDIANB",
         "Market Cap": "70,028.66",
         "Alpha": "34.68",
@@ -2125,6 +2500,9 @@
         "g": "5"
     },
     {
+        "Symbol": "AWL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/adani-wilmar-ltd.svg",
+        "Company_Name": "ADANI WILMAR LTD",
         "Name": "AUROPHARMA",
         "Market Cap": "68,531.69",
         "Alpha": "17.46",
@@ -2142,6 +2520,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BHARTIHEXA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bharti-hexacom-limited.svg",
+        "Company_Name": "BHARTI HEXACOM LTD",
         "Name": "BHARTIHEXA",
         "Market Cap": "68,282.50",
         "Alpha": "-",
@@ -2159,6 +2540,9 @@
         "g": "5"
     },
     {
+        "Symbol": "HINDPETRO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/hindustan-petroleum.svg",
+        "Company_Name": "HINDUSTAN PETROLEUM CORP",
         "Name": "HINDPETRO",
         "Market Cap": "68,122.24",
         "Alpha": "12.49",
@@ -2176,6 +2560,9 @@
         "g": "5"
     },
     {
+        "Symbol": "GICRE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/general-insurance.svg",
+        "Company_Name": "GENERAL INS CORP OF INDIA",
         "Name": "GICRE",
         "Market Cap": "67,833.88",
         "Alpha": "36.12",
@@ -2193,6 +2580,9 @@
         "g": "5"
     },
     {
+        "Symbol": "COLPAL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/colgate-palmolive.svg",
+        "Company_Name": "COLGATE PALMOLIVE LTD.",
         "Name": "COLPAL",
         "Market Cap": "67,325.96",
         "Alpha": "16.03",
@@ -2210,6 +2600,9 @@
         "g": "5"
     },
     {
+        "Symbol": "OIL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/oil-india.svg",
+        "Company_Name": "OIL INDIA LTD",
         "Name": "OIL",
         "Market Cap": "67,162.64",
         "Alpha": "37.32",
@@ -2227,6 +2620,9 @@
         "g": "5"
     },
     {
+        "Symbol": "PATANJALI",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/ruchi-soya-industries.svg",
+        "Company_Name": "PATANJALI FOODS LTD",
         "Name": "PATANJALI",
         "Market Cap": "65,910.21",
         "Alpha": "21.34",
@@ -2244,6 +2640,9 @@
         "g": "5"
     },
     {
+        "Symbol": "AUBANK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/au-small-finance-b.svg",
+        "Company_Name": "AU SMALL FINANCE BANK LTD",
         "Name": "ATGL",
         "Market Cap": "65,680.66",
         "Alpha": "-20.96",
@@ -2261,6 +2660,9 @@
         "g": "3"
     },
     {
+        "Symbol": "ASIANPAINT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/asian-paints.svg",
+        "Company_Name": "ASIAN PAINTS LTD",
         "Name": "ASHOKLEY",
         "Market Cap": "63,743.20",
         "Alpha": "12.04",
@@ -2278,6 +2680,9 @@
         "g": "3"
     },
     {
+        "Symbol": "TORNTPOWER",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/torrent-power.svg",
+        "Company_Name": "TORRENT POWER LTD",
         "Name": "TORNTPOWER",
         "Market Cap": "63,275.17",
         "Alpha": "29.82",
@@ -2295,6 +2700,9 @@
         "g": "5"
     },
     {
+        "Symbol": "LLOYDSME",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/lloyds-metals-and-energy-ltd.svg",
+        "Company_Name": "LLOYDS METALS N ENERGY L",
         "Name": "LLOYDSME",
         "Market Cap": "62,321.91",
         "Alpha": "-",
@@ -2312,6 +2720,9 @@
         "g": "5"
     },
     {
+        "Symbol": "IDEA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/vodafone-idea.svg",
+        "Company_Name": "VODAFONE IDEA LTD",
         "Name": "IDEA",
         "Market Cap": "61,683.58",
         "Alpha": "-7.65",
@@ -2329,6 +2740,9 @@
         "g": "1"
     },
     {
+        "Symbol": "GODREJPROP",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/godrej-properties.svg",
+        "Company_Name": "GODREJ PROPERTIES LTD",
         "Name": "GODREJPROP",
         "Market Cap": "61,010.74",
         "Alpha": "-0.87",
@@ -2346,6 +2760,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ABBOTINDIA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/abbott.svg",
+        "Company_Name": "ABBOTT INDIA LTD",
         "Name": "ABBOTINDIA",
         "Market Cap": "60,261.00",
         "Alpha": "17.77",
@@ -2363,6 +2780,9 @@
         "g": "5"
     },
     {
+        "Symbol": "IRCTC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/indian-rail-tour-corp-ltd.svg",
+        "Company_Name": "INDIAN RAIL TOUR CORP LTD",
         "Name": "IRCTC",
         "Market Cap": "59,708.00",
         "Alpha": "-10.63",
@@ -2380,6 +2800,9 @@
         "g": "4"
     },
     {
+        "Symbol": "OBEROIRLTY",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/oberoi-realty.svg",
+        "Company_Name": "OBEROI REALTY LTD",
         "Name": "OBEROIRLTY",
         "Market Cap": "59,218.08",
         "Alpha": "14.58",
@@ -2397,6 +2820,9 @@
         "g": "5"
     },
     {
+        "Symbol": "PHOENIXLTD",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/phoenix-mills.svg",
+        "Company_Name": "THE PHOENIX MILLS LTD",
         "Name": "PHOENIXLTD",
         "Market Cap": "57,207.34",
         "Alpha": "33.51",
@@ -2414,6 +2840,9 @@
         "g": "5"
     },
     {
+        "Symbol": "YESBANK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/yes-bank.svg",
+        "Company_Name": "YES BANK LTD",
         "Name": "YESBANK",
         "Market Cap": "56,968.16",
         "Alpha": "6.81",
@@ -2431,6 +2860,9 @@
         "g": "2"
     },
     {
+        "Symbol": "BERGEPAINT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/berger-paints.svg",
+        "Company_Name": "BERGER PAINTS (I) LTD",
         "Name": "BERGEPAINT",
         "Market Cap": "56,571.96",
         "Alpha": "-14.07",
@@ -2448,6 +2880,9 @@
         "g": "3"
     },
     {
+        "Symbol": "ALKEM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/alkem.svg",
+        "Company_Name": "ALKEM LABORATORIES LTD.",
         "Name": "ALKEM",
         "Market Cap": "56,429.30",
         "Alpha": "10.2",
@@ -2465,6 +2900,9 @@
         "g": "5"
     },
     {
+        "Symbol": "NMDC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/nmdc.svg",
+        "Company_Name": "NMDC LTD.",
         "Name": "NMDC",
         "Market Cap": "55,546.70",
         "Alpha": "15.69",
@@ -2482,6 +2920,9 @@
         "g": "3"
     },
     {
+        "Symbol": "COROMANDEL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/coromandel-international.svg",
+        "Company_Name": "COROMANDEL INTERNTL. LTD",
         "Name": "COROMANDEL",
         "Market Cap": "54,541.90",
         "Alpha": "23.88",
@@ -2499,6 +2940,9 @@
         "g": "5"
     },
     {
+        "Symbol": "UNOMINDA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/minda-industries.svg",
+        "Company_Name": "UNO MINDA LTD",
         "Name": "UNOMINDA",
         "Market Cap": "54,364.70",
         "Alpha": "19.25",
@@ -2516,6 +2960,9 @@
         "g": "4"
     },
     {
+        "Symbol": "KALYANKJIL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/kalyan-jewellers-ind-ltd.svg",
+        "Company_Name": "KALYAN JEWELLERS IND LTD",
         "Name": "KALYANKJIL",
         "Market Cap": "54,299.92",
         "Alpha": "73.36",
@@ -2533,6 +2980,9 @@
         "g": "3"
     },
     {
+        "Symbol": "UBL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/united-breweries.svg",
+        "Company_Name": "UNITED BREWERIES LTD",
         "Name": "UBL",
         "Market Cap": "53,680.86",
         "Alpha": "3.9",
@@ -2550,6 +3000,9 @@
         "g": "5"
     },
     {
+        "Symbol": "PRESTIGE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/prestige-estates-projects.svg",
+        "Company_Name": "PRESTIGE ESTATE LTD",
         "Name": "PRESTIGE",
         "Market Cap": "53,320.10",
         "Alpha": "30.65",
@@ -2567,6 +3020,9 @@
         "g": "2"
     },
     {
+        "Symbol": "LTTS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/l-and-t-technology-services.svg",
+        "Company_Name": "L&T TECHNOLOGY SER. LTD.",
         "Name": "LTTS",
         "Market Cap": "53,189.75",
         "Alpha": "-3.71",
@@ -2584,6 +3040,9 @@
         "g": "5"
     },
     {
+        "Symbol": "COFORGE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/coforge-ltd.svg",
+        "Company_Name": "COFORGE LTD",
         "Name": "COFORGE",
         "Market Cap": "52,665.57",
         "Alpha": "16.05",
@@ -2601,6 +3060,9 @@
         "g": "5"
     },
     {
+        "Symbol": "TIINDIA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/tube-investments-of-india.svg",
+        "Company_Name": "TUBE INVEST OF INDIA LTD",
         "Name": "TIINDIA",
         "Market Cap": "52,496.04",
         "Alpha": "15.63",
@@ -2618,6 +3080,9 @@
         "g": "5"
     },
     {
+        "Symbol": "FACT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/fertilizers-and-chem.svg",
+        "Company_Name": "FACT LTD",
         "Name": "FACT",
         "Market Cap": "52,150.77",
         "Alpha": "73.96",
@@ -2635,6 +3100,9 @@
         "g": "2"
     },
     {
+        "Symbol": "BHARATFORG",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bharat-forge.svg",
+        "Company_Name": "BHARAT FORGE LTD",
         "Name": "BHARATFORG",
         "Market Cap": "51,451.90",
         "Alpha": "7.99",
@@ -2652,6 +3120,9 @@
         "g": "4"
     },
     {
+        "Symbol": "BANDHANBNK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bandhan-bank.svg",
+        "Company_Name": "BANDHAN BANK LTD",
         "Name": "BALKRISIND",
         "Market Cap": "50,868.52",
         "Alpha": "3.49",
@@ -2669,6 +3140,9 @@
         "g": "5"
     },
     {
+        "Symbol": "JSL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/jindal-stainless.svg",
+        "Company_Name": "JINDAL STAINLESS LTD",
         "Name": "JSL",
         "Market Cap": "50,126.58",
         "Alpha": "34.75",
@@ -2686,6 +3160,9 @@
         "g": "5"
     },
     {
+        "Symbol": "JSWINFRA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/jsw.svg",
+        "Company_Name": "JSW INFRASTRUCTURE LTD",
         "Name": "JSWINFRA",
         "Market Cap": "49,862.45",
         "Alpha": "-",
@@ -2703,6 +3180,9 @@
         "g": "3"
     },
     {
+        "Symbol": "POWERINDIA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/abb-power-products.svg",
+        "Company_Name": "HITACHI ENERGY INDIA LTD",
         "Name": "POWERINDIA",
         "Market Cap": "49,820.51",
         "Alpha": "48.93",
@@ -2720,6 +3200,9 @@
         "g": "5"
     },
     {
+        "Symbol": "UPL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/upl.svg",
+        "Company_Name": "UPL LTD",
         "Name": "UPL",
         "Market Cap": "49,739.02",
         "Alpha": "-10.09",
@@ -2737,6 +3220,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SUNDARMFIN",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/sundaram-finance.svg",
+        "Company_Name": "SUNDARAM FINANCE LTD",
         "Name": "SUNDARMFIN",
         "Market Cap": "49,566.71",
         "Alpha": "20.62",
@@ -2754,6 +3240,9 @@
         "g": "5"
     },
     {
+        "Symbol": "MPHASIS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/mphasis.svg",
+        "Company_Name": "MPHASIS LTD",
         "Name": "MPHASIS",
         "Market Cap": "49,347.37",
         "Alpha": "-11.9",
@@ -2771,6 +3260,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SUPREMEIND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/supreme-industries.svg",
+        "Company_Name": "SUPREME INDUSTRIES LTD",
         "Name": "SUPREMEIND",
         "Market Cap": "49,257.84",
         "Alpha": "21.51",
@@ -2788,6 +3280,9 @@
         "g": "5"
     },
     {
+        "Symbol": "PIIND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/pi-industries.svg",
+        "Company_Name": "PI INDUSTRIES LTD",
         "Name": "PIIND",
         "Market Cap": "48,949.32",
         "Alpha": "0.07",
@@ -2805,6 +3300,9 @@
         "g": "5"
     },
     {
+        "Symbol": "NYKAA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/fsn-e-commerce-ventures.svg",
+        "Company_Name": "FSN E COMMERCE VENTURES",
         "Name": "NYKAA",
         "Market Cap": "48,721.25",
         "Alpha": "-11.66",
@@ -2822,6 +3320,9 @@
         "g": "2"
     },
     {
+        "Symbol": "LINDEINDIA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/linde.svg",
+        "Company_Name": "LINDE INDIA LTD",
         "Name": "LINDEINDIA",
         "Market Cap": "48,553.59",
         "Alpha": "23.65",
@@ -2839,6 +3340,9 @@
         "g": "5"
     },
     {
+        "Symbol": "PAYTM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/one-97-communications.svg",
+        "Company_Name": "ONE 97 COMMUNICATIONS LTD",
         "Name": "PAYTM",
         "Market Cap": "48,169.40",
         "Alpha": "9.9",
@@ -2856,6 +3360,9 @@
         "g": "1"
     },
     {
+        "Symbol": "UCOBANK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/uco-bank.svg",
+        "Company_Name": "UCO BANK",
         "Name": "UCOBANK",
         "Market Cap": "48,062.95",
         "Alpha": "40.35",
@@ -2873,6 +3380,9 @@
         "g": "2"
     },
     {
+        "Symbol": "IREDA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/indian-renewable-energy.svg",
+        "Company_Name": "INDIAN RENEWABLE ENERGY",
         "Name": "IREDA",
         "Market Cap": "47,589.56",
         "Alpha": "-",
@@ -2890,6 +3400,9 @@
         "g": "3"
     },
     {
+        "Symbol": "SCHAEFFLER",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/schaeffler.svg",
+        "Company_Name": "SCHAEFFLER INDIA LTD",
         "Name": "SCHAEFFLER",
         "Market Cap": "47,221.68",
         "Alpha": "13.61",
@@ -2907,6 +3420,9 @@
         "g": "5"
     },
     {
+        "Symbol": "MRF",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/mrf.svg",
+        "Company_Name": "MRF LTD",
         "Name": "MRF",
         "Market Cap": "46,553.75",
         "Alpha": "12.39",
@@ -2924,6 +3440,9 @@
         "g": "5"
     },
     {
+        "Symbol": "PAGEIND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/page-industries.svg",
+        "Company_Name": "PAGE INDUSTRIES LTD",
         "Name": "PAGEIND",
         "Market Cap": "46,490.74",
         "Alpha": "-2.74",
@@ -2941,6 +3460,9 @@
         "g": "5"
     },
     {
+        "Symbol": "FORTIS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/fortis-healthcare.svg",
+        "Company_Name": "FORTIS HEALTHCARE LTD",
         "Name": "FORTIS",
         "Market Cap": "46,188.34",
         "Alpha": "24.24",
@@ -2958,6 +3480,9 @@
         "g": "4"
     },
     {
+        "Symbol": "BAYERCROP",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bayer.svg",
+        "Company_Name": "BAYER CROPSCIENCE LTD",
         "Name": "BANKINDIA",
         "Market Cap": "46,027.47",
         "Alpha": "14.78",
@@ -2975,6 +3500,9 @@
         "g": "5"
     },
     {
+        "Symbol": "PGHH",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/procter-and-gamble.svg",
+        "Company_Name": "P&G HYGIENE & HEALTH CARE",
         "Name": "PGHH",
         "Market Cap": "45,184.05",
         "Alpha": "-7.35",
@@ -2992,6 +3520,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SAIL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/steel-authority-of-india.svg",
+        "Company_Name": "STEEL AUTHORITY OF INDIA",
         "Name": "SAIL",
         "Market Cap": "45,159.03",
         "Alpha": "-3.41",
@@ -3009,6 +3540,9 @@
         "g": "2"
     },
     {
+        "Symbol": "IDFCFIRSTB",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/idfc-first-bank.svg",
+        "Company_Name": "IDFC FIRST BANK LTD",
         "Name": "IDFCFIRSTB",
         "Market Cap": "45,018.16",
         "Alpha": "3.04",
@@ -3026,6 +3560,9 @@
         "g": "2"
     },
     {
+        "Symbol": "FEDERALBNK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/fed-bank.svg",
+        "Company_Name": "FEDERAL BANK LTD",
         "Name": "FEDERALBNK",
         "Market Cap": "44,638.55",
         "Alpha": "13.38",
@@ -3043,6 +3580,9 @@
         "g": "4"
     },
     {
+        "Symbol": "PETRONET",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/petronet-lng.svg",
+        "Company_Name": "PETRONET LNG LTD",
         "Name": "PETRONET",
         "Market Cap": "44,557.50",
         "Alpha": "11.06",
@@ -3060,6 +3600,9 @@
         "g": "5"
     },
     {
+        "Symbol": "JUBLFOOD",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/jubilant-foodworks.svg",
+        "Company_Name": "JUBILANT FOODWORKS LTD",
         "Name": "JUBLFOOD",
         "Market Cap": "43,539.52",
         "Alpha": "-0.62",
@@ -3077,6 +3620,9 @@
         "g": "2"
     },
     {
+        "Symbol": "TATACOMM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/tata.svg",
+        "Company_Name": "TATA COMMUNICATIONS LTD",
         "Name": "TATACOMM",
         "Market Cap": "43,411.20",
         "Alpha": "-0.66",
@@ -3094,6 +3640,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BIOCON",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/biocon.svg",
+        "Company_Name": "BIOCON LIMITED.",
         "Name": "BIOCON",
         "Market Cap": "43,041.39",
         "Alpha": "-7.5",
@@ -3111,6 +3660,9 @@
         "g": "2"
     },
     {
+        "Symbol": "BDL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bharat-dynamics-limited.svg",
+        "Company_Name": "BHARAT DYNAMICS LTD",
         "Name": "BDL",
         "Market Cap": "42,766.85",
         "Alpha": "53.68",
@@ -3128,6 +3680,9 @@
         "g": "4"
     },
     {
+        "Symbol": "CONCOR",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/container.svg",
+        "Company_Name": "CONTAINER CORP OF IND LTD",
         "Name": "CONCOR",
         "Market Cap": "42,318.54",
         "Alpha": "-0.22",
@@ -3145,6 +3700,9 @@
         "g": "5"
     },
     {
+        "Symbol": "CENTRALBK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/central-bank-of-india.svg",
+        "Company_Name": "CENTRAL BANK OF INDIA",
         "Name": "CENTRALBK",
         "Market Cap": "42,258.81",
         "Alpha": "25.99",
@@ -3162,6 +3720,9 @@
         "g": "3"
     },
     {
+        "Symbol": "ABCAPITAL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/aditya-birla-capital.svg",
+        "Company_Name": "ADITYA BIRLA CAPITAL LTD.",
         "Name": "ABCAPITAL",
         "Market Cap": "41,512.23",
         "Alpha": "2.46",
@@ -3179,6 +3740,9 @@
         "g": "3"
     },
     {
+        "Symbol": "FLUOROCHEM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/gujarat-fluorochem-ltd.svg",
+        "Company_Name": "GUJARAT FLUOROCHEM LTD",
         "Name": "FLUOROCHEM",
         "Market Cap": "41,439.26",
         "Alpha": "8.66",
@@ -3196,6 +3760,9 @@
         "g": "5"
     },
     {
+        "Symbol": "VOLTAS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/voltas.svg",
+        "Company_Name": "VOLTAS LTD",
         "Name": "VOLTAS",
         "Market Cap": "41,312.61",
         "Alpha": "-6.61",
@@ -3213,6 +3780,9 @@
         "g": "4"
     },
     {
+        "Symbol": "AUROPHARMA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/aurobindo.svg",
+        "Company_Name": "AUROBINDO PHARMA LTD",
         "Name": "AUBANK",
         "Market Cap": "41,168.49",
         "Alpha": "-7.95",
@@ -3230,6 +3800,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BLUESTARCO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/blue-star.svg",
+        "Company_Name": "BLUE STAR LTD",
         "Name": "BLUESTARCO",
         "Market Cap": "41,016.04",
         "Alpha": "41.46",
@@ -3247,6 +3820,9 @@
         "g": "5"
     },
     {
+        "Symbol": "GLENMARK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/glenmark.svg",
+        "Company_Name": "GLENMARK PHARMACEUTICALS",
         "Name": "GLENMARK",
         "Market Cap": "39,822.39",
         "Alpha": "32.13",
@@ -3264,6 +3840,9 @@
         "g": "5"
     },
     {
+        "Symbol": "GVT&D",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/ge-t-and-d-india-ltd.svg",
+        "Company_Name": "GE VERNOVA T&D INDIA LTD",
         "Name": "GVT&D",
         "Market Cap": "39,738.42",
         "Alpha": "94.55",
@@ -3281,6 +3860,9 @@
         "g": "5"
     },
     {
+        "Symbol": "MOTILALOFS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/motilal.svg",
+        "Company_Name": "MOTILAL OSWAL FIN LTD",
         "Name": "MOTILALOFS",
         "Market Cap": "38,731.38",
         "Alpha": "34.94",
@@ -3298,6 +3880,9 @@
         "g": "5"
     },
     {
+        "Symbol": "HUDCO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/housing-urban-dev.svg",
+        "Company_Name": "HSG & URBAN DEV CORPN LTD",
         "Name": "HUDCO",
         "Market Cap": "38,548.59",
         "Alpha": "56.79",
@@ -3315,6 +3900,9 @@
         "g": "4"
     },
     {
+        "Symbol": "TATAELXSI",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/tata.svg",
+        "Company_Name": "TATA ELXSI LTD",
         "Name": "TATAELXSI",
         "Market Cap": "38,206.94",
         "Alpha": "-9.62",
@@ -3332,6 +3920,9 @@
         "g": "5"
     },
     {
+        "Symbol": "APOLLOHOSP",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/apollo-hospitals.svg",
+        "Company_Name": "APOLLO HOSPITALS ENTER. L",
         "Name": "APLAPOLLO",
         "Market Cap": "38,137.43",
         "Alpha": "12.7",
@@ -3349,6 +3940,9 @@
         "g": "5"
     },
     {
+        "Symbol": "IPCALAB",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/ipca.svg",
+        "Company_Name": "IPCA LABORATORIES LTD",
         "Name": "IPCALAB",
         "Market Cap": "37,824.76",
         "Alpha": "14.92",
@@ -3366,6 +3960,9 @@
         "g": "5"
     },
     {
+        "Symbol": "MAHABANK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bank-of-maharashtra.svg",
+        "Company_Name": "BANK OF MAHARASHTRA",
         "Name": "MAHABANK",
         "Market Cap": "37,796.30",
         "Alpha": "26.22",
@@ -3383,6 +3980,9 @@
         "g": "3"
     },
     {
+        "Symbol": "360ONE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/iifl.svg",
+        "Company_Name": "360 ONE WAM LTD",
         "Name": "360ONE",
         "Market Cap": "37,423.26",
         "Alpha": "23.58",
@@ -3400,6 +4000,9 @@
         "g": "5"
     },
     {
+        "Symbol": "CRISIL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/crisil.svg",
+        "Company_Name": "CRISIL LTD",
         "Name": "CRISIL",
         "Market Cap": "37,272.18",
         "Alpha": "15.88",
@@ -3417,6 +4020,9 @@
         "g": "5"
     },
     {
+        "Symbol": "MFSL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/max-financial.svg",
+        "Company_Name": "MAX FINANCIAL SERV LTD",
         "Name": "MFSL",
         "Market Cap": "37,267.22",
         "Alpha": "6.43",
@@ -3434,6 +4040,9 @@
         "g": "3"
     },
     {
+        "Symbol": "JKCEMENT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/jk-cements.svg",
+        "Company_Name": "JK CEMENT LTD",
         "Name": "JKCEMENT",
         "Market Cap": "37,057.47",
         "Alpha": "7.48",
@@ -3451,6 +4060,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ATGL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/adani.svg",
+        "Company_Name": "ADANI TOTAL GAS LTD",
         "Name": "ASTRAL",
         "Market Cap": "36,821.76",
         "Alpha": "-4.92",
@@ -3468,6 +4080,9 @@
         "g": "4"
     },
     {
+        "Symbol": "KPITTECH",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/kpit-technologies.svg",
+        "Company_Name": "KPIT TECHNOLOGIES LTD",
         "Name": "KPITTECH",
         "Market Cap": "36,404.43",
         "Alpha": "23.79",
@@ -3485,6 +4100,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SJVN",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/sjvn.svg",
+        "Company_Name": "SJVN LTD",
         "Name": "SJVN",
         "Market Cap": "36,378.11",
         "Alpha": "34.8",
@@ -3502,6 +4120,9 @@
         "g": "3"
     },
     {
+        "Symbol": "ACC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/acc.svg",
+        "Company_Name": "ACC LTD",
         "Name": "ACC",
         "Market Cap": "35,945.30",
         "Alpha": "-10.69",
@@ -3519,6 +4140,9 @@
         "g": "5"
     },
     {
+        "Symbol": "THERMAX",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/thermax.svg",
+        "Company_Name": "THERMAX LTD",
         "Name": "THERMAX",
         "Market Cap": "35,791.08",
         "Alpha": "18.98",
@@ -3536,6 +4160,9 @@
         "g": "5"
     },
     {
+        "Symbol": "NATIONALUM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/national-aluminum.svg",
+        "Company_Name": "NATIONAL ALUMINIUM CO LTD",
         "Name": "NATIONALUM",
         "Market Cap": "35,164.15",
         "Alpha": "11.95",
@@ -3553,6 +4180,9 @@
         "g": "5"
     },
     {
+        "Symbol": "LTF",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/l-and-t-finance.svg",
+        "Company_Name": "L&T FINANCE LTD",
         "Name": "LTF",
         "Market Cap": "35,010.48",
         "Alpha": "12.66",
@@ -3570,6 +4200,9 @@
         "g": "3"
     },
     {
+        "Symbol": "NAM_INDIA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/nippon-life-india-asset.svg",
+        "Company_Name": "NIPPON L I A M LTD",
         "Name": "NAM-INDIA",
         "Market Cap": "34,931.55",
         "Alpha": "14.14",
@@ -3587,6 +4220,9 @@
         "g": "4"
     },
     {
+        "Symbol": "M&MFIN",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/mahindra-finance.svg",
+        "Company_Name": "M&M FIN. SERVICES LTD",
         "Name": "M&MFIN",
         "Market Cap": "34,896.31",
         "Alpha": "11.74",
@@ -3604,6 +4240,9 @@
         "g": "5"
     },
     {
+        "Symbol": "COCHINSHIP",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/cochin-shipyard-limited.svg",
+        "Company_Name": "COCHIN SHIPYARD LTD",
         "Name": "COCHINSHIP",
         "Market Cap": "34,193.92",
         "Alpha": "72.49",
@@ -3621,6 +4260,9 @@
         "g": "5"
     },
     {
+        "Symbol": "GLAXO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/glaxosmithkline.svg",
+        "Company_Name": "GLAXOSMITHKLINE PHARMA LTD",
         "Name": "GLAXO",
         "Market Cap": "33,860.88",
         "Alpha": "9.71",
@@ -3638,6 +4280,9 @@
         "g": "5"
     },
     {
+        "Symbol": "DALBHARAT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/dalmia-bharat.svg",
+        "Company_Name": "DALMIA BHARAT LTD",
         "Name": "DALBHARAT",
         "Market Cap": "33,731.72",
         "Alpha": "-7.36",
@@ -3655,6 +4300,9 @@
         "g": "4"
     },
     {
+        "Symbol": "ESCORTS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/escorts.svg",
+        "Company_Name": "ESCORTS KUBOTA LTD",
         "Name": "ESCORTS",
         "Market Cap": "33,243.63",
         "Alpha": "12.63",
@@ -3672,6 +4320,9 @@
         "g": "5"
     },
     {
+        "Symbol": "AIAENG",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/aia-engineering.svg",
+        "Company_Name": "AIA ENGINEERING LTD",
         "Name": "AIAENG",
         "Market Cap": "32,858.57",
         "Alpha": "20.61",
@@ -3689,6 +4340,9 @@
         "g": "5"
     },
     {
+        "Symbol": "KEI",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/kei-industries.svg",
+        "Company_Name": "KEI INDUSTRIES LTD.",
         "Name": "KEI",
         "Market Cap": "32,526.10",
         "Alpha": "35.78",
@@ -3706,6 +4360,9 @@
         "g": "5"
     },
     {
+        "Symbol": "LAURUSLABS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/laurus-labs.svg",
+        "Company_Name": "LAURUS LABS LTD",
         "Name": "LAURUSLABS",
         "Market Cap": "32,409.07",
         "Alpha": "-1.85",
@@ -3723,6 +4380,9 @@
         "g": "3"
     },
     {
+        "Symbol": "SONACOMS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/sona-blw-precision.svg",
+        "Company_Name": "SONA BLW PRECISION FRGS L",
         "Name": "SONACOMS",
         "Market Cap": "32,108.62",
         "Alpha": "-11.41",
@@ -3740,6 +4400,9 @@
         "g": "3"
     },
     {
+        "Symbol": "AXISBANK",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/axis-bank.svg",
+        "Company_Name": "AXIS BANK LTD",
         "Name": "AWL",
         "Market Cap": "31,738.15",
         "Alpha": "-11.06",
@@ -3757,6 +4420,9 @@
         "g": "4"
     },
     {
+        "Symbol": "METROBRAND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/metro-brands-ltd.svg",
+        "Company_Name": "METRO BRANDS LTD",
         "Name": "METROBRAND",
         "Market Cap": "31,227.30",
         "Alpha": "21.86",
@@ -3774,6 +4440,9 @@
         "g": "4"
     },
     {
+        "Symbol": "EXIDEIND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/exide.svg",
+        "Company_Name": "EXIDE INDUSTRIES LTD",
         "Name": "EXIDEIND",
         "Market Cap": "31,190.75",
         "Alpha": "22.56",
@@ -3791,6 +4460,9 @@
         "g": "3"
     },
     {
+        "Symbol": "HONAUT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/honeywell.svg",
+        "Company_Name": "HONEYWELL AUTOMATION IND",
         "Name": "HONAUT",
         "Market Cap": "31,190.24",
         "Alpha": "-7.18",
@@ -3808,6 +4480,9 @@
         "g": "5"
     },
     {
+        "Symbol": "AJANTPHARM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/ajanta-pharma.svg",
+        "Company_Name": "AJANTA PHARMA LTD",
         "Name": "AJANTPHARM",
         "Market Cap": "31,173.06",
         "Alpha": "23.59",
@@ -3825,6 +4500,9 @@
         "g": "5"
     },
     {
+        "Symbol": "3MINDIA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/3m.svg",
+        "Company_Name": "3M INDIA LTD",
         "Name": "3MINDIA",
         "Market Cap": "30,637.05",
         "Alpha": "7.52",
@@ -3842,6 +4520,9 @@
         "g": "5"
     },
     {
+        "Symbol": "DEEPAKNTR",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/deepak-nitrite.svg",
+        "Company_Name": "DEEPAK NITRITE LTD",
         "Name": "DEEPAKNTR",
         "Market Cap": "30,528.17",
         "Alpha": "-3.32",
@@ -3859,6 +4540,9 @@
         "g": "5"
     },
     {
+        "Symbol": "LICHSGFIN",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/lic-housing.svg",
+        "Company_Name": "LIC HOUSING FINANCE LTD",
         "Name": "LICHSGFIN",
         "Market Cap": "30,322.22",
         "Alpha": "4.01",
@@ -3876,6 +4560,9 @@
         "g": "5"
     },
     {
+        "Symbol": "MEDANTA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/global-health-limited.svg",
+        "Company_Name": "GLOBAL HEALTH LTD",
         "Name": "MEDANTA",
         "Market Cap": "30,306.06",
         "Alpha": "43.08",
@@ -3893,6 +4580,9 @@
         "g": "5"
     },
     {
+        "Symbol": "TATATECH",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/tata.svg",
+        "Company_Name": "TATA TECHNOLOGIES LTD",
         "Name": "TATATECH",
         "Market Cap": "29,934.28",
         "Alpha": "-",
@@ -3910,6 +4600,9 @@
         "g": "4"
     },
     {
+        "Symbol": "KPRMILL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/kpr-mill.svg",
+        "Company_Name": "KPR MILL LTD.",
         "Name": "KPRMILL",
         "Market Cap": "29,917.27",
         "Alpha": "10.2",
@@ -3927,6 +4620,9 @@
         "g": "5"
     },
     {
+        "Symbol": "IRB",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/irb-infrastructure-trust.svg",
+        "Company_Name": "IRB INFRA DEV LTD.",
         "Name": "IRB",
         "Market Cap": "29,874.93",
         "Alpha": "12.45",
@@ -3944,6 +4640,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ABFRL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/aditya-birla-fash.svg",
+        "Company_Name": "ADITYA BIRLA FASHION & RT",
         "Name": "ABFRL",
         "Market Cap": "29,395.52",
         "Alpha": "-9.08",
@@ -3961,6 +4660,9 @@
         "g": "1"
     },
     {
+        "Symbol": "MCX",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/multi-commodity-ex.svg",
+        "Company_Name": "MULTI COMMODITY EXCHANGE",
         "Name": "MCX",
         "Market Cap": "28,561.06",
         "Alpha": "42.13",
@@ -3978,6 +4680,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SUVENPHAR",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/suven-pharmaceuticals-ltd.svg",
+        "Company_Name": "SUVEN PHARMACEUTICALS LTD",
         "Name": "SUVENPHAR",
         "Market Cap": "28,512.55",
         "Alpha": "22.33",
@@ -3995,6 +4700,9 @@
         "g": "4"
     },
     {
+        "Symbol": "RADICO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/radico-khaitan.svg",
+        "Company_Name": "RADICO KHAITAN LTD",
         "Name": "RADICO",
         "Market Cap": "28,435.78",
         "Alpha": "22.1",
@@ -4012,6 +4720,9 @@
         "g": "5"
     },
     {
+        "Symbol": "CHOLAHLDNG",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/cholamandalam-fin.svg",
+        "Company_Name": "CHOLAMANDALAM FIN HOL LTD",
         "Name": "CHOLAHLDNG",
         "Market Cap": "28,394.77",
         "Alpha": "24.83",
@@ -4029,6 +4740,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SYNGENE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/syngene.svg",
+        "Company_Name": "SYNGENE INTERNATIONAL LTD",
         "Name": "SYNGENE",
         "Market Cap": "28,187.38",
         "Alpha": "3.34",
@@ -4046,6 +4760,9 @@
         "g": "4"
     },
     {
+        "Symbol": "NLCINDIA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/nlc-india.svg",
+        "Company_Name": "NLC INDIA LTD",
         "Name": "NLCINDIA",
         "Market Cap": "27,853.37",
         "Alpha": "32.68",
@@ -4063,6 +4780,9 @@
         "g": "5"
     },
     {
+        "Symbol": "GODREJIND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/godrej-industries.svg",
+        "Company_Name": "GODREJ INDUSTRIES LTD",
         "Name": "GODREJIND",
         "Market Cap": "27,778.68",
         "Alpha": "11.11",
@@ -4080,6 +4800,9 @@
         "g": "5"
     },
     {
+        "Symbol": "GUJGASLTD",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/gujarat-gas.svg",
+        "Company_Name": "GUJARAT GAS LTD",
         "Name": "GUJGASLTD",
         "Market Cap": "27,731.80",
         "Alpha": "-19.58",
@@ -4097,6 +4820,9 @@
         "g": "4"
     },
     {
+        "Symbol": "GODIGIT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/go-digit-general-insurance-lim.svg",
+        "Company_Name": "GO DIGIT GENERAL INS LTD",
         "Name": "GODIGIT",
         "Market Cap": "27,409.11",
         "Alpha": "-",
@@ -4114,6 +4840,9 @@
         "g": "3"
     },
     {
+        "Symbol": "ITI",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/indian-tel-ind-iti.svg",
+        "Company_Name": "ITI LIMITED",
         "Name": "ITI",
         "Market Cap": "27,322.82",
         "Alpha": "37.1",
@@ -4131,6 +4860,9 @@
         "g": "1"
     },
     {
+        "Symbol": "APLAPOLLO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/apl-apollo-tubes.svg",
+        "Company_Name": "APL APOLLO TUBES LTD",
         "Name": "APARINDS",
         "Market Cap": "27,099.15",
         "Alpha": "81.55",
@@ -4148,6 +4880,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ISEC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/icici-securities-l.svg",
+        "Company_Name": "ICICI SECURITIES LTD",
         "Name": "ISEC",
         "Market Cap": "27,033.18",
         "Alpha": "-0.77",
@@ -4165,6 +4900,9 @@
         "g": "5"
     },
     {
+        "Symbol": "TATAINVEST",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/tata.svg",
+        "Company_Name": "TATA INVESTMENT CORP LTD",
         "Name": "TATAINVEST",
         "Market Cap": "27,007.52",
         "Alpha": "47.62",
@@ -4182,6 +4920,9 @@
         "g": "4"
     },
     {
+        "Symbol": "NH",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/narayana-hrudayalaya.svg",
+        "Company_Name": "NARAYANA HRUDAYALAYA LTD.",
         "Name": "NH",
         "Market Cap": "26,991.97",
         "Alpha": "22.79",
@@ -4199,6 +4940,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ENDURANCE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/endurance-technologies.svg",
+        "Company_Name": "ENDURANCE TECHNO. LTD.",
         "Name": "ENDURANCE",
         "Market Cap": "26,922.87",
         "Alpha": "7.9",
@@ -4216,6 +4960,9 @@
         "g": "5"
     },
     {
+        "Symbol": "IGL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/indraprastha-gas.svg",
+        "Company_Name": "INDRAPRASTHA GAS LTD",
         "Name": "IGL",
         "Market Cap": "26,741.43",
         "Alpha": "-3.22",
@@ -4233,6 +4980,9 @@
         "g": "3"
     },
     {
+        "Symbol": "NIACL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/the-new-india-assu.svg",
+        "Company_Name": "THE NEW INDIA ASSU CO LTD",
         "Name": "NIACL",
         "Market Cap": "26,723.97",
         "Alpha": "6.94",
@@ -4250,6 +5000,9 @@
         "g": "3"
     },
     {
+        "Symbol": "ASHOKLEY",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/ashok-leyland.svg",
+        "Company_Name": "ASHOK LEYLAND LTD",
         "Name": "APOLLOTYRE",
         "Market Cap": "26,718.70",
         "Alpha": "15.08",
@@ -4267,6 +5020,9 @@
         "g": "5"
     },
     {
+        "Symbol": "KAYNES",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/kaynes-technology-india-limite.svg",
+        "Company_Name": "KAYNES TECHNOLOGY IND LTD",
         "Name": "KAYNES",
         "Market Cap": "26,488.62",
         "Alpha": "78.35",
@@ -4284,6 +5040,9 @@
         "g": "5"
     },
     {
+        "Symbol": "PPLPHARMA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/piramal-pharma-limited.svg",
+        "Company_Name": "PIRAMAL PHARMA LTD",
         "Name": "PPLPHARMA",
         "Market Cap": "26,482.37",
         "Alpha": "8.93",
@@ -4301,6 +5060,9 @@
         "g": "2"
     },
     {
+        "Symbol": "JBCHEPHARM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/jbchemicals-and-pharmaceutical.svg",
+        "Company_Name": "J B CHEMICALS AND PHARMA",
         "Name": "JBCHEPHARM",
         "Market Cap": "26,199.44",
         "Alpha": "23.56",
@@ -4318,6 +5080,9 @@
         "g": "5"
     },
     {
+        "Symbol": "GILLETTE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/gillette-india.svg",
+        "Company_Name": "GILLETTE INDIA LTD",
         "Name": "GILLETTE",
         "Market Cap": "25,923.82",
         "Alpha": "13.3",
@@ -4335,6 +5100,9 @@
         "g": "5"
     },
     {
+        "Symbol": "GODFRYPHLP",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/godfrey-phillips.svg",
+        "Company_Name": "GODFREY PHILLIPS INDIA LTD",
         "Name": "GODFRYPHLP",
         "Market Cap": "25,909.14",
         "Alpha": "52.21",
@@ -4352,6 +5120,9 @@
         "g": "5"
     },
     {
+        "Symbol": "AEGISLOG",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/aegis-logistics.svg",
+        "Company_Name": "AEGIS LOGISTICS LTD",
         "Name": "AEGISLOG",
         "Market Cap": "25,859.93",
         "Alpha": "43.1",
@@ -4369,6 +5140,9 @@
         "g": "4"
     },
     {
+        "Symbol": "CDSL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/central-depository.svg",
+        "Company_Name": "CENTRAL DEPO SER (I) LTD",
         "Name": "CDSL",
         "Market Cap": "25,644.30",
         "Alpha": "10.37",
@@ -4386,6 +5160,9 @@
         "g": "5"
     },
     {
+        "Symbol": "BRIGADE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/brigade-enterprise.svg",
+        "Company_Name": "BRIGADE ENTER. LTD",
         "Name": "BRIGADE",
         "Market Cap": "25,077.72",
         "Alpha": "16.84",
@@ -4403,6 +5180,9 @@
         "g": "5"
     },
     {
+        "Symbol": "FSL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/firstsource-solutions.svg",
+        "Company_Name": "FIRSTSOURCE SOLU. LTD.",
         "Name": "FSL",
         "Market Cap": "24,938.65",
         "Alpha": "29.59",
@@ -4420,6 +5200,9 @@
         "g": "3"
     },
     {
+        "Symbol": "GLAND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/gland-pharma.svg",
+        "Company_Name": "GLAND PHARMA LTD",
         "Name": "GLAND",
         "Market Cap": "24,319.83",
         "Alpha": "-22",
@@ -4437,6 +5220,9 @@
         "g": "5"
     },
     {
+        "Symbol": "JYOTICNC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/jyoti-cnc-automation-ltd--big.svg",
+        "Company_Name": "JYOTI CNC AUTOMATION LTD",
         "Name": "JYOTICNC",
         "Market Cap": "24,225.11",
         "Alpha": "-",
@@ -4454,6 +5240,9 @@
         "g": "4"
     },
     {
+        "Symbol": "SUMICHEM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/sumitomo-chemical.svg",
+        "Company_Name": "SUMITOMO CHEM INDIA LTD",
         "Name": "SUMICHEM",
         "Market Cap": "24,143.68",
         "Alpha": "6.22",
@@ -4471,6 +5260,9 @@
         "g": "3"
     },
     {
+        "Symbol": "KIMS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/krishna-institute-of-medical-s.svg",
+        "Company_Name": "KRISHNA INST OF MED SCI L",
         "Name": "KIMS",
         "Market Cap": "23,672.22",
         "Alpha": "26.31",
@@ -4488,6 +5280,9 @@
         "g": "3"
     },
     {
+        "Symbol": "SUNTV",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/sun-tv.svg",
+        "Company_Name": "SUN TV NETWORK LTD",
         "Name": "SUNTV",
         "Market Cap": "23,562.32",
         "Alpha": "1.3",
@@ -4505,6 +5300,9 @@
         "g": "5"
     },
     {
+        "Symbol": "EMAMILTD",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/emami.svg",
+        "Company_Name": "EMAMI LTD",
         "Name": "EMAMILTD",
         "Market Cap": "23,555.72",
         "Alpha": "1.33",
@@ -4522,6 +5320,9 @@
         "g": "5"
     },
     {
+        "Symbol": "STARHEALTH",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/star-health-and-al-ins-co-l.svg",
+        "Company_Name": "STAR HEALTH & AL INS CO L",
         "Name": "STARHEALTH",
         "Market Cap": "23,339.68",
         "Alpha": "-20.98",
@@ -4539,6 +5340,9 @@
         "g": "4"
     },
     {
+        "Symbol": "ABREL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/century-text.svg",
+        "Company_Name": "ADITYA BIRLA REAL EST LTD",
         "Name": "ABREL",
         "Market Cap": "23,207.90",
         "Alpha": "24.62",
@@ -4556,6 +5360,9 @@
         "g": "1"
     },
     {
+        "Symbol": "NBCC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/nbcc-india.svg",
+        "Company_Name": "NBCC (INDIA) LTD",
         "Name": "NBCC",
         "Market Cap": "23,152.50",
         "Alpha": "33.15",
@@ -4573,6 +5380,9 @@
         "g": "2"
     },
     {
+        "Symbol": "POONAWALLA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/poonawalla-fincorp.svg",
+        "Company_Name": "POONAWALLA FINCORP LTD",
         "Name": "POONAWALLA",
         "Market Cap": "23,087.40",
         "Alpha": "0.91",
@@ -4590,6 +5400,9 @@
         "g": "2"
     },
     {
+        "Symbol": "INOXWIND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/inox-wind.svg",
+        "Company_Name": "INOX WIND LTD",
         "Name": "INOXWIND",
         "Market Cap": "22,972.85",
         "Alpha": "58.13",
@@ -4607,6 +5420,9 @@
         "g": "2"
     },
     {
+        "Symbol": "MSUMI",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/motherson-sumi-wiring-india-li.svg",
+        "Company_Name": "MOTHERSON SUMI WRNG IND L",
         "Name": "MSUMI",
         "Market Cap": "22,715.65",
         "Alpha": "-1.52",
@@ -4624,6 +5440,9 @@
         "g": "2"
     },
     {
+        "Symbol": "BANKBARODA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/bank-of-baroda.svg",
+        "Company_Name": "BANK OF BARODA",
         "Name": "BANDHANBNK",
         "Market Cap": "22,600.32",
         "Alpha": "-31.63",
@@ -4641,6 +5460,9 @@
         "g": "3"
     },
     {
+        "Symbol": "POLYMED",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/poly-medicure.svg",
+        "Company_Name": "POLY MEDICURE LTD",
         "Name": "POLYMED",
         "Market Cap": "22,518.63",
         "Alpha": "38.27",
@@ -4658,6 +5480,9 @@
         "g": "5"
     },
     {
+        "Symbol": "TATACHEM",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/tata.svg",
+        "Company_Name": "TATA CHEMICALS LTD",
         "Name": "TATACHEM",
         "Market Cap": "22,119.21",
         "Alpha": "-5.01",
@@ -4675,6 +5500,9 @@
         "g": "1"
     },
     {
+        "Symbol": "CONCORDBIO",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/concord-biotech-ltd--big.svg",
+        "Company_Name": "CONCORD BIOTECH LTD",
         "Name": "CONCORDBIO",
         "Market Cap": "22,091.80",
         "Alpha": "-",
@@ -4692,6 +5520,9 @@
         "g": "5"
     },
     {
+        "Symbol": "CROMPTON",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/crompton-greaves-consumer-elec.svg",
+        "Company_Name": "CROMPT GREA CON ELEC LTD",
         "Name": "CROMPTON",
         "Market Cap": "22,032.31",
         "Alpha": "-5.65",
@@ -4709,6 +5540,9 @@
         "g": "3"
     },
     {
+        "Symbol": "LALPATHLAB",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/dr-lal-pathlabs.svg",
+        "Company_Name": "DR. LAL PATH LABS LTD.",
         "Name": "LALPATHLAB",
         "Market Cap": "21,866.86",
         "Alpha": "-4.28",
@@ -4726,6 +5560,9 @@
         "g": "5"
     },
     {
+        "Symbol": "AFFLE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/affle.svg",
+        "Company_Name": "AFFLE (INDIA) LTD",
         "Name": "AFFLE",
         "Market Cap": "21,846.94",
         "Alpha": "2.06",
@@ -4743,6 +5580,9 @@
         "g": "5"
     },
     {
+        "Symbol": "HINDCOPPER",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/hindustan-copper.svg",
+        "Company_Name": "HINDUSTAN COPPER LTD",
         "Name": "HINDCOPPER",
         "Market Cap": "21,844.11",
         "Alpha": "16.15",
@@ -4760,6 +5600,9 @@
         "g": "2"
     },
     {
+        "Symbol": "MANYAVAR",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/vedant-fashions-ltd.svg",
+        "Company_Name": "VEDANT FASHIONS LTD",
         "Name": "MANYAVAR",
         "Market Cap": "21,705.11",
         "Alpha": "-3.37",
@@ -4777,6 +5620,9 @@
         "g": "3"
     },
     {
+        "Symbol": "HSCL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/himadri-speciality.svg",
+        "Company_Name": "HIMADRI SPECIALITY CHEM L",
         "Name": "HSCL",
         "Market Cap": "21,680.01",
         "Alpha": "65.79",
@@ -4794,6 +5640,9 @@
         "g": "3"
     },
     {
+        "Symbol": "PEL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/piramal.svg",
+        "Company_Name": "PIRAMAL ENTERPRISES LTD",
         "Name": "PEL",
         "Market Cap": "21,658.76",
         "Alpha": "-15.56",
@@ -4811,6 +5660,9 @@
         "g": "3"
     },
     {
+        "Symbol": "ASTRAL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/astral-poly-techni.svg",
+        "Company_Name": "ASTRAL LTD",
         "Name": "ASTERDM",
         "Market Cap": "21,454.29",
         "Alpha": "36.7",
@@ -4828,6 +5680,9 @@
         "g": "3"
     },
     {
+        "Symbol": "CHAMBLFERT",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/chambal-fertilisers-and-chemical.svg",
+        "Company_Name": "CHAMBAL FERTILIZERS LTD",
         "Name": "CHAMBLFERT",
         "Market Cap": "21,444.91",
         "Alpha": "5.8",
@@ -4845,6 +5700,9 @@
         "g": "5"
     },
     {
+        "Symbol": "FIVESTAR",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/five-star-business-finance-ltd.svg",
+        "Company_Name": "FIVE-STAR BUS FIN LTD",
         "Name": "FIVESTAR",
         "Market Cap": "21,250.42",
         "Alpha": "22.46",
@@ -4862,6 +5720,9 @@
         "g": "5"
     },
     {
+        "Symbol": "DELHIVERY",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/delhivery-limited--big.svg",
+        "Company_Name": "DELHIVERY LTD",
         "Name": "DELHIVERY",
         "Market Cap": "20,977.25",
         "Alpha": "-27.22",
@@ -4879,6 +5740,9 @@
         "g": "2"
     },
     {
+        "Symbol": "EIHOTEL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/eih.svg",
+        "Company_Name": "EIH LTD",
         "Name": "EIHOTEL",
         "Market Cap": "20,962.21",
         "Alpha": "24.61",
@@ -4896,6 +5760,9 @@
         "g": "4"
     },
     {
+        "Symbol": "PNBHOUSING",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/pnb-housing-finance.svg",
+        "Company_Name": "PNB HOUSING FIN LTD.",
         "Name": "PNBHOUSING",
         "Market Cap": "20,948.22",
         "Alpha": "23.25",
@@ -4913,6 +5780,9 @@
         "g": "5"
     },
     {
+        "Symbol": "APARINDS",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/apar-industries.svg",
+        "Company_Name": "APAR INDUSTRIES LTD.",
         "Name": "ANGELONE",
         "Market Cap": "20,876.44",
         "Alpha": "14.72",
@@ -4930,6 +5800,9 @@
         "g": "5"
     },
     {
+        "Symbol": "WELCORP",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/welspun.svg",
+        "Company_Name": "WELSPUN CORP LTD",
         "Name": "WELCORP",
         "Market Cap": "20,803.99",
         "Alpha": "51.58",
@@ -4947,6 +5820,9 @@
         "g": "5"
     },
     {
+        "Symbol": "AMBER",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/amber-enterprises-india.svg",
+        "Company_Name": "AMBER ENTERPRISES (I) LTD",
         "Name": "AMBER",
         "Market Cap": "20,780.15",
         "Alpha": "24.5",
@@ -4964,6 +5840,9 @@
         "g": "5"
     },
     {
+        "Symbol": "PTCIL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/ptc-industries-ltd--big.svg",
+        "Company_Name": "PTC INDUSTRIES LTD",
         "Name": "PTCIL",
         "Market Cap": "20,759.31",
         "Alpha": "-",
@@ -4981,6 +5860,9 @@
         "g": "5"
     },
     {
+        "Symbol": "KEC",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/kec-international--big.svg",
+        "Company_Name": "KEC INTL. LTD",
         "Name": "KEC",
         "Market Cap": "20,663.78",
         "Alpha": "17.82",
@@ -4998,6 +5880,9 @@
         "g": "4"
     },
     {
+        "Symbol": "SUNDRMFAST",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/sundram-fasteners.svg",
+        "Company_Name": "SUNDRAM FASTENERS LTD",
         "Name": "SUNDRMFAST",
         "Market Cap": "20,629.35",
         "Alpha": "-0.11",
@@ -5015,6 +5900,9 @@
         "g": "5"
     },
     {
+        "Symbol": "ZFCVINDIA",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/wabco.svg",
+        "Company_Name": "ZF COM VE CTR SYS IND LTD",
         "Name": "ZFCVINDIA",
         "Market Cap": "20,587.04",
         "Alpha": "15.01",
@@ -5032,6 +5920,9 @@
         "g": "5"
     },
     {
+        "Symbol": "SHYAMMETL",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/shyam-metalics-and-energy.svg",
+        "Company_Name": "SHYAM METALICS AND ENGY L",
         "Name": "SHYAMMETL",
         "Market Cap": "20,569.29",
         "Alpha": "23.2",
@@ -5049,6 +5940,9 @@
         "g": "5"
     },
     {
+        "Symbol": "CASTROLIND",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/castrol-india.svg",
+        "Company_Name": "CASTROL INDIA LTD",
         "Name": "CASTROLIND",
         "Market Cap": "20,457.03",
         "Alpha": "16.87",
@@ -5066,6 +5960,9 @@
         "g": "3"
     },
     {
+        "Symbol": "ANGELONE",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/angel-broking.svg",
+        "Company_Name": "ANGEL ONE LTD",
         "Name": "ANANTRAJ",
         "Market Cap": "20,431.39",
         "Alpha": "69.07",
@@ -5083,6 +5980,9 @@
         "g": "4"
     },
     {
+        "Symbol": "NAVINFLUOR",
+        "Logo_URL": "https://s3-symbol-logo.tradingview.com/navin-fluorine-international-l.svg",
+        "Company_Name": "NAVIN FLUORINE INT. LTD",
         "Name": "NAVINFLUOR",
         "Market Cap": "20,373.85",
         "Alpha": "-1.75",
@@ -5098,3405 +5998,5 @@
         "e": "5",
         "f": "4",
         "g": "5"
-    },
-    {
-        "Name": "RAMCOCEM",
-        "Market Cap": "20,363.68",
-        "Alpha": "-5.39",
-        "Beta": "0.84",
-        "5Y CAGR": "1.74",
-        "D/E": "0.68",
-        "EPS (Q)": "7.62",
-        "SCORE": "17",
-        "Capability": "R",
-        "b": "2",
-        "c": "1",
-        "d": "4",
-        "e": "1",
-        "f": "4",
-        "g": "5"
-    },
-    {
-        "Name": "MRPL",
-        "Market Cap": "20,246.02",
-        "Alpha": "40.81",
-        "Beta": "1.2",
-        "5Y CAGR": "22.2",
-        "D/E": "0.96",
-        "EPS (Q)": "1.76",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "4",
-        "g": "3"
-    },
-    {
-        "Name": "EMCURE",
-        "Market Cap": "20,164.07",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.75",
-        "EPS (Q)": "8.12",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "4",
-        "g": "5"
-    },
-    {
-        "Name": "TIMKEN",
-        "Market Cap": "20,006.68",
-        "Alpha": "8.07",
-        "Beta": "0.9",
-        "5Y CAGR": "21.19",
-        "D/E": "0.01",
-        "EPS (Q)": "9.88",
-        "SCORE": "26",
-        "Capability": "S",
-        "b": "2",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "NUVAMA",
-        "Market Cap": "19,747.32",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "2.33",
-        "EPS (Q)": "70.41",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "2",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "2",
-        "g": "5"
-    },
-    {
-        "Name": "BAYERCROP",
-        "Market Cap": "19,635.42",
-        "Alpha": "-4.49",
-        "Beta": "0.71",
-        "5Y CAGR": "0.08",
-        "D/E": "0.02",
-        "EPS (Q)": "7.61",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "2",
-        "c": "1",
-        "d": "4",
-        "e": "1",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "ZENSARTECH",
-        "Market Cap": "19,631.82",
-        "Alpha": "24.82",
-        "Beta": "1.35",
-        "5Y CAGR": "41.63",
-        "D/E": "0.05",
-        "EPS (Q)": "7.04",
-        "SCORE": "25",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "CARBORUNIV",
-        "Market Cap": "19,568.10",
-        "Alpha": "3.61",
-        "Beta": "1.12",
-        "5Y CAGR": "24.66",
-        "D/E": "0.05",
-        "EPS (Q)": "6.09",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "2",
-        "c": "4",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "DEVYANI",
-        "Market Cap": "19,373.84",
-        "Alpha": "-7.6",
-        "Beta": "1.18",
-        "5Y CAGR": "-",
-        "D/E": "2.15",
-        "EPS (Q)": "0",
-        "SCORE": "14",
-        "Capability": "HR",
-        "b": "2",
-        "c": "1",
-        "d": "3",
-        "e": "5",
-        "f": "2",
-        "g": "1"
-    },
-    {
-        "Name": "REDINGTON",
-        "Market Cap": "19,118.29",
-        "Alpha": "11.23",
-        "Beta": "1",
-        "5Y CAGR": "32.49",
-        "D/E": "0.38",
-        "EPS (Q)": "5.12",
-        "SCORE": "26",
-        "Capability": "S",
-        "b": "2",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "PFIZER",
-        "Market Cap": "19,072.46",
-        "Alpha": "-3.29",
-        "Beta": "0.49",
-        "5Y CAGR": "-1.9",
-        "D/E": "0.01",
-        "EPS (Q)": "27.89",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "2",
-        "c": "1",
-        "d": "5",
-        "e": "1",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "ABSLAMC",
-        "Market Cap": "18,995.88",
-        "Alpha": "6.57",
-        "Beta": "1.02",
-        "5Y CAGR": "-",
-        "D/E": "0.02",
-        "EPS (Q)": "7.78",
-        "SCORE": "25",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "KANSAINER",
-        "Market Cap": "18,974.20",
-        "Alpha": "-16.61",
-        "Beta": "0.94",
-        "5Y CAGR": "-6.84",
-        "D/E": "0.05",
-        "EPS (Q)": "8.42",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "2",
-        "c": "1",
-        "d": "4",
-        "e": "1",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "ASTRAZEN",
-        "Market Cap": "18,487.63",
-        "Alpha": "32.06",
-        "Beta": "0.43",
-        "5Y CAGR": "21.55",
-        "D/E": "0.01",
-        "EPS (Q)": "12.34",
-        "SCORE": "27",
-        "Capability": "S",
-        "b": "2",
-        "c": "5",
-        "d": "5",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "BASF",
-        "Market Cap": "18,384.06",
-        "Alpha": "17.4",
-        "Beta": "0.57",
-        "5Y CAGR": "37.06",
-        "D/E": "0.05",
-        "EPS (Q)": "23.9",
-        "SCORE": "26",
-        "Capability": "S",
-        "b": "2",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "GRINDWELL",
-        "Market Cap": "18,282.64",
-        "Alpha": "-2.4",
-        "Beta": "0.98",
-        "5Y CAGR": "21.47",
-        "D/E": "0.04",
-        "EPS (Q)": "7.84",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "2",
-        "c": "2",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "SKFINDIA",
-        "Market Cap": "18,174.63",
-        "Alpha": "-3.5",
-        "Beta": "0.7",
-        "5Y CAGR": "12.56",
-        "D/E": "0",
-        "EPS (Q)": "22.1",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "2",
-        "c": "1",
-        "d": "4",
-        "e": "3",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "KARURVYSYA",
-        "Market Cap": "18,127.05",
-        "Alpha": "43.06",
-        "Beta": "1.92",
-        "5Y CAGR": "35.39",
-        "D/E": "0",
-        "EPS (Q)": "6.16",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "TRITURBINE",
-        "Market Cap": "18,001.37",
-        "Alpha": "36.83",
-        "Beta": "1.39",
-        "5Y CAGR": "43.5",
-        "D/E": "0",
-        "EPS (Q)": "2.92",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "ARE&M",
-        "Market Cap": "17,994.14",
-        "Alpha": "9.85",
-        "Beta": "1.15",
-        "5Y CAGR": "5.18",
-        "D/E": "0.02",
-        "EPS (Q)": "16.3",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "3",
-        "e": "2",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "RATNAMANI",
-        "Market Cap": "17,797.76",
-        "Alpha": "17.52",
-        "Beta": "0.92",
-        "5Y CAGR": "23.96",
-        "D/E": "0.05",
-        "EPS (Q)": "19",
-        "SCORE": "26",
-        "Capability": "S",
-        "b": "2",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "NATCOPHARM",
-        "Market Cap": "17,464.11",
-        "Alpha": "2.94",
-        "Beta": "0.71",
-        "5Y CAGR": "7.67",
-        "D/E": "0.06",
-        "EPS (Q)": "7.43",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "2",
-        "c": "3",
-        "d": "4",
-        "e": "2",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "ERIS",
-        "Market Cap": "17,222.40",
-        "Alpha": "18.82",
-        "Beta": "0.71",
-        "5Y CAGR": "19.23",
-        "D/E": "0.86",
-        "EPS (Q)": "6.15",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "4",
-        "e": "4",
-        "f": "4",
-        "g": "5"
-    },
-    {
-        "Name": "KFINTECH",
-        "Market Cap": "17,198.14",
-        "Alpha": "49.84",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.04",
-        "EPS (Q)": "5.25",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "CENTURYPLY",
-        "Market Cap": "17,186.19",
-        "Alpha": "0.25",
-        "Beta": "1.19",
-        "5Y CAGR": "36.99",
-        "D/E": "0.35",
-        "EPS (Q)": "2.63",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "2",
-        "c": "3",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "SIGNATURE",
-        "Market Cap": "17,178.13",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "3.07",
-        "EPS (Q)": "2.07",
-        "SCORE": "17",
-        "Capability": "R",
-        "b": "2",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "1",
-        "g": "3"
-    },
-    {
-        "Name": "BATAINDIA",
-        "Market Cap": "17,141.72",
-        "Alpha": "-20.05",
-        "Beta": "1.01",
-        "5Y CAGR": "-5.96",
-        "D/E": "0.89",
-        "EPS (Q)": "4.57",
-        "SCORE": "15",
-        "Capability": "HR",
-        "b": "2",
-        "c": "1",
-        "d": "3",
-        "e": "1",
-        "f": "4",
-        "g": "4"
-    },
-    {
-        "Name": "TBOTEK",
-        "Market Cap": "17,056.09",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.39",
-        "EPS (Q)": "4.7",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "VINATIORGA",
-        "Market Cap": "17,054.55",
-        "Alpha": "-9.74",
-        "Beta": "0.59",
-        "5Y CAGR": "10.54",
-        "D/E": "0",
-        "EPS (Q)": "9.04",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "2",
-        "c": "1",
-        "d": "4",
-        "e": "3",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "AADHARHFC",
-        "Market Cap": "16,936.17",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "3.14",
-        "EPS (Q)": "5.56",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "2",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "1",
-        "g": "5"
-    },
-    {
-        "Name": "CAMS",
-        "Market Cap": "16,848.28",
-        "Alpha": "9.54",
-        "Beta": "0.7",
-        "5Y CAGR": "-",
-        "D/E": "0.11",
-        "EPS (Q)": "25.45",
-        "SCORE": "26",
-        "Capability": "S",
-        "b": "2",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "KPIL",
-        "Market Cap": "16,774.13",
-        "Alpha": "27.17",
-        "Beta": "1.29",
-        "5Y CAGR": "20.13",
-        "D/E": "0.78",
-        "EPS (Q)": "8.67",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "4",
-        "g": "5"
-    },
-    {
-        "Name": "CESC",
-        "Market Cap": "16,691.58",
-        "Alpha": "9.82",
-        "Beta": "1.5",
-        "5Y CAGR": "11.61",
-        "D/E": "1.21",
-        "EPS (Q)": "1.99",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "2",
-        "c": "5",
-        "d": "3",
-        "e": "3",
-        "f": "3",
-        "g": "3"
-    },
-    {
-        "Name": "CREDITACC",
-        "Market Cap": "16,688.93",
-        "Alpha": "11.71",
-        "Beta": "1.69",
-        "5Y CAGR": "4.28",
-        "D/E": "3.32",
-        "EPS (Q)": "-6.24",
-        "SCORE": "12",
-        "Capability": "HR",
-        "b": "2",
-        "c": "5",
-        "d": "2",
-        "e": "1",
-        "f": "1",
-        "g": "1"
-    },
-    {
-        "Name": "ELGIEQUIP",
-        "Market Cap": "16,651.18",
-        "Alpha": "11.42",
-        "Beta": "1.18",
-        "5Y CAGR": "35.15",
-        "D/E": "0.4",
-        "EPS (Q)": "2.55",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "GSPL",
-        "Market Cap": "16,590.64",
-        "Alpha": "1.02",
-        "Beta": "0.93",
-        "5Y CAGR": "4.33",
-        "D/E": "0.01",
-        "EPS (Q)": "4.15",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "2",
-        "c": "3",
-        "d": "4",
-        "e": "1",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "ATUL",
-        "Market Cap": "16,460.00",
-        "Alpha": "-21.36",
-        "Beta": "0.96",
-        "5Y CAGR": "2.43",
-        "D/E": "0.05",
-        "EPS (Q)": "36.93",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "2",
-        "c": "1",
-        "d": "4",
-        "e": "1",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "MANAPPURAM",
-        "Market Cap": "16,425.91",
-        "Alpha": "9.79",
-        "Beta": "1.61",
-        "5Y CAGR": "3.41",
-        "D/E": "2.96",
-        "EPS (Q)": "3.29",
-        "SCORE": "16",
-        "Capability": "HR",
-        "b": "2",
-        "c": "5",
-        "d": "2",
-        "e": "1",
-        "f": "2",
-        "g": "4"
-    },
-    {
-        "Name": "BLS",
-        "Market Cap": "16,260.25",
-        "Alpha": "67.06",
-        "Beta": "1.6",
-        "5Y CAGR": "86.42",
-        "D/E": "0.02",
-        "EPS (Q)": "2.93",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "APLLTD",
-        "Market Cap": "16,231.20",
-        "Alpha": "5.37",
-        "Beta": "0.75",
-        "5Y CAGR": "5.26",
-        "D/E": "0.11",
-        "EPS (Q)": "7.01",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "4",
-        "e": "2",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "CIEINDIA",
-        "Market Cap": "16,193.08",
-        "Alpha": "22.69",
-        "Beta": "1.3",
-        "5Y CAGR": "20.25",
-        "D/E": "0.14",
-        "EPS (Q)": "5.14",
-        "SCORE": "25",
-        "Capability": "M",
-        "b": "2",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "GRSE",
-        "Market Cap": "16,156.41",
-        "Alpha": "64.3",
-        "Beta": "0.75",
-        "5Y CAGR": "52.16",
-        "D/E": "0.04",
-        "EPS (Q)": "8.57",
-        "SCORE": "26",
-        "Capability": "S",
-        "b": "2",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "CYIENT",
-        "Market Cap": "15,955.59",
-        "Alpha": "14.28",
-        "Beta": "1.49",
-        "5Y CAGR": "26",
-        "D/E": "0.17",
-        "EPS (Q)": "11.11",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "SCHNEIDER",
-        "Market Cap": "15,888.46",
-        "Alpha": "55.73",
-        "Beta": "1.08",
-        "5Y CAGR": "46.21",
-        "D/E": "0.8",
-        "EPS (Q)": "4.62",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "4",
-        "g": "4"
-    },
-    {
-        "Name": "IRCON",
-        "Market Cap": "15,738.59",
-        "Alpha": "46.54",
-        "Beta": "0.93",
-        "5Y CAGR": "25.95",
-        "D/E": "0.44",
-        "EPS (Q)": "0.92",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "2"
-    },
-    {
-        "Name": "AARTIIND",
-        "Market Cap": "15,677.17",
-        "Alpha": "-27.98",
-        "Beta": "1.36",
-        "5Y CAGR": "-2.29",
-        "D/E": "0.61",
-        "EPS (Q)": "1.27",
-        "SCORE": "13",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "1",
-        "f": "4",
-        "g": "3"
-    },
-    {
-        "Name": "JINDALSAW",
-        "Market Cap": "15,629.53",
-        "Alpha": "55.4",
-        "Beta": "1.17",
-        "5Y CAGR": "43.09",
-        "D/E": "0.61",
-        "EPS (Q)": "7.96",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "4",
-        "g": "5"
-    },
-    {
-        "Name": "ASAHIINDIA",
-        "Market Cap": "15,591.79",
-        "Alpha": "3.15",
-        "Beta": "0.98",
-        "5Y CAGR": "19.56",
-        "D/E": "0.84",
-        "EPS (Q)": "4.34",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "4",
-        "d": "4",
-        "e": "4",
-        "f": "4",
-        "g": "4"
-    },
-    {
-        "Name": "DOMS",
-        "Market Cap": "15,380.27",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.2",
-        "EPS (Q)": "8.94",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "APTUS",
-        "Market Cap": "15,364.29",
-        "Alpha": "-9.98",
-        "Beta": "0.99",
-        "5Y CAGR": "-",
-        "D/E": "1.38",
-        "EPS (Q)": "3.82",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "4",
-        "e": "5",
-        "f": "3",
-        "g": "4"
-    },
-    {
-        "Name": "CAPLIPOINT",
-        "Market Cap": "15,332.70",
-        "Alpha": "28.47",
-        "Beta": "0.66",
-        "5Y CAGR": "43",
-        "D/E": "0",
-        "EPS (Q)": "18.28",
-        "SCORE": "25",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "FINCABLES",
-        "Market Cap": "15,271.76",
-        "Alpha": "18.97",
-        "Beta": "1.26",
-        "5Y CAGR": "21.12",
-        "D/E": "0",
-        "EPS (Q)": "9.63",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "JUBLPHARMA",
-        "Market Cap": "15,212.42",
-        "Alpha": "22.69",
-        "Beta": "1.91",
-        "5Y CAGR": "12.63",
-        "D/E": "0.68",
-        "EPS (Q)": "6.37",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "3",
-        "f": "4",
-        "g": "5"
-    },
-    {
-        "Name": "SWANENERGY",
-        "Market Cap": "15,125.86",
-        "Alpha": "39.75",
-        "Beta": "0.46",
-        "5Y CAGR": "29.28",
-        "D/E": "0.43",
-        "EPS (Q)": "2.28",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "5",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "IEX",
-        "Market Cap": "15,081.50",
-        "Alpha": "-12.86",
-        "Beta": "1.16",
-        "5Y CAGR": "21.88",
-        "D/E": "0.01",
-        "EPS (Q)": "1.21",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "ANANDRATHI",
-        "Market Cap": "15,038.57",
-        "Alpha": "63.91",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.08",
-        "EPS (Q)": "18.58",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "BIKAJI",
-        "Market Cap": "14,956.58",
-        "Alpha": "24.56",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.14",
-        "EPS (Q)": "1.14",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "VGUARD",
-        "Market Cap": "14,941.55",
-        "Alpha": "11.59",
-        "Beta": "0.62",
-        "5Y CAGR": "11.08",
-        "D/E": "0.22",
-        "EPS (Q)": "1.38",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "3",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "JBMA",
-        "Market Cap": "14,906.23",
-        "Alpha": "30.78",
-        "Beta": "0.84",
-        "5Y CAGR": "68.05",
-        "D/E": "1.78",
-        "EPS (Q)": "2.23",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "3",
-        "g": "3"
-    },
-    {
-        "Name": "KAJARIACER",
-        "Market Cap": "14,808.34",
-        "Alpha": "-14.8",
-        "Beta": "1.09",
-        "5Y CAGR": "11.28",
-        "D/E": "0.09",
-        "EPS (Q)": "4.88",
-        "SCORE": "17",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "3",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "CHALET",
-        "Market Cap": "14,739.19",
-        "Alpha": "29.87",
-        "Beta": "0.94",
-        "5Y CAGR": "13.96",
-        "D/E": "1.37",
-        "EPS (Q)": "4.42",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "3",
-        "f": "3",
-        "g": "4"
-    },
-    {
-        "Name": "ACE",
-        "Market Cap": "14,585.89",
-        "Alpha": "54.1",
-        "Beta": "1.81",
-        "5Y CAGR": "73",
-        "D/E": "0",
-        "EPS (Q)": "9.38",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "PCBL",
-        "Market Cap": "14,541.75",
-        "Alpha": "42.06",
-        "Beta": "1.51",
-        "5Y CAGR": "43.64",
-        "D/E": "1.53",
-        "EPS (Q)": "2.47",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "3",
-        "g": "3"
-    },
-    {
-        "Name": "ECLERX",
-        "Market Cap": "14,479.57",
-        "Alpha": "20.77",
-        "Beta": "1.18",
-        "5Y CAGR": "49.18",
-        "D/E": "0.12",
-        "EPS (Q)": "29.16",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "TEJASNET",
-        "Market Cap": "14,456.60",
-        "Alpha": "19.36",
-        "Beta": "1.55",
-        "5Y CAGR": "63.25",
-        "D/E": "0.6",
-        "EPS (Q)": "9.44",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "4",
-        "g": "5"
-    },
-    {
-        "Name": "INDGN",
-        "Market Cap": "14,396.91",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.34",
-        "EPS (Q)": "4.59",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "BLUEDART",
-        "Market Cap": "14,383.52",
-        "Alpha": "-6.57",
-        "Beta": "0.71",
-        "5Y CAGR": "15.55",
-        "D/E": "0.78",
-        "EPS (Q)": "34.14",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "4",
-        "e": "4",
-        "f": "4",
-        "g": "5"
-    },
-    {
-        "Name": "TRIDENT",
-        "Market Cap": "14,373.85",
-        "Alpha": "-27.12",
-        "Beta": "0.82",
-        "5Y CAGR": "37.74",
-        "D/E": "0.49",
-        "EPS (Q)": "0.15",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "2"
-    },
-    {
-        "Name": "GODREJAGRO",
-        "Market Cap": "14,172.55",
-        "Alpha": "9.02",
-        "Beta": "0.77",
-        "5Y CAGR": "5.77",
-        "D/E": "0.48",
-        "EPS (Q)": "5.8",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "2",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "IIFL",
-        "Market Cap": "14,072.72",
-        "Alpha": "0.1",
-        "Beta": "1.47",
-        "5Y CAGR": "10.19",
-        "D/E": "3.91",
-        "EPS (Q)": "0.96",
-        "SCORE": "13",
-        "Capability": "HR",
-        "b": "1",
-        "c": "3",
-        "d": "3",
-        "e": "3",
-        "f": "1",
-        "g": "2"
-    },
-    {
-        "Name": "BSOFT",
-        "Market Cap": "14,035.18",
-        "Alpha": "-0.55",
-        "Beta": "1.3",
-        "5Y CAGR": "40.94",
-        "D/E": "0.03",
-        "EPS (Q)": "4.2",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "2",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "CLEAN",
-        "Market Cap": "14,028.74",
-        "Alpha": "-19.74",
-        "Beta": "0.97",
-        "5Y CAGR": "-",
-        "D/E": "0",
-        "EPS (Q)": "6.18",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "1",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "KIRLOSBROS",
-        "Market Cap": "13,956.52",
-        "Alpha": "60.68",
-        "Beta": "1.34",
-        "5Y CAGR": "66.02",
-        "D/E": "0.11",
-        "EPS (Q)": "14.76",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "EIDPARRY",
-        "Market Cap": "13,857.03",
-        "Alpha": "18.19",
-        "Beta": "0.82",
-        "5Y CAGR": "28.52",
-        "D/E": "0.16",
-        "EPS (Q)": "10.97",
-        "SCORE": "25",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "NEWGEN",
-        "Market Cap": "13,846.92",
-        "Alpha": "44.1",
-        "Beta": "1.27",
-        "5Y CAGR": "56.76",
-        "D/E": "0.04",
-        "EPS (Q)": "6.36",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "JWL",
-        "Market Cap": "13,834.39",
-        "Alpha": "73.53",
-        "Beta": "0.96",
-        "5Y CAGR": "87.01",
-        "D/E": "0.21",
-        "EPS (Q)": "2.29",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "CGCL",
-        "Market Cap": "13,691.16",
-        "Alpha": "7.84",
-        "Beta": "0.41",
-        "5Y CAGR": "26.12",
-        "D/E": "2.71",
-        "EPS (Q)": "1.55",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "5",
-        "e": "5",
-        "f": "2",
-        "g": "3"
-    },
-    {
-        "Name": "HBLENGINE",
-        "Market Cap": "13,654.62",
-        "Alpha": "66.79",
-        "Beta": "1.35",
-        "5Y CAGR": "99.34",
-        "D/E": "0.06",
-        "EPS (Q)": "2.31",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "CELLO",
-        "Market Cap": "13,629.71",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.27",
-        "EPS (Q)": "3.99",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "BBTC",
-        "Market Cap": "13,591.57",
-        "Alpha": "18.93",
-        "Beta": "1.25",
-        "5Y CAGR": "10.86",
-        "D/E": "0.32",
-        "EPS (Q)": "48.58",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "3",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "DEEPAKFERT",
-        "Market Cap": "13,483.46",
-        "Alpha": "19.96",
-        "Beta": "1.01",
-        "5Y CAGR": "60.77",
-        "D/E": "0.76",
-        "EPS (Q)": "19.86",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "4",
-        "g": "5"
-    },
-    {
-        "Name": "AAVAS",
-        "Market Cap": "13,438.41",
-        "Alpha": "-22.61",
-        "Beta": "1.08",
-        "5Y CAGR": "-1.92",
-        "D/E": "3.29",
-        "EPS (Q)": "18",
-        "SCORE": "12",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "1",
-        "f": "1",
-        "g": "5"
-    },
-    {
-        "Name": "TTML",
-        "Market Cap": "13,420.58",
-        "Alpha": "-23.36",
-        "Beta": "0.98",
-        "5Y CAGR": "81.35",
-        "D/E": "-",
-        "EPS (Q)": "-1.61",
-        "SCORE": "13",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "4",
-        "e": "5",
-        "f": "1",
-        "g": "1"
-    },
-    {
-        "Name": "JYOTHYLAB",
-        "Market Cap": "13,335.39",
-        "Alpha": "31.71",
-        "Beta": "0.96",
-        "5Y CAGR": "21.72",
-        "D/E": "0.03",
-        "EPS (Q)": "2.38",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "RAINBOW",
-        "Market Cap": "13,320.53",
-        "Alpha": "35.94",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.61",
-        "EPS (Q)": "6.76",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "4",
-        "g": "5"
-    },
-    {
-        "Name": "INDIAMART",
-        "Market Cap": "13,190.72",
-        "Alpha": "-8.17",
-        "Beta": "0.82",
-        "5Y CAGR": "12.59",
-        "D/E": "0.02",
-        "EPS (Q)": "20.18",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "4",
-        "e": "3",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "HFCL",
-        "Market Cap": "13,157.11",
-        "Alpha": "2.36",
-        "Beta": "1.81",
-        "5Y CAGR": "40.11",
-        "D/E": "0.25",
-        "EPS (Q)": "0.51",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "1",
-        "c": "3",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "2"
-    },
-    {
-        "Name": "GRANULES",
-        "Market Cap": "13,149.22",
-        "Alpha": "15.84",
-        "Beta": "0.59",
-        "5Y CAGR": "26.13",
-        "D/E": "0.41",
-        "EPS (Q)": "4.85",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "GESHIP",
-        "Market Cap": "13,019.65",
-        "Alpha": "33.6",
-        "Beta": "1.08",
-        "5Y CAGR": "26.19",
-        "D/E": "0.25",
-        "EPS (Q)": "41.58",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "WHIRLPOOL",
-        "Market Cap": "12,974.55",
-        "Alpha": "-15.91",
-        "Beta": "0.76",
-        "5Y CAGR": "-14.75",
-        "D/E": "0.06",
-        "EPS (Q)": "3.46",
-        "SCORE": "16",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "4",
-        "e": "1",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "RRKABEL",
-        "Market Cap": "12,870.02",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.2",
-        "EPS (Q)": "6.07",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "MGL",
-        "Market Cap": "12,821.85",
-        "Alpha": "11.64",
-        "Beta": "1.07",
-        "5Y CAGR": "1.73",
-        "D/E": "0.03",
-        "EPS (Q)": "22.39",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "1",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "UTIAMC",
-        "Market Cap": "12,680.39",
-        "Alpha": "2.97",
-        "Beta": "1.19",
-        "5Y CAGR": "-",
-        "D/E": "0",
-        "EPS (Q)": "11.81",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "3",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "VTL",
-        "Market Cap": "12,664.41",
-        "Alpha": "-8.94",
-        "Beta": "1.08",
-        "5Y CAGR": "17.08",
-        "D/E": "0.19",
-        "EPS (Q)": "7.4",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "4",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "IFCI",
-        "Market Cap": "12,500.81",
-        "Alpha": "45.1",
-        "Beta": "1.16",
-        "5Y CAGR": "47.72",
-        "D/E": "0.7",
-        "EPS (Q)": "-0.12",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "4",
-        "g": "1"
-    },
-    {
-        "Name": "MINDACORP",
-        "Market Cap": "12,462.83",
-        "Alpha": "30.7",
-        "Beta": "1.36",
-        "5Y CAGR": "35.23",
-        "D/E": "0.27",
-        "EPS (Q)": "2.75",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "NCC",
-        "Market Cap": "12,418.81",
-        "Alpha": "33.75",
-        "Beta": "1.82",
-        "5Y CAGR": "32.79",
-        "D/E": "0.14",
-        "EPS (Q)": "3.08",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "FINPIPE",
-        "Market Cap": "12,406.47",
-        "Alpha": "0.76",
-        "Beta": "0.77",
-        "5Y CAGR": "12.94",
-        "D/E": "0.07",
-        "EPS (Q)": "1.52",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "3",
-        "d": "4",
-        "e": "3",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "SANOFI",
-        "Market Cap": "12,379.42",
-        "Alpha": "6.52",
-        "Beta": "0.67",
-        "5Y CAGR": "3.05",
-        "D/E": "0.02",
-        "EPS (Q)": "35.69",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "1",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "SOBHA",
-        "Market Cap": "12,331.15",
-        "Alpha": "8.52",
-        "Beta": "1.86",
-        "5Y CAGR": "25.77",
-        "D/E": "0.77",
-        "EPS (Q)": "2.15",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "4",
-        "g": "3"
-    },
-    {
-        "Name": "CUB",
-        "Market Cap": "12,296.66",
-        "Alpha": "1.79",
-        "Beta": "1.18",
-        "5Y CAGR": "-5.7",
-        "D/E": "0",
-        "EPS (Q)": "3.86",
-        "SCORE": "17",
-        "Capability": "R",
-        "b": "1",
-        "c": "3",
-        "d": "3",
-        "e": "1",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "BEML",
-        "Market Cap": "12,240.36",
-        "Alpha": "23.42",
-        "Beta": "1.5",
-        "5Y CAGR": "25.55",
-        "D/E": "0.03",
-        "EPS (Q)": "5.86",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "FINEORG",
-        "Market Cap": "12,231.18",
-        "Alpha": "-2.36",
-        "Beta": "0.33",
-        "5Y CAGR": "12.17",
-        "D/E": "0",
-        "EPS (Q)": "26.97",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "2",
-        "d": "5",
-        "e": "3",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "RKFORGE",
-        "Market Cap": "12,004.14",
-        "Alpha": "40.18",
-        "Beta": "1.51",
-        "5Y CAGR": "58.66",
-        "D/E": "0.45",
-        "EPS (Q)": "5.51",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "SONATSOFTW",
-        "Market Cap": "11,947.05",
-        "Alpha": "8.58",
-        "Beta": "1.64",
-        "5Y CAGR": "27.77",
-        "D/E": "0.54",
-        "EPS (Q)": "3.78",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "4",
-        "g": "4"
-    },
-    {
-        "Name": "NUVOCO",
-        "Market Cap": "11,745.08",
-        "Alpha": "-9.13",
-        "Beta": "1.12",
-        "5Y CAGR": "-",
-        "D/E": "0.49",
-        "EPS (Q)": "-1.72",
-        "SCORE": "16",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "1"
-    },
-    {
-        "Name": "GPIL",
-        "Market Cap": "11,588.65",
-        "Alpha": "34.6",
-        "Beta": "1.47",
-        "5Y CAGR": "75.82",
-        "D/E": "0.01",
-        "EPS (Q)": "2.36",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "WELSPUNLIV",
-        "Market Cap": "11,581.53",
-        "Alpha": "-1.9",
-        "Beta": "1.19",
-        "5Y CAGR": "20.81",
-        "D/E": "0.57",
-        "EPS (Q)": "1.27",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "1",
-        "c": "2",
-        "d": "3",
-        "e": "5",
-        "f": "4",
-        "g": "3"
-    },
-    {
-        "Name": "WESTLIFE",
-        "Market Cap": "11,570.77",
-        "Alpha": "12.22",
-        "Beta": "0.89",
-        "5Y CAGR": "9.67",
-        "D/E": "2.32",
-        "EPS (Q)": "0.45",
-        "SCORE": "16",
-        "Capability": "HR",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "2",
-        "f": "2",
-        "g": "2"
-    },
-    {
-        "Name": "TITAGARH",
-        "Market Cap": "11,449.29",
-        "Alpha": "80.22",
-        "Beta": "1.79",
-        "5Y CAGR": "75.58",
-        "D/E": "0.07",
-        "EPS (Q)": "5.99",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "TECHNOE",
-        "Market Cap": "11,261.87",
-        "Alpha": "45.44",
-        "Beta": "0.58",
-        "5Y CAGR": "26.78",
-        "D/E": "0",
-        "EPS (Q)": "8.25",
-        "SCORE": "25",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "NSLNISP",
-        "Market Cap": "11,142.16",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.43",
-        "EPS (Q)": "-2.59",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "1"
-    },
-    {
-        "Name": "ELECON",
-        "Market Cap": "10,869.93",
-        "Alpha": "61.46",
-        "Beta": "1.61",
-        "5Y CAGR": "94.84",
-        "D/E": "0.04",
-        "EPS (Q)": "4.79",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "J&KBANK",
-        "Market Cap": "10,692.48",
-        "Alpha": "26.62",
-        "Beta": "1.67",
-        "5Y CAGR": "38.43",
-        "D/E": "0",
-        "EPS (Q)": "4.8",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "CEATLTD",
-        "Market Cap": "10,666.08",
-        "Alpha": "29.04",
-        "Beta": "0.8",
-        "5Y CAGR": "20.91",
-        "D/E": "0.44",
-        "EPS (Q)": "24.01",
-        "SCORE": "25",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "LEMONTREE",
-        "Market Cap": "10,628.97",
-        "Alpha": "27.37",
-        "Beta": "1.24",
-        "5Y CAGR": "19.69",
-        "D/E": "1.51",
-        "EPS (Q)": "0.79",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "4",
-        "f": "3",
-        "g": "2"
-    },
-    {
-        "Name": "KSB",
-        "Market Cap": "10,616.39",
-        "Alpha": "34.82",
-        "Beta": "1.14",
-        "5Y CAGR": "33.85",
-        "D/E": "0",
-        "EPS (Q)": "3.55",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "HAPPSTMNDS",
-        "Market Cap": "10,436.04",
-        "Alpha": "-20.35",
-        "Beta": "1.08",
-        "5Y CAGR": "-",
-        "D/E": "0.35",
-        "EPS (Q)": "3.33",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "JUBLINGREA",
-        "Market Cap": "10,429.34",
-        "Alpha": "4.28",
-        "Beta": "1.15",
-        "5Y CAGR": "-",
-        "D/E": "0.27",
-        "EPS (Q)": "4.39",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "4",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "PVRINOX",
-        "Market Cap": "10,413.61",
-        "Alpha": "-17.53",
-        "Beta": "1",
-        "5Y CAGR": "-12.22",
-        "D/E": "1.13",
-        "EPS (Q)": "3.66",
-        "SCORE": "14",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "4",
-        "e": "1",
-        "f": "3",
-        "g": "4"
-    },
-    {
-        "Name": "KIRLOSENG",
-        "Market Cap": "10,390.68",
-        "Alpha": "52.71",
-        "Beta": "1.39",
-        "5Y CAGR": "38.91",
-        "D/E": "1.56",
-        "EPS (Q)": "4.91",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "3",
-        "g": "4"
-    },
-    {
-        "Name": "RAILTEL",
-        "Market Cap": "10,372.73",
-        "Alpha": "39.52",
-        "Beta": "1.07",
-        "5Y CAGR": "-",
-        "D/E": "0.02",
-        "EPS (Q)": "2.03",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "GRINFRA",
-        "Market Cap": "10,356.05",
-        "Alpha": "-16.42",
-        "Beta": "1.5",
-        "5Y CAGR": "-",
-        "D/E": "0.5",
-        "EPS (Q)": "27.06",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "PRAJIND",
-        "Market Cap": "10,328.46",
-        "Alpha": "12.97",
-        "Beta": "1.5",
-        "5Y CAGR": "39.54",
-        "D/E": "0.13",
-        "EPS (Q)": "2.23",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "RITES",
-        "Market Cap": "10,275.31",
-        "Alpha": "15.31",
-        "Beta": "0.55",
-        "5Y CAGR": "6.11",
-        "D/E": "0",
-        "EPS (Q)": "2.08",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "2",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "SAMMAANCAP",
-        "Market Cap": "10,243.40",
-        "Alpha": "-18.51",
-        "Beta": "2.48",
-        "5Y CAGR": "-15.53",
-        "D/E": "2.45",
-        "EPS (Q)": "4.17",
-        "SCORE": "10",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "1",
-        "e": "1",
-        "f": "2",
-        "g": "4"
-    },
-    {
-        "Name": "INTELLECT",
-        "Market Cap": "10,182.12",
-        "Alpha": "-1.61",
-        "Beta": "2.14",
-        "5Y CAGR": "36.96",
-        "D/E": "0.02",
-        "EPS (Q)": "5.11",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "2",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "OLECTRA",
-        "Market Cap": "10,087.72",
-        "Alpha": "15.34",
-        "Beta": "1.96",
-        "5Y CAGR": "50.41",
-        "D/E": "0.13",
-        "EPS (Q)": "5.64",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "RBLBANK",
-        "Market Cap": "10,002.30",
-        "Alpha": "-3.21",
-        "Beta": "1.76",
-        "5Y CAGR": "-12.77",
-        "D/E": "0",
-        "EPS (Q)": "0.78",
-        "SCORE": "12",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "2",
-        "e": "1",
-        "f": "5",
-        "g": "2"
-    },
-    {
-        "Name": "SAREGAMA",
-        "Market Cap": "9,973.22",
-        "Alpha": "5.86",
-        "Beta": "1.89",
-        "5Y CAGR": "68.31",
-        "D/E": "0",
-        "EPS (Q)": "3.24",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "VIJAYA",
-        "Market Cap": "9,787.91",
-        "Alpha": "30.36",
-        "Beta": "0.32",
-        "5Y CAGR": "-",
-        "D/E": "0.39",
-        "EPS (Q)": "3.42",
-        "SCORE": "25",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "5",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "JMFINANCIL",
-        "Market Cap": "9,770.79",
-        "Alpha": "9.77",
-        "Beta": "1.08",
-        "5Y CAGR": "-2.34",
-        "D/E": "1.47",
-        "EPS (Q)": "2.19",
-        "SCORE": "16",
-        "Capability": "HR",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "1",
-        "f": "3",
-        "g": "3"
-    },
-    {
-        "Name": "JPPOWER",
-        "Market Cap": "9,622.26",
-        "Alpha": "20.8",
-        "Beta": "1.72",
-        "5Y CAGR": "51.66",
-        "D/E": "0.37",
-        "EPS (Q)": "0.14",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "2"
-    },
-    {
-        "Name": "ZEEL",
-        "Market Cap": "9,599.43",
-        "Alpha": "-35.75",
-        "Beta": "1.35",
-        "5Y CAGR": "-15.87",
-        "D/E": "0.02",
-        "EPS (Q)": "1.7",
-        "SCORE": "14",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "1",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "CRAFTSMAN",
-        "Market Cap": "9,573.48",
-        "Alpha": "16.24",
-        "Beta": "1.54",
-        "5Y CAGR": "-",
-        "D/E": "1",
-        "EPS (Q)": "-0.87",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "4",
-        "g": "1"
-    },
-    {
-        "Name": "AVANTIFEED",
-        "Market Cap": "9,529.70",
-        "Alpha": "7.37",
-        "Beta": "1.08",
-        "5Y CAGR": "2.74",
-        "D/E": "0.01",
-        "EPS (Q)": "9.92",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "1",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "SAPPHIRE",
-        "Market Cap": "9,514.28",
-        "Alpha": "-3.39",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.87",
-        "EPS (Q)": "0.37",
-        "SCORE": "14",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "1",
-        "e": "5",
-        "f": "4",
-        "g": "2"
-    },
-    {
-        "Name": "RAYMOND",
-        "Market Cap": "9,430.67",
-        "Alpha": "33.99",
-        "Beta": "1.36",
-        "5Y CAGR": "31.38",
-        "D/E": "0.83",
-        "EPS (Q)": "10.84",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "4",
-        "g": "5"
-    },
-    {
-        "Name": "DATAPATTNS",
-        "Market Cap": "9,423.78",
-        "Alpha": "29.11",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0",
-        "EPS (Q)": "7.97",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "ENGINERSIN",
-        "Market Cap": "9,274.26",
-        "Alpha": "28.09",
-        "Beta": "1.05",
-        "5Y CAGR": "13.12",
-        "D/E": "0.01",
-        "EPS (Q)": "1.94",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "3",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "MMTC",
-        "Market Cap": "9,249.00",
-        "Alpha": "4.52",
-        "Beta": "1.6",
-        "5Y CAGR": "24.22",
-        "D/E": "0.1",
-        "EPS (Q)": "0.32",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "4",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "2"
-    },
-    {
-        "Name": "USHAMART",
-        "Market Cap": "9,203.21",
-        "Alpha": "39.2",
-        "Beta": "1.13",
-        "5Y CAGR": "64.66",
-        "D/E": "0.15",
-        "EPS (Q)": "3.04",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "SBFC",
-        "Market Cap": "9,198.10",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "1.44",
-        "EPS (Q)": "0.82",
-        "SCORE": "17",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "3",
-        "g": "2"
-    },
-    {
-        "Name": "QUESS",
-        "Market Cap": "9,083.31",
-        "Alpha": "-6.63",
-        "Beta": "1.47",
-        "5Y CAGR": "0.7",
-        "D/E": "0.28",
-        "EPS (Q)": "5.42",
-        "SCORE": "16",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "1",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "MAPMYINDIA",
-        "Market Cap": "9,019.04",
-        "Alpha": "7.03",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.04",
-        "EPS (Q)": "5.96",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "JKLAKSHMI",
-        "Market Cap": "8,897.62",
-        "Alpha": "11.32",
-        "Beta": "0.93",
-        "5Y CAGR": "16.76",
-        "D/E": "0.62",
-        "EPS (Q)": "5.05",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "4",
-        "f": "4",
-        "g": "5"
-    },
-    {
-        "Name": "CAMPUS",
-        "Market Cap": "8,880.98",
-        "Alpha": "-10.58",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.27",
-        "EPS (Q)": "1.52",
-        "SCORE": "16",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "RHIM",
-        "Market Cap": "8,844.46",
-        "Alpha": "-9.99",
-        "Beta": "1.24",
-        "5Y CAGR": "11.56",
-        "D/E": "0.13",
-        "EPS (Q)": "2.3",
-        "SCORE": "16",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "3",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "GMDCLTD",
-        "Market Cap": "8,840.40",
-        "Alpha": "22.91",
-        "Beta": "1.32",
-        "5Y CAGR": "36.21",
-        "D/E": "0",
-        "EPS (Q)": "4.64",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "BALRAMCHIN",
-        "Market Cap": "8,825.15",
-        "Alpha": "0.55",
-        "Beta": "0.79",
-        "5Y CAGR": "20.67",
-        "D/E": "0.59",
-        "EPS (Q)": "3.49",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "3",
-        "d": "4",
-        "e": "5",
-        "f": "4",
-        "g": "4"
-    },
-    {
-        "Name": "ALKYLAMINE",
-        "Market Cap": "8,809.97",
-        "Alpha": "-23.29",
-        "Beta": "1.2",
-        "5Y CAGR": "22.72",
-        "D/E": "0",
-        "EPS (Q)": "8.56",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "METROPOLIS",
-        "Market Cap": "8,758.30",
-        "Alpha": "-9.78",
-        "Beta": "0.81",
-        "5Y CAGR": "-1.24",
-        "D/E": "0.18",
-        "EPS (Q)": "6.12",
-        "SCORE": "17",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "4",
-        "e": "1",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "INDIACEM",
-        "Market Cap": "8,731.35",
-        "Alpha": "4.84",
-        "Beta": "0.5",
-        "5Y CAGR": "30.8",
-        "D/E": "0.47",
-        "EPS (Q)": "162.41",
-        "SCORE": "25",
-        "Capability": "M",
-        "b": "1",
-        "c": "4",
-        "d": "5",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "HOMEFIRST",
-        "Market Cap": "8,709.56",
-        "Alpha": "8.96",
-        "Beta": "0.56",
-        "5Y CAGR": "-",
-        "D/E": "3.44",
-        "EPS (Q)": "10.9",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "1",
-        "g": "5"
-    },
-    {
-        "Name": "GRAPHITE",
-        "Market Cap": "8,588.71",
-        "Alpha": "-9.96",
-        "Beta": "1.97",
-        "5Y CAGR": "8.46",
-        "D/E": "0.03",
-        "EPS (Q)": "-1.03",
-        "SCORE": "12",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "2",
-        "e": "2",
-        "f": "5",
-        "g": "1"
-    },
-    {
-        "Name": "LATENTVIEW",
-        "Market Cap": "8,588.18",
-        "Alpha": "-11.83",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.02",
-        "EPS (Q)": "2.03",
-        "SCORE": "16",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "NETWEB",
-        "Market Cap": "8,505.73",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.02",
-        "EPS (Q)": "5.38",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "INOXINDIA",
-        "Market Cap": "8,471.41",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.02",
-        "EPS (Q)": "6.43",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "AKUMS",
-        "Market Cap": "8,425.97",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.78",
-        "EPS (Q)": "4.26",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "4",
-        "g": "4"
-    },
-    {
-        "Name": "ALOKINDS",
-        "Market Cap": "8,421.05",
-        "Alpha": "-13.17",
-        "Beta": "2.09",
-        "5Y CAGR": "-",
-        "D/E": "-",
-        "EPS (Q)": "-0.55",
-        "SCORE": "10",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "1",
-        "e": "5",
-        "f": "1",
-        "g": "1"
-    },
-    {
-        "Name": "GNFC",
-        "Market Cap": "8,400.60",
-        "Alpha": "-5.35",
-        "Beta": "1.27",
-        "5Y CAGR": "25.13",
-        "D/E": "0",
-        "EPS (Q)": "7.14",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "SYRMA",
-        "Market Cap": "8,308.15",
-        "Alpha": "13.47",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.38",
-        "EPS (Q)": "2.74",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "MAHSEAMLES",
-        "Market Cap": "8,273.11",
-        "Alpha": "26.5",
-        "Beta": "1.13",
-        "5Y CAGR": "28.56",
-        "D/E": "0",
-        "EPS (Q)": "13.89",
-        "SCORE": "24",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "CANFINHOME",
-        "Market Cap": "8,141.04",
-        "Alpha": "-8.41",
-        "Beta": "1.6",
-        "5Y CAGR": "3.84",
-        "D/E": "7.34",
-        "EPS (Q)": "15.93",
-        "SCORE": "11",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "2",
-        "e": "1",
-        "f": "1",
-        "g": "5"
-    },
-    {
-        "Name": "MASTEK",
-        "Market Cap": "8,046.05",
-        "Alpha": "-7.16",
-        "Beta": "1.78",
-        "5Y CAGR": "44.4",
-        "D/E": "0.25",
-        "EPS (Q)": "30.68",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "JKTYRE",
-        "Market Cap": "8,042.49",
-        "Alpha": "27.53",
-        "Beta": "1.2",
-        "5Y CAGR": "32.92",
-        "D/E": "1",
-        "EPS (Q)": "1.88",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "4",
-        "g": "3"
-    },
-    {
-        "Name": "CERA",
-        "Market Cap": "7,986.33",
-        "Alpha": "11.35",
-        "Beta": "0.46",
-        "5Y CAGR": "19.97",
-        "D/E": "0.03",
-        "EPS (Q)": "35.52",
-        "SCORE": "25",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "5",
-        "e": "4",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "TRIVENI",
-        "Market Cap": "7,975.55",
-        "Alpha": "7.34",
-        "Beta": "1.03",
-        "5Y CAGR": "34.49",
-        "D/E": "0.49",
-        "EPS (Q)": "1.94",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "CCL",
-        "Market Cap": "7,958.26",
-        "Alpha": "3.25",
-        "Beta": "0.68",
-        "5Y CAGR": "19.27",
-        "D/E": "0.97",
-        "EPS (Q)": "4.73",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "4",
-        "d": "4",
-        "e": "4",
-        "f": "4",
-        "g": "4"
-    },
-    {
-        "Name": "GSFC",
-        "Market Cap": "7,908.98",
-        "Alpha": "9.79",
-        "Beta": "1.44",
-        "5Y CAGR": "21.81",
-        "D/E": "0",
-        "EPS (Q)": "3.36",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "BIRLACORPN",
-        "Market Cap": "7,908.45",
-        "Alpha": "-8.39",
-        "Beta": "1.12",
-        "5Y CAGR": "6.75",
-        "D/E": "0.58",
-        "EPS (Q)": "4.06",
-        "SCORE": "15",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "2",
-        "f": "4",
-        "g": "4"
-    },
-    {
-        "Name": "RCF",
-        "Market Cap": "7,797.01",
-        "Alpha": "16.79",
-        "Beta": "1.55",
-        "5Y CAGR": "26.58",
-        "D/E": "0.72",
-        "EPS (Q)": "1.45",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "5",
-        "f": "4",
-        "g": "3"
-    },
-    {
-        "Name": "VARROC",
-        "Market Cap": "7,760.79",
-        "Alpha": "5.68",
-        "Beta": "1.88",
-        "5Y CAGR": "3.26",
-        "D/E": "0.91",
-        "EPS (Q)": "-3.1",
-        "SCORE": "14",
-        "Capability": "HR",
-        "b": "1",
-        "c": "5",
-        "d": "2",
-        "e": "1",
-        "f": "4",
-        "g": "1"
-    },
-    {
-        "Name": "SCI",
-        "Market Cap": "7,599.98",
-        "Alpha": "18.21",
-        "Beta": "1.12",
-        "5Y CAGR": "29.25",
-        "D/E": "0.39",
-        "EPS (Q)": "1.62",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "NETWORK18",
-        "Market Cap": "7,591.27",
-        "Alpha": "-17.57",
-        "Beta": "1.13",
-        "5Y CAGR": "10.34",
-        "D/E": "0.29",
-        "EPS (Q)": "-9.38",
-        "SCORE": "14",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "3",
-        "f": "5",
-        "g": "1"
-    },
-    {
-        "Name": "DBREALTY",
-        "Market Cap": "7,497.59",
-        "Alpha": "16.17",
-        "Beta": "0.82",
-        "5Y CAGR": "72.18",
-        "D/E": "0.42",
-        "EPS (Q)": "0.08",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "2"
-    },
-    {
-        "Name": "HONASA",
-        "Market Cap": "7,496.61",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.12",
-        "EPS (Q)": "0.8",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "2"
-    },
-    {
-        "Name": "CHENNPETRO",
-        "Market Cap": "7,471.63",
-        "Alpha": "58.43",
-        "Beta": "1.13",
-        "5Y CAGR": "34.3",
-        "D/E": "0.25",
-        "EPS (Q)": "1.4",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "KNRCON",
-        "Market Cap": "7,326.16",
-        "Alpha": "-9.29",
-        "Beta": "0.98",
-        "5Y CAGR": "13.09",
-        "D/E": "0.36",
-        "EPS (Q)": "15.7",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "4",
-        "e": "3",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "EQUITASBNK",
-        "Market Cap": "7,252.17",
-        "Alpha": "5.47",
-        "Beta": "0.8",
-        "5Y CAGR": "-",
-        "D/E": "0",
-        "EPS (Q)": "0.58",
-        "SCORE": "22",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "2"
-    },
-    {
-        "Name": "TANLA",
-        "Market Cap": "7,152.22",
-        "Alpha": "-41.66",
-        "Beta": "1.99",
-        "5Y CAGR": "44.53",
-        "D/E": "0.04",
-        "EPS (Q)": "8.82",
-        "SCORE": "19",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "2",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "PNCINFRA",
-        "Market Cap": "7,079.20",
-        "Alpha": "-4.39",
-        "Beta": "1.52",
-        "5Y CAGR": "6.39",
-        "D/E": "1.55",
-        "EPS (Q)": "3.17",
-        "SCORE": "13",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "2",
-        "e": "2",
-        "f": "3",
-        "g": "4"
-    },
-    {
-        "Name": "JUSTDIAL",
-        "Market Cap": "6,962.25",
-        "Alpha": "-1.53",
-        "Beta": "1.39",
-        "5Y CAGR": "9.69",
-        "D/E": "0.02",
-        "EPS (Q)": "13.61",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "1",
-        "c": "2",
-        "d": "3",
-        "e": "2",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "ROUTE",
-        "Market Cap": "6,919.92",
-        "Alpha": "-14.32",
-        "Beta": "1.07",
-        "5Y CAGR": "-",
-        "D/E": "0.17",
-        "EPS (Q)": "13.1",
-        "SCORE": "20",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "RENUKA",
-        "Market Cap": "6,785.63",
-        "Alpha": "-3.33",
-        "Beta": "1.25",
-        "5Y CAGR": "32.52",
-        "D/E": "-",
-        "EPS (Q)": "-0.96",
-        "SCORE": "12",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "5",
-        "f": "1",
-        "g": "1"
-    },
-    {
-        "Name": "CHEMPLASTS",
-        "Market Cap": "6,722.82",
-        "Alpha": "-9.19",
-        "Beta": "1.15",
-        "5Y CAGR": "-",
-        "D/E": "0.91",
-        "EPS (Q)": "-3.06",
-        "SCORE": "15",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "5",
-        "f": "4",
-        "g": "1"
-    },
-    {
-        "Name": "RTNINDIA",
-        "Market Cap": "6,713.88",
-        "Alpha": "-5.81",
-        "Beta": "1.08",
-        "5Y CAGR": "75.15",
-        "D/E": "1.4",
-        "EPS (Q)": "-1.23",
-        "SCORE": "14",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "5",
-        "f": "3",
-        "g": "1"
-    },
-    {
-        "Name": "HEG",
-        "Market Cap": "6,615.27",
-        "Alpha": "4.1",
-        "Beta": "2.06",
-        "5Y CAGR": "10.45",
-        "D/E": "0.14",
-        "EPS (Q)": "4.32",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "1",
-        "c": "4",
-        "d": "1",
-        "e": "3",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "UJJIVANSFB",
-        "Market Cap": "6,568.59",
-        "Alpha": "17.72",
-        "Beta": "1.21",
-        "5Y CAGR": "-9.1",
-        "D/E": "0",
-        "EPS (Q)": "0.56",
-        "SCORE": "17",
-        "Capability": "R",
-        "b": "1",
-        "c": "5",
-        "d": "3",
-        "e": "1",
-        "f": "5",
-        "g": "2"
-    },
-    {
-        "Name": "GPPL",
-        "Market Cap": "6,514.84",
-        "Alpha": "6.91",
-        "Beta": "0.67",
-        "5Y CAGR": "10.73",
-        "D/E": "0.03",
-        "EPS (Q)": "2.06",
-        "SCORE": "21",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "3",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "SWSOLAR",
-        "Market Cap": "6,424.60",
-        "Alpha": "-8.52",
-        "Beta": "2.39",
-        "5Y CAGR": "0",
-        "D/E": "0.54",
-        "EPS (Q)": "0.64",
-        "SCORE": "10",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "1",
-        "e": "1",
-        "f": "4",
-        "g": "2"
-    },
-    {
-        "Name": "TVSSCS",
-        "Market Cap": "6,167.46",
-        "Alpha": "-",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "1.19",
-        "EPS (Q)": "-0.56",
-        "SCORE": "16",
-        "Capability": "HR",
-        "b": "1",
-        "c": "5",
-        "d": "1",
-        "e": "5",
-        "f": "3",
-        "g": "1"
-    },
-    {
-        "Name": "ACI",
-        "Market Cap": "5,575.85",
-        "Alpha": "-7.38",
-        "Beta": "-",
-        "5Y CAGR": "-",
-        "D/E": "0.06",
-        "EPS (Q)": "3.89",
-        "SCORE": "17",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "4"
-    },
-    {
-        "Name": "MAHLIFE",
-        "Market Cap": "5,561.45",
-        "Alpha": "-1.09",
-        "Beta": "1.22",
-        "5Y CAGR": "22.13",
-        "D/E": "0.47",
-        "EPS (Q)": "-1.45",
-        "SCORE": "17",
-        "Capability": "R",
-        "b": "1",
-        "c": "2",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "1"
-    },
-    {
-        "Name": "GAEL",
-        "Market Cap": "5,200.41",
-        "Alpha": "5.17",
-        "Beta": "0.73",
-        "5Y CAGR": "24.31",
-        "D/E": "0.07",
-        "EPS (Q)": "1.56",
-        "SCORE": "23",
-        "Capability": "M",
-        "b": "1",
-        "c": "5",
-        "d": "4",
-        "e": "5",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "VIPIND",
-        "Market Cap": "4,977.79",
-        "Alpha": "-21.61",
-        "Beta": "1.17",
-        "5Y CAGR": "-5.63",
-        "D/E": "1.29",
-        "EPS (Q)": "-0.88",
-        "SCORE": "10",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "1",
-        "f": "3",
-        "g": "1"
-    },
-    {
-        "Name": "BALAMINES",
-        "Market Cap": "4,912.64",
-        "Alpha": "-29.34",
-        "Beta": "2.03",
-        "5Y CAGR": "30.37",
-        "D/E": "0.01",
-        "EPS (Q)": "10.24",
-        "SCORE": "18",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "1",
-        "e": "5",
-        "f": "5",
-        "g": "5"
-    },
-    {
-        "Name": "RAJESHEXPO",
-        "Market Cap": "4,872.38",
-        "Alpha": "-50.67",
-        "Beta": "0.5",
-        "5Y CAGR": "-25.41",
-        "D/E": "0.04",
-        "EPS (Q)": "1.54",
-        "SCORE": "16",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "5",
-        "e": "1",
-        "f": "5",
-        "g": "3"
-    },
-    {
-        "Name": "SPARC",
-        "Market Cap": "4,687.39",
-        "Alpha": "-27.34",
-        "Beta": "1.53",
-        "5Y CAGR": "-2.99",
-        "D/E": "0.49",
-        "EPS (Q)": "-2.45",
-        "SCORE": "11",
-        "Capability": "HR",
-        "b": "1",
-        "c": "1",
-        "d": "2",
-        "e": "1",
-        "f": "5",
-        "g": "1"
-    },
-    {
-        "Name": "EASEMYTRIP",
-        "Market Cap": "4,337.96",
-        "Alpha": "-13.88",
-        "Beta": "1.5",
-        "5Y CAGR": "-",
-        "D/E": "0.03",
-        "EPS (Q)": "0.08",
-        "SCORE": "17",
-        "Capability": "R",
-        "b": "1",
-        "c": "1",
-        "d": "3",
-        "e": "5",
-        "f": "5",
-        "g": "2"
     }
 ]
