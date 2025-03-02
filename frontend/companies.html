@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Autocomplete and Capability Filter</title>
-     <!-- <link rel="stylesheet" href="https://cdn.tailwindcss.com/3.4.16"> -->
+     <link rel="stylesheet" href="https://cdn.tailwindcss.com/3.4.16">
      <link rel="stylesheet" href="https://preline.co/assets/css/obfuscated.min.css">
      <link rel="stylesheet" href="styles.css">
      <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
@@ -20,7 +20,7 @@
         }
         #stock-results .grid-container {
             display: grid;
-            grid-template-columns: repeat(5, 1fr); /* 5 columns */
+            grid-template-columns: repeat(10, 1fr); /* 5 columns */
             grid-gap: 10px;
             padding: 10px;
             overflow: auto;
@@ -107,6 +107,10 @@
         <input type="text" id="stock-name" class="input" placeholder="Type a stock name...">
     </div>
 
+    <div class="table">
+        
+    </div>
+
     <div>
         <label for="capability">Select Capability: </label>
         <select id="capability" class="select">
@@ -119,6 +123,8 @@
             <!-- Stock results will be displayed here in a grid -->
         </div>
     </div>
+
+
 
     <script>
         // Function to fetch JSON data from main.json
@@ -145,20 +151,22 @@
                     gridItem.classList.add("grid-item");
 
                     gridItem.innerHTML = `
-                        <div class="content">
-                            <div class="header">
-                                <div class="avatar-container">
-                                    <div>
-                                        <h3 class="group-hover:text-blue-600">${stock.Name}</h3>
+                                <div class="relative group">
+                                    <!-- Content -->
+                                    <div class="v869m dpq4d a11ya xroga z1r3e dark:bg-neutral-800 dark:border-neutral-700">
+                                        <div class="flex wwu1y">
+                                            <img src="${stock.Logo_URL}" alt="${stock.Name}">
+                                            <div class="btpiv truncate">
+                                                <p class="block truncate ps4xk b7vor dark:text-neutral-300">
+                                                    ${stock.Name}
+                                                </p>
+                                                <small class="block ps4xk pykwy dark:text-neutral-500">
+                                                    ${stock.SCORE}/30
+                                                </small>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="m9 18 6-6-6-6"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
                     `;
 
                     stockList.appendChild(gridItem);
@@ -211,6 +219,39 @@
             filterStocks(stocks);
         })();
     </script>
+
+<script>
+    // Get the tooltip span
+    const tooltip = document.querySelector('span');
+    const button = document.querySelector('button');
+  
+    button.addEventListener('mouseenter', () => {
+      setTimeout(() => {
+        // Tooltip becomes visible after 0.5 seconds
+        tooltip.style.opacity = 1;
+  
+        // Check space on the right side and adjust if needed
+        const buttonRect = button.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+  
+        const spaceRight = window.innerWidth - buttonRect.right;
+        const spaceLeft = buttonRect.left;
+  
+        // If there's not enough space on the right, move the tooltip to the left
+        if (spaceRight < tooltipRect.width) {
+          tooltip.style.left = `${buttonRect.left + buttonRect.width / 2 - tooltipRect.width / 2}px`;
+          tooltip.style.transform = 'translateX(0)';
+        } else {
+          tooltip.style.left = `${buttonRect.left + buttonRect.width / 2 - tooltipRect.width / 2}px`;
+          tooltip.style.transform = 'translateX(-50%)';
+        }
+      }, 500);
+    });
+  
+    button.addEventListener('mouseleave', () => {
+      tooltip.style.opacity = 0; // Hide tooltip when mouse leaves
+    });
+  </script>
 
    
 
