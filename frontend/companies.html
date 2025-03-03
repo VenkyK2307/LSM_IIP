@@ -38,7 +38,7 @@
         }
         .grid-item:hover {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border: 1px solid blueviolet;
+         
 
         }
         .grid-item .content {
@@ -100,23 +100,24 @@
 </head>
 <body>
 
-    <h2>Stock Search and Filter</h2>
-
-    <div>
-        <label for="stock-name">Search Stock by Name: </label>
-        <input type="text" id="stock-name" class="input" placeholder="Type a stock name...">
+    <div class="hori" style="display: flex; gap: 40px;">
+        <div class="mb-4">
+            <label for="stock-name" class="block text-gray-700 font-medium mb-2">Search Stock by Name:</label>
+            <input type="text" id="stock-name" class="input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-gray-400" placeholder="Type a stock name...">
+          </div>
+      
+    
+          <div class="mb-6">
+            <label for="capability" class="block text-gray-700 font-medium mb-2">Select Capability:</label>
+            <select id="capability" class="select w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <!-- Capabilities will be populated here dynamically -->
+            </select>
+          </div>
     </div>
 
-    <div class="table">
-        
-    </div>
+ 
 
-    <div>
-        <label for="capability">Select Capability: </label>
-        <select id="capability" class="select">
-            <!-- Capabilities will be populated here dynamically -->
-        </select>
-    </div>
+    
 
     <div id="stock-results">
         <div class="grid-container" id="stock-list">
@@ -151,7 +152,7 @@
                     gridItem.classList.add("grid-item");
 
                     gridItem.innerHTML = `
-                                <div class="relative group">
+                                 <div class="relative group border border-transparent hover:border-blue-500  radius 30px">
                                     <!-- Content -->
                                     <div class="v869m dpq4d a11ya xroga z1r3e dark:bg-neutral-800 dark:border-neutral-700">
                                         <div class="flex wwu1y">
@@ -219,39 +220,6 @@
             filterStocks(stocks);
         })();
     </script>
-
-<script>
-    // Get the tooltip span
-    const tooltip = document.querySelector('span');
-    const button = document.querySelector('button');
-  
-    button.addEventListener('mouseenter', () => {
-      setTimeout(() => {
-        // Tooltip becomes visible after 0.5 seconds
-        tooltip.style.opacity = 1;
-  
-        // Check space on the right side and adjust if needed
-        const buttonRect = button.getBoundingClientRect();
-        const tooltipRect = tooltip.getBoundingClientRect();
-  
-        const spaceRight = window.innerWidth - buttonRect.right;
-        const spaceLeft = buttonRect.left;
-  
-        // If there's not enough space on the right, move the tooltip to the left
-        if (spaceRight < tooltipRect.width) {
-          tooltip.style.left = `${buttonRect.left + buttonRect.width / 2 - tooltipRect.width / 2}px`;
-          tooltip.style.transform = 'translateX(0)';
-        } else {
-          tooltip.style.left = `${buttonRect.left + buttonRect.width / 2 - tooltipRect.width / 2}px`;
-          tooltip.style.transform = 'translateX(-50%)';
-        }
-      }, 500);
-    });
-  
-    button.addEventListener('mouseleave', () => {
-      tooltip.style.opacity = 0; // Hide tooltip when mouse leaves
-    });
-  </script>
 
    
 
