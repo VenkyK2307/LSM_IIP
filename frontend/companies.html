@@ -94,7 +94,15 @@
 }
 
 .grid-item {
-    position: relative; }
+    position: relative; 
+}
+
+    .button{
+position: absolute;
+top: 40px;
+right: 30px;
+z-index: 999;
+    }
 
     </style>
 </head>
@@ -104,20 +112,73 @@
         <div class="mb-4">
             <label for="stock-name" class="block text-gray-700 font-medium mb-2">Search Stock by Name:</label>
             <input type="text" id="stock-name" class="input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-gray-400" placeholder="Type a stock name...">
-          </div>
-      
-    
-          <div class="mb-6">
+        </div>
+
+        <div class="mb-6">
             <label for="capability" class="block text-gray-700 font-medium mb-2">Select Capability:</label>
             <select id="capability" class="select w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-              <!-- Capabilities will be populated here dynamically -->
+                <!-- Capabilities will be populated here dynamically -->
             </select>
-          </div>
+        </div>
+
+        
+    
     </div>
 
- 
+    <div class="button">
+        <div class="wu6q4 d7n5o sb72b mx-auto"><!-- Popover -->
+            <div class=" truncate">
+              <div class="hs-tooltip [--trigger:click] sm:[--placement:bottom-left] inline-block muahm">
+                <span class="hs-tooltip-toggle relative lxq6g inline-flex items-center truncate haue5 p2hej shq01 dark:text-neutral-200 cursor-pointer buzh1 oxdd2" tabindex="-1" style="">
+                  Lewis Clarke
+                </span>
 
-    
+                <!-- Popover Content -->
+                <div class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 m55qu absolute p2i0f iyudp a7ep8 d7n5o dmpbm ahplb r6p05 q0eqv ox4hw k36kn after:absolute after:top-0 after:-start-4 after:w-4 after:h-full dark:bg-neutral-800 dark:border-neutral-700 hidden" role="tooltip" style="position: fixed; left: 166.8px; top: 43.4px;">
+                  <div class="rqtdq">
+                    <span class="block ykymf haue5 rgfsw dark:text-neutral-500">
+                      Contact
+                    </span>
+
+                    <!-- Header -->
+                    <div class="flex flex-col kcz8q items-center ycexc">
+                      <img class="aoz7r bvrda mrhis" src="https://images.unsplash.com/photo-1679412330254-90cb240038c5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2.5&amp;w=320&amp;h=320&amp;q=80" alt="Avatar">
+                      <h4 class="eme6w eyvb2 shq01 dark:text-white">
+                        Lewis Clarke
+                      </h4>
+                    </div>
+                    <!-- End Header -->
+
+                    <div class="scigp scsv5">
+                      <p class="haue5 shq01 dark:text-neutral-200">
+                        <a class="inline-flex items-center qcjqw b8tiz zzle9 bg5c8 oxdd2 focus:outline-hidden rtxpp dark:text-blue-500" href="#" target="_parent">lewis@company.com</a>
+                      </p>
+                    </div>
+      
+                    <!-- Footer -->
+                    <div class="ld1zm wu6q4 flex jbdbg items-center of9bz lftmz dark:border-neutral-700">
+                      <a class="inline-flex items-center qcjqw nj683 rgfsw zcbkx focus:outline-hidden fqjyz disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-white dark:focus:text-white" href="#" target="_parent">
+                        <svg class="aoz7r tkxzw" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" x2="4" y1="22" y2="15"></line></svg>
+                        Flag
+                      </a>
+
+                      <button type="button" class="bkwmr vi1ao inline-flex items-center qcjqw haue5 cnwot ahplb lftmz dmpbm shq01 x80s0 p7mjk disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden vqbw5 dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+                        <svg class="aoz7r bfq76" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>
+                        Add to contacts
+                      </button>
+                    </div>
+                    <!-- End Footer -->
+                  </div>
+                </div>
+                <!-- End Popover Content -->
+              </div>
+            </div>
+            <!-- End Popover --></div>
+    </div>
+
+
+
+  
 
     <div id="stock-results">
         <div class="grid-container" id="stock-list">
@@ -140,11 +201,31 @@
             }
         }
 
-        // Function to display stock names in a grid with custom styles
+        // Function to populate the capability dropdown with all available capabilities
+        function populateCapabilities(stocks) {
+            const capabilities = new Set(stocks.map(stock => stock.Capability)); // Get unique capabilities
+            const capabilitySelect = document.getElementById("capability");
+            capabilitySelect.innerHTML = ''; // Clear previous options
+
+            // Add "All" option to the dropdown
+            const allOption = document.createElement("option");
+            allOption.value = "all";
+            allOption.textContent = "All Stocks";
+            capabilitySelect.appendChild(allOption);
+
+            // Populate the dropdown with all unique capabilities
+            capabilities.forEach(cap => {
+                const option = document.createElement("option");
+                option.value = cap;
+                option.textContent = cap;
+                capabilitySelect.appendChild(option);
+            });
+        }
+
+        // Function to display stock names in a grid
         function displayStockNames(stocks) {
             const stockList = document.getElementById("stock-list");
             stockList.innerHTML = ''; // Clear previous results
-            
 
             if (stocks.length > 0) {
                 stocks.forEach(stock => {
@@ -152,22 +233,21 @@
                     gridItem.classList.add("grid-item");
 
                     gridItem.innerHTML = `
-                                 <div class="relative group border border-transparent hover:border-blue-500  radius 30px">
-                                    <!-- Content -->
-                                    <div class="v869m dpq4d a11ya xroga z1r3e dark:bg-neutral-800 dark:border-neutral-700">
-                                        <div class="flex wwu1y">
-                                            <img src="${stock.Logo_URL}" alt="${stock.Name}">
-                                            <div class="btpiv truncate">
-                                                <p class="block truncate ps4xk b7vor dark:text-neutral-300">
-                                                    ${stock.Name}
-                                                </p>
-                                                <small class="block ps4xk pykwy dark:text-neutral-500">
-                                                    ${stock.SCORE}/30
-                                                </small>
-                                            </div>
-                                        </div>
+                        <div class="relative group border border-transparent hover:border-blue-500 radius 30px p-2">
+                            <div class="v869m dpq4d a11ya xroga z1r3e dark:bg-neutral-800 dark:border-neutral-700">
+                                <div class="flex wwu1y">
+                                    <img src="${stock.Logo_URL}" alt="${stock.Name}">
+                                    <div class="btpiv truncate">
+                                        <p class="block truncate ps4xk b7vor dark:text-neutral-300">
+                                            ${stock.Name}
+                                        </p>
+                                        <small class="block ps4xk pykwy dark:text-neutral-500">
+                                            ${stock.SCORE}/30
+                                        </small>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
                     `;
 
                     stockList.appendChild(gridItem);
@@ -182,24 +262,15 @@
             const searchTerm = document.getElementById("stock-name").value.toLowerCase();
             const selectedCapability = document.getElementById("capability").value;
 
-            const filteredStocks = stocks.filter(stock => 
-                stock.Name.toLowerCase().includes(searchTerm) && stock.Capability === selectedCapability
-            );
+            // Filter stocks based on search name and capability
+            const filteredStocks = stocks.filter(stock => {
+                const matchesName = stock.Name.toLowerCase().includes(searchTerm);
+                const matchesCapability = selectedCapability === "all" || stock.Capability === selectedCapability;
+
+                return matchesName && matchesCapability;
+            });
 
             displayStockNames(filteredStocks);
-        }
-
-        // Function to populate the capability dropdown
-        function populateCapabilities(stocks) {
-            const capabilities = new Set(stocks.map(stock => stock.Capability)); // Get unique capabilities
-            const capabilitySelect = document.getElementById("capability");
-            
-            capabilities.forEach(cap => {
-                const option = document.createElement("option");
-                option.value = cap;
-                option.textContent = cap;
-                capabilitySelect.appendChild(option);
-            });
         }
 
         // Event listeners for filtering
@@ -213,15 +284,18 @@
             filterStocks(stocks);
         });
 
-        // Initial data load and populate capabilities
+        // Initial data load, populate capabilities and display all stocks
         (async () => {
             const stocks = await fetchStockData();
-            populateCapabilities(stocks);
-            filterStocks(stocks);
+            populateCapabilities(stocks);  // Populate the dropdown with all capabilities
+            displayStockNames(stocks);      // Display all stocks in the grid initially
         })();
     </script>
 
-   
+    <script src="./assets/preline/js/prelinejs1.js"></script>
+    <script src="./assets/preline/js/prelinejs2.js"></script>
 
 </body>
+
+
 </html>

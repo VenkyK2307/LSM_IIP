@@ -1,0 +1,63 @@
+[
+    {
+      "index": "NIFTY 50",
+      "current_price": 22337.30,
+      "risk_level": "Low"
+    },
+    {
+      "index": "NIFTY NEXT 50",
+      "current_price": 59441.65,
+      "risk_level": "Moderate"
+    },
+    {
+      "index": "NIFTY 100",
+      "current_price": 22818.80,
+      "risk_level": "Low"
+    },
+    {
+      "index": "NIFTY 200",
+      "current_price": 12320.75,
+      "risk_level": "Moderate"
+    },
+    {
+      "index": "NIFTY 500",
+      "current_price": 20256.50,
+      "risk_level": "Moderate"
+    },
+    {
+      "index": "NIFTY MIDCAP 50",
+      "current_price": 13936.70,
+      "risk_level": "Moderate"
+    },
+    {
+      "index": "NIFTY MIDCAP 100",
+      "current_price": 49168.35,
+      "risk_level": "Moderate"
+    },
+    {
+      "index": "NIFTY SMALLCAP 100",
+      "current_price": 15199.10,
+      "risk_level": "High"
+    },
+    {
+      "index": "INDIA VIX",
+      "current_price": 13.67,
+      "risk_level": "High"
+    },
+    {
+      "index": "NIFTY MIDCAP 150",
+      "current_price": 18240.15,
+      "risk_level": "Moderate"
+    },
+    {
+      "index": "NIFTY SMALLCAP 50",
+      "current_price": 7379.25,
+      "risk_level": "High"
+    },
+    {
+      "index": "NIFTY SMALLCAP 250",
+      "current_price": 14291.05,
+      "risk_level": "High"
+    }
+  ]
+  
