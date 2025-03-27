@@ -46,7 +46,7 @@
                     body: JSON.stringify({
                         messages: [{ role: 'user', content: userMessage }],
                         model: 'gpt-4o',
-                        max_tokens: 100,
+                        max_tokens: 300,
                         temperature: 0.9
                     })
                 });

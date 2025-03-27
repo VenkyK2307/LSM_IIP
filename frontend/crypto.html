@@ -142,7 +142,7 @@ z-index: 999;
         // Function to fetch JSON data from main.json
         async function fetchStockData() {
             try {
-                const response = await fetch('json/main.json'); // Adjust the path if needed
+                const response = await fetch('json/crypto.json'); // Adjust the path if needed
                 const data = await response.json();
                 return data;
             } catch (error) {
@@ -186,13 +186,13 @@ z-index: 999;
                         <div class="relative group border border-transparent hover:border-blue-500 radius 30px p-2">
                             <div class="v869m dpq4d a11ya xroga z1r3e dark:bg-neutral-800 dark:border-neutral-700">
                                 <div class="flex wwu1y " >
-                                    <img src="${stock.Logo_URL}" alt="${stock.Name}">
+                                    <img src="${stock.logo}" alt="${stock.Name}">
                                     <div class="btpiv truncate">
                                         <p class="block truncate ps4xk b7vor dark:text-neutral-300">
                                             ${stock.Name}
                                         </p>
                                         <small class="block ps4xk pykwy dark:text-neutral-500">
-                                            ${stock.SCORE}/30
+                                            Rank : ${stock.Rank}
                                         </small>
                                     </div>
                                 </div>

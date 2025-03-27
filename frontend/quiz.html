@@ -354,7 +354,7 @@
         <div class="buttons">
             <button type="button" id="prevButton" class="arrow-button" style="display:none;">Previous</button>
             <button type="button" id="nextButton" class="arrow-button">Next</button>
-            <button type="button" id="finishButton" class="arrow-button" style="display:none;">Finish Quiz</button>
+            <button type="button" id="finishButton" class="arrow-button" style="display:none;" onclick="showResults()">Finish Quiz</button>
         </div>
     </div>
 
@@ -363,7 +363,11 @@
         <h1>Quiz Finished!</h1>
         <h2>Your RAT Score : </h2>
         <p id="scoreText" class="score"></p>
+        <!-- <canvas id="scoreChart"></canvas> -->
     </div>
+
+  
+
 
     <script>
         const questions = [
@@ -486,6 +490,40 @@
         finishButton.addEventListener('click', showResults);
         questionContainer.addEventListener('click', handleOptionClick);
     </script>
+
+    <script>
+        function showResults() {
+    let score = selectedAnswers.reduce((acc, val) => acc + (val || 0), 0);
+
+    quizContainer.style.display = 'none';
+    resultsContainer.style.display = 'block';
+    sidebar.style.display = 'none';
+    scoreText.innerHTML = ` ${score} / 100 `;
+
+    // Display Donut Chart
+    const ctx = document.getElementById('scoreChart').getContext('2d');
+
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Achieved Score', 'Remaining'],
+            datasets: [{
+                data: [score, 100 - score],
+                backgroundColor: ['#4CAF50', '#FF0000'],
+                hoverBackgroundColor: ['#45A049', '#D32F2F']
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+}
+
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
       <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 
 

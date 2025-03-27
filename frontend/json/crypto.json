@@ -1,0 +1,1002 @@
+[
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC.svg",
+        "symbol": "BTC",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/BTCUSD/?exchange=CRYPTO",
+        "Name": "Bitcoin",
+        "Rank": "1",
+        "Market cap": "1.72T USD",
+        "Circ supply": "19.84M",
+        "Category": "Cryptocurrencies, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCETH.svg",
+        "symbol": "ETH",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/ETHUSD/?exchange=CRYPTO",
+        "Name": "Ethereum",
+        "Rank": "2",
+        "Market cap": "243.23B USD",
+        "Circ supply": "120.64M",
+        "Category": "Smart contract platforms, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCUSDT.svg",
+        "symbol": "USDT",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/USDTUSD/?exchange=CRYPTO",
+        "Name": "Tether USDt",
+        "Rank": "3",
+        "Market cap": "144.03B USD",
+        "Circ supply": "144.02B",
+        "Category": "Stablecoins, Asset-backed Stablecoins"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCXRP.svg",
+        "symbol": "XRP",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/XRPUSD/?exchange=CRYPTO",
+        "Name": "XRP",
+        "Rank": "4",
+        "Market cap": "139.83B USD",
+        "Circ supply": "58.16B",
+        "Category": "Cryptocurrencies, Enterprise solutions, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCBNB.svg",
+        "symbol": "BNB",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/BNBUSD/?exchange=CRYPTO",
+        "Name": "BNB",
+        "Rank": "5",
+        "Market cap": "88.76B USD",
+        "Circ supply": "142.47M",
+        "Category": "Smart contract platforms, Centralized-exchange, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCSOL.svg",
+        "symbol": "SOL",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/SOLUSD/?exchange=CRYPTO",
+        "Name": "Solana",
+        "Rank": "6",
+        "Market cap": "71.36B USD",
+        "Circ supply": "511.46M",
+        "Category": "Smart contract platforms, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCUSDC.svg",
+        "symbol": "USDC",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/USDCUSD/?exchange=CRYPTO",
+        "Name": "USDC",
+        "Rank": "7",
+        "Market cap": "60.14B USD",
+        "Circ supply": "60.14B",
+        "Category": "Stablecoins, Asset-backed Stablecoins, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCDOGE.svg",
+        "symbol": "DOGE",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/DOGEUSD/?exchange=CRYPTO",
+        "Name": "Dogecoin",
+        "Rank": "8",
+        "Market cap": "29.18B USD",
+        "Circ supply": "148.59B",
+        "Category": "Memes, Cryptocurrencies, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCADA.svg",
+        "symbol": "ADA",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/ADAUSD/?exchange=CRYPTO",
+        "Name": "Cardano",
+        "Rank": "9",
+        "Market cap": "26.05B USD",
+        "Circ supply": "35.24B",
+        "Category": "Smart contract platforms, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCTRX.svg",
+        "symbol": "TRX",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/TRXUSD/?exchange=CRYPTO",
+        "Name": "TRON",
+        "Rank": "10",
+        "Market cap": "21.79B USD",
+        "Circ supply": "95B",
+        "Category": "Smart contract platforms, Payments, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCLINK.svg",
+        "symbol": "LINK",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/LINKUSD/?exchange=CRYPTO",
+        "Name": "Chainlink",
+        "Rank": "11",
+        "Market cap": "10.08B USD",
+        "Circ supply": "657.1M",
+        "Category": "Oracles, Data management & AI, Web3, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCAVAX.svg",
+        "symbol": "AVAX",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/AVAXUSD/?exchange=CRYPTO",
+        "Name": "Avalanche",
+        "Rank": "12",
+        "Market cap": "9.23B USD",
+        "Circ supply": "414.79M",
+        "Category": "Smart contract platforms, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCLEO.svg",
+        "symbol": "LEO",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/LEOUSD/?exchange=CRYPTO",
+        "Name": "UNUS SED LEO",
+        "Rank": "13",
+        "Market cap": "9.03B USD",
+        "Circ supply": "923.86M",
+        "Category": "Centralized-exchange, Payments"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCTON.svg",
+        "symbol": "TON",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/TONUSD/?exchange=CRYPTO",
+        "Name": "Toncoin",
+        "Rank": "14",
+        "Market cap": "8.95B USD",
+        "Circ supply": "2.48B",
+        "Category": "Smart contract platforms, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCXLM.svg",
+        "symbol": "XLM",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/XLMUSD/?exchange=CRYPTO",
+        "Name": "Stellar",
+        "Rank": "15",
+        "Market cap": "8.86B USD",
+        "Circ supply": "30.78B",
+        "Category": "Cryptocurrencies, Smart contract platforms, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCSHIB.svg",
+        "symbol": "SHIB",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/SHIBUSD/?exchange=CRYPTO",
+        "Name": "Shiba Inu",
+        "Rank": "16",
+        "Market cap": "8.65B USD",
+        "Circ supply": "589.25T",
+        "Category": "Memes, Cryptocurrencies"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCHBAR.svg",
+        "symbol": "HBAR",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/HBARUSD/?exchange=CRYPTO",
+        "Name": "Hedera",
+        "Rank": "17",
+        "Market cap": "8.22B USD",
+        "Circ supply": "42.22B",
+        "Category": "Smart contract platforms, Enterprise solutions, DeFi, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCSUI.svg",
+        "symbol": "SUI",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/SUIUSD/?exchange=CRYPTO",
+        "Name": "Sui",
+        "Rank": "18",
+        "Market cap": "8.22B USD",
+        "Circ supply": "3.17B",
+        "Category": "Smart contract platforms, Developments tools, Scaling, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCDOT.svg",
+        "symbol": "DOT",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/DOTUSD/?exchange=CRYPTO",
+        "Name": "Polkadot",
+        "Rank": "19",
+        "Market cap": "7.35B USD",
+        "Circ supply": "1.56B",
+        "Category": "Smart contract platforms, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCLTC.svg",
+        "symbol": "LTC",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/LTCUSD/?exchange=CRYPTO",
+        "Name": "Litecoin",
+        "Rank": "20",
+        "Market cap": "7.03B USD",
+        "Circ supply": "75.56M",
+        "Category": "Cryptocurrencies, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCBCH.svg",
+        "symbol": "BCH",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/BCHUSD/?exchange=CRYPTO",
+        "Name": "Bitcoin Cash",
+        "Rank": "21",
+        "Market cap": "6.67B USD",
+        "Circ supply": "19.85M",
+        "Category": "Cryptocurrencies, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCOM.svg",
+        "symbol": "OM",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/OMUSD/?exchange=CRYPTO",
+        "Name": "MANTRA",
+        "Rank": "22",
+        "Market cap": "6.47B USD",
+        "Circ supply": "985.77M",
+        "Category": "Lending & Borrowing, DeFi, DAO"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCBGB.svg",
+        "symbol": "BGB",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/BGBUSD/?exchange=CRYPTO",
+        "Name": "Bitget Token",
+        "Rank": "23",
+        "Market cap": "6.05B USD",
+        "Circ supply": "1.2B",
+        "Category": "Centralized-exchange"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCUSDEE.svg",
+        "symbol": "USDE",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/USDEEUSD/?exchange=CRYPTO",
+        "Name": "Ethena USDe",
+        "Rank": "24",
+        "Market cap": "5.37B USD",
+        "Circ supply": "5.37B",
+        "Category": "Stablecoins, Asset-backed Stablecoins"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCDAI.svg",
+        "symbol": "DAI",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/DAIUSD/?exchange=CRYPTO",
+        "Name": "Dai",
+        "Rank": "25",
+        "Market cap": "5.37B USD",
+        "Circ supply": "5.37B",
+        "Category": "Stablecoins, Asset-backed Stablecoins, DeFi"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCPI3.svg",
+        "symbol": "PI",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/PI3USD/?exchange=CRYPTO",
+        "Name": "PI",
+        "Rank": "26",
+        "Market cap": "5.33B USD",
+        "Circ supply": "6.76B",
+        "Category": "Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCHYPEH.svg",
+        "symbol": "HYPE",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/HYPEHUSD/?exchange=CRYPTO",
+        "Name": "Hyperliquid",
+        "Rank": "27",
+        "Market cap": "4.83B USD",
+        "Circ supply": "333.93M",
+        "Category": "Decentralized exchange, Derivatives, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCUNI.svg",
+        "symbol": "UNI",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/UNIUSD/?exchange=CRYPTO",
+        "Name": "Uniswap",
+        "Rank": "28",
+        "Market cap": "4.3B USD",
+        "Circ supply": "628.49M",
+        "Category": "Decentralized exchange, DeFi, DAO, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCXMR.svg",
+        "symbol": "XMR",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/XMRUSD/?exchange=CRYPTO",
+        "Name": "Monero",
+        "Rank": "29",
+        "Market cap": "4.1B USD",
+        "Circ supply": "18.45M",
+        "Category": "Privacy, Cryptocurrencies, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCPEPE.svg",
+        "symbol": "PEPE",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/PEPEUSD/?exchange=CRYPTO",
+        "Name": "Pepe",
+        "Rank": "30",
+        "Market cap": "3.64B USD",
+        "Circ supply": "420.69T",
+        "Category": "Memes"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCNEAR.svg",
+        "symbol": "NEAR",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/NEARUSD/?exchange=CRYPTO",
+        "Name": "NEAR Protocol",
+        "Rank": "31",
+        "Market cap": "3.6B USD",
+        "Circ supply": "1.2B",
+        "Category": "Smart contract platforms, Data management & AI, Interoperability, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCAPTO.svg",
+        "symbol": "APT",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/APTOUSD/?exchange=CRYPTO",
+        "Name": "Aptos",
+        "Rank": "32",
+        "Market cap": "3.56B USD",
+        "Circ supply": "603.53M",
+        "Category": "Smart contract platforms, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCOKB.svg",
+        "symbol": "OKB",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/OKBUSD/?exchange=CRYPTO",
+        "Name": "OKB",
+        "Rank": "33",
+        "Market cap": "3B USD",
+        "Circ supply": "60M",
+        "Category": "Centralized-exchange, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCICP.svg",
+        "symbol": "ICP",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/ICPUSD/?exchange=CRYPTO",
+        "Name": "Internet Computer",
+        "Rank": "34",
+        "Market cap": "2.98B USD",
+        "Circ supply": "482.05M",
+        "Category": "Smart contract platforms, Data management & AI, DeFi, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCONDO.svg",
+        "symbol": "ONDO",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/ONDOUSD/?exchange=CRYPTO",
+        "Name": "Ondo",
+        "Rank": "35",
+        "Market cap": "2.9B USD",
+        "Circ supply": "3.16B",
+        "Category": "Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCMNT.svg",
+        "symbol": "MNT",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/MNTUSD/?exchange=CRYPTO",
+        "Name": "Mantle",
+        "Rank": "36",
+        "Market cap": "2.85B USD",
+        "Circ supply": "3.36B",
+        "Category": "Scaling, DeFi, DAO"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCETC.svg",
+        "symbol": "ETC",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/ETCUSD/?exchange=CRYPTO",
+        "Name": "Ethereum Classic",
+        "Rank": "37",
+        "Market cap": "2.76B USD",
+        "Circ supply": "151.27M",
+        "Category": "Smart contract platforms, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCAAVE.svg",
+        "symbol": "AAVE",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/AAVEUSD/?exchange=CRYPTO",
+        "Name": "Aave",
+        "Rank": "38",
+        "Market cap": "2.74B USD",
+        "Circ supply": "15.09M",
+        "Category": "Lending & Borrowing, DeFi, DAO, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCCRO.svg",
+        "symbol": "CRO",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/CROUSD/?exchange=CRYPTO",
+        "Name": "Cronos",
+        "Rank": "39",
+        "Market cap": "2.67B USD",
+        "Circ supply": "26.57B",
+        "Category": "Smart contract platforms, Centralized-exchange, Payments, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCPOLYG.svg",
+        "symbol": "POL",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/POLYGUSD/?exchange=CRYPTO",
+        "Name": "POL (ex-MATIC)",
+        "Rank": "40",
+        "Market cap": "2.45B USD",
+        "Circ supply": "10.39B",
+        "Category": "—"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCFDUSD.svg",
+        "symbol": "FDUSD",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/FDUSDUSD/?exchange=CRYPTO",
+        "Name": "First Digital USD",
+        "Rank": "41",
+        "Market cap": "2.41B USD",
+        "Circ supply": "2.41B",
+        "Category": "Stablecoins"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCTRUMPOF.svg",
+        "symbol": "TRUMP",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/TRUMPOFUSD/?exchange=CRYPTO",
+        "Name": "OFFICIAL TRUMP",
+        "Rank": "42",
+        "Market cap": "2.31B USD",
+        "Circ supply": "200M",
+        "Category": "Memes, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCVET.svg",
+        "symbol": "VET",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/VETUSD/?exchange=CRYPTO",
+        "Name": "VeChain",
+        "Rank": "43",
+        "Market cap": "2.3B USD",
+        "Circ supply": "85.99B",
+        "Category": "Smart contract platforms, Internet of things, Logistics, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCTAOB.svg",
+        "symbol": "TAO",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/TAOBUSD/?exchange=CRYPTO",
+        "Name": "Bittensor",
+        "Rank": "44",
+        "Market cap": "2.24B USD",
+        "Circ supply": "8.52M",
+        "Category": "Distributed computing & Storage, Oracles, Data management & AI, DAO, DePIN"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCENA.svg",
+        "symbol": "ENA",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/ENAUSD/?exchange=CRYPTO",
+        "Name": "Ethena",
+        "Rank": "45",
+        "Market cap": "2.22B USD",
+        "Circ supply": "5.29B",
+        "Category": "DeFi"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCRNDR.svg",
+        "symbol": "RENDER",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/RENDERUSD/?exchange=CRYPTO",
+        "Name": "Render",
+        "Rank": "46",
+        "Market cap": "2.07B USD",
+        "Circ supply": "517.72M",
+        "Category": "Distributed computing & Storage, Data management & AI, NFTs & Collectibles, Scaling, Social, media & Content, Metaverse, Web3, DePIN, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCGT.svg",
+        "symbol": "GT",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/GTUSD/?exchange=CRYPTO",
+        "Name": "GateToken",
+        "Rank": "47",
+        "Market cap": "2.03B USD",
+        "Circ supply": "85.82M",
+        "Category": "Centralized-exchange"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCTIA2.svg",
+        "symbol": "TIA",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/TIA2USD/?exchange=CRYPTO",
+        "Name": "Celestia",
+        "Rank": "48",
+        "Market cap": "2.03B USD",
+        "Circ supply": "575.87M",
+        "Category": "—"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCFIL.svg",
+        "symbol": "FIL",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/FILUSD/?exchange=CRYPTO",
+        "Name": "Filecoin",
+        "Rank": "49",
+        "Market cap": "2.01B USD",
+        "Circ supply": "645.94M",
+        "Category": "Distributed computing & Storage, Data management & AI, Web3, Layer 1, DePIN, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCKAS.svg",
+        "symbol": "KAS",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/KASUSD/?exchange=CRYPTO",
+        "Name": "Kaspa",
+        "Rank": "50",
+        "Market cap": "1.96B USD",
+        "Circ supply": "25.92B",
+        "Category": "Cryptocurrencies, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCATOM.svg",
+        "symbol": "ATOM",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/ATOMUSD/?exchange=CRYPTO",
+        "Name": "Cosmos",
+        "Rank": "51",
+        "Market cap": "1.92B USD",
+        "Circ supply": "390.93M",
+        "Category": "Smart contract platforms, Interoperability, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCARBI.svg",
+        "symbol": "ARB",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/ARBIUSD/?exchange=CRYPTO",
+        "Name": "Arbitrum",
+        "Rank": "52",
+        "Market cap": "1.78B USD",
+        "Circ supply": "4.62B",
+        "Category": "Scaling, Web3, DAO"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCALGO.svg",
+        "symbol": "ALGO",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/ALGOUSD/?exchange=CRYPTO",
+        "Name": "Algorand",
+        "Rank": "53",
+        "Market cap": "1.77B USD",
+        "Circ supply": "8.52B",
+        "Category": "Smart contract platforms, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCSONI.svg",
+        "symbol": "S",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/SONIUSD/?exchange=CRYPTO",
+        "Name": "Sonic (prev. FTM)",
+        "Rank": "54",
+        "Market cap": "1.75B USD",
+        "Circ supply": "2.88B",
+        "Category": "Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCIP.svg",
+        "symbol": "IP",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/IPUSD/?exchange=CRYPTO",
+        "Name": "Story",
+        "Rank": "55",
+        "Market cap": "1.55B USD",
+        "Circ supply": "258.46M",
+        "Category": "Smart contract platforms, Data management & AI, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCJUPI.svg",
+        "symbol": "JUP",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/JUPIUSD/?exchange=CRYPTO",
+        "Name": "Jupiter",
+        "Rank": "56",
+        "Market cap": "1.48B USD",
+        "Circ supply": "2.69B",
+        "Category": "Decentralized exchange, Derivatives, Interoperability, DeFi"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCDEXE.svg",
+        "symbol": "DEXE",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/DEXEUSD/?exchange=CRYPTO",
+        "Name": "DeXe",
+        "Rank": "57",
+        "Market cap": "1.46B USD",
+        "Circ supply": "83.73M",
+        "Category": "Data management & AI, Asset management, DeFi"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCOP.svg",
+        "symbol": "OP",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/OPUSD/?exchange=CRYPTO",
+        "Name": "Optimism",
+        "Rank": "58",
+        "Market cap": "1.45B USD",
+        "Circ supply": "1.62B",
+        "Category": "Scaling, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCKCS.svg",
+        "symbol": "KCS",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/KCSUSD/?exchange=CRYPTO",
+        "Name": "KuCoin Token",
+        "Rank": "59",
+        "Market cap": "1.38B USD",
+        "Circ supply": "122.56M",
+        "Category": "Centralized-exchange"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCFET.svg",
+        "symbol": "FET",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/FETUSD/?exchange=CRYPTO",
+        "Name": "Artificial Superintelligence Alliance",
+        "Rank": "60",
+        "Market cap": "1.33B USD",
+        "Circ supply": "2.39B",
+        "Category": "Data management & AI, Interoperability, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCMOVEM.svg",
+        "symbol": "MOVE",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/MOVEMUSD/?exchange=CRYPTO",
+        "Name": "Movement",
+        "Rank": "61",
+        "Market cap": "1.26B USD",
+        "Circ supply": "2.45B",
+        "Category": "Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCIMXIMMUTABLEX.svg",
+        "symbol": "IMX",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/IMXUSD/?exchange=CRYPTO",
+        "Name": "Immutable",
+        "Rank": "62",
+        "Market cap": "1.18B USD",
+        "Circ supply": "1.79B",
+        "Category": "Developments tools, Gaming, NFTs & Collectibles, Scaling, Marketplace"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCXDC.svg",
+        "symbol": "XDC",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/XDCUSD/?exchange=CRYPTO",
+        "Name": "XDC Network",
+        "Rank": "63",
+        "Market cap": "1.15B USD",
+        "Circ supply": "15.7B",
+        "Category": "Smart contract platforms, Enterprise solutions, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCMKR.svg",
+        "symbol": "MKR",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/MKRUSD/?exchange=CRYPTO",
+        "Name": "Maker",
+        "Rank": "64",
+        "Market cap": "1.15B USD",
+        "Circ supply": "848.07K",
+        "Category": "Lending & Borrowing, DeFi, DAO, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCWLDW.svg",
+        "symbol": "WLD",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/WLDWUSD/?exchange=CRYPTO",
+        "Name": "Worldcoin",
+        "Rank": "65",
+        "Market cap": "1.13B USD",
+        "Circ supply": "1.2B",
+        "Category": "Privacy, Identity, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCBONK.svg",
+        "symbol": "BONK",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/BONKUSD/?exchange=CRYPTO",
+        "Name": "Bonk",
+        "Rank": "66",
+        "Market cap": "1.12B USD",
+        "Circ supply": "77.98T",
+        "Category": "Memes, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCSTXS.svg",
+        "symbol": "STX",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/STXSUSD/?exchange=CRYPTO",
+        "Name": "Stacks",
+        "Rank": "67",
+        "Market cap": "1.09B USD",
+        "Circ supply": "1.52B",
+        "Category": "Smart contract platforms, NFTs & Collectibles, DeFi, Metaverse, Web3, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCINJ.svg",
+        "symbol": "INJ",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/INJUSD/?exchange=CRYPTO",
+        "Name": "Injective",
+        "Rank": "68",
+        "Market cap": "1.07B USD",
+        "Circ supply": "99.97M",
+        "Category": "Smart contract platforms, Data management & AI, Interoperability, DeFi, Web3, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCGRAPH.svg",
+        "symbol": "GRT",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/GRTUSD/?exchange=CRYPTO",
+        "Name": "The Graph",
+        "Rank": "69",
+        "Market cap": "1.03B USD",
+        "Circ supply": "9.78B",
+        "Category": "Data management & AI, Enterprise solutions, Web3, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCSEI.svg",
+        "symbol": "SEI",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/SEIUSD/?exchange=CRYPTO",
+        "Name": "Sei",
+        "Rank": "70",
+        "Market cap": "1.02B USD",
+        "Circ supply": "4.88B",
+        "Category": "Developments tools, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCTHETA.svg",
+        "symbol": "THETA",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/THETAUSD/?exchange=CRYPTO",
+        "Name": "Theta Network",
+        "Rank": "71",
+        "Market cap": "999.4M USD",
+        "Circ supply": "1B",
+        "Category": "Smart contract platforms, Distributed computing & Storage, Data management & AI, Enterprise solutions, Social, media & Content, Web3, Layer 1, DePIN, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCQNT.svg",
+        "symbol": "QNT",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/QNTUSD/?exchange=CRYPTO",
+        "Name": "Quant",
+        "Rank": "72",
+        "Market cap": "931.3M USD",
+        "Circ supply": "12.07M",
+        "Category": "Interoperability"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCLDO.svg",
+        "symbol": "LDO",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/LDOUSD/?exchange=CRYPTO",
+        "Name": "Lido DAO",
+        "Rank": "73",
+        "Market cap": "929.12M USD",
+        "Circ supply": "897.88M",
+        "Category": "Derivatives, DeFi, DAO"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCFLR.svg",
+        "symbol": "FLR",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/FLRUSD/?exchange=CRYPTO",
+        "Name": "FLARE",
+        "Rank": "74",
+        "Market cap": "904.31M USD",
+        "Circ supply": "61.11B",
+        "Category": "Developments tools, Interoperability, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCEOS.svg",
+        "symbol": "EOS",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/EOSUSD/?exchange=CRYPTO",
+        "Name": "EOS",
+        "Rank": "75",
+        "Market cap": "906.81M USD",
+        "Circ supply": "1.55B",
+        "Category": "Smart contract platforms, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCBNXB.svg",
+        "symbol": "BNX",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/BNXBUSD/?exchange=CRYPTO",
+        "Name": "BinaryX",
+        "Rank": "76",
+        "Market cap": "893.42M USD",
+        "Circ supply": "381.87M",
+        "Category": "Gaming, NFTs & Collectibles, Metaverse, Marketplace, Web3"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCBERA.svg",
+        "symbol": "BERA",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/BERAUSD/?exchange=CRYPTO",
+        "Name": "Berachain",
+        "Rank": "77",
+        "Market cap": "827.22M USD",
+        "Circ supply": "107.48M",
+        "Category": "DeFi, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCGALA.svg",
+        "symbol": "GALA",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/GALAUSD/?exchange=CRYPTO",
+        "Name": "Gala",
+        "Rank": "78",
+        "Market cap": "809.76M USD",
+        "Circ supply": "43.69B",
+        "Category": "Gaming, NFTs & Collectibles, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCPYUSD.svg",
+        "symbol": "PYUSD",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/PYUSDUSD/?exchange=CRYPTO",
+        "Name": "PayPal USD",
+        "Rank": "79",
+        "Market cap": "791.43M USD",
+        "Circ supply": "791.69M",
+        "Category": "Stablecoins, Asset-backed Stablecoins"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCSAND.svg",
+        "symbol": "SAND",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/SANDUSD/?exchange=CRYPTO",
+        "Name": "The Sandbox",
+        "Rank": "80",
+        "Market cap": "772.52M USD",
+        "Circ supply": "2.48B",
+        "Category": "Gaming, NFTs & Collectibles, Metaverse, Marketplace"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCXTZ.svg",
+        "symbol": "XTZ",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/XTZUSD/?exchange=CRYPTO",
+        "Name": "Tezos",
+        "Rank": "81",
+        "Market cap": "754.77M USD",
+        "Circ supply": "1.04B",
+        "Category": "Smart contract platforms, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCJTO.svg",
+        "symbol": "JTO",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/JTOUSD/?exchange=CRYPTO",
+        "Name": "Jito",
+        "Rank": "82",
+        "Market cap": "747.22M USD",
+        "Circ supply": "308.93M",
+        "Category": "Derivatives, DeFi, DAO"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCNEXO.svg",
+        "symbol": "NEXO",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/NEXOUSD/?exchange=CRYPTO",
+        "Name": "Nexo",
+        "Rank": "83",
+        "Market cap": "757.67M USD",
+        "Circ supply": "646.15M",
+        "Category": "Lending & Borrowing, Payments"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCXAUT.svg",
+        "symbol": "XAUT",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/XAUTUSD/?exchange=CRYPTO",
+        "Name": "Tether Gold",
+        "Rank": "84",
+        "Market cap": "747.16M USD",
+        "Circ supply": "246.52K",
+        "Category": "Asset-backed Tokens"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCIOTA.svg",
+        "symbol": "IOTA",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/IOTAUSD/?exchange=CRYPTO",
+        "Name": "IOTA",
+        "Rank": "85",
+        "Market cap": "744.33M USD",
+        "Circ supply": "3.69B",
+        "Category": "Cryptocurrencies, Internet of things, DePIN"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCBTT.svg",
+        "symbol": "BTT",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/BTTUSD/?exchange=CRYPTO",
+        "Name": "BitTorrent-New",
+        "Rank": "86",
+        "Market cap": "707.03M USD",
+        "Circ supply": "986.06T",
+        "Category": "Distributed computing & Storage, Web3, DePIN"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCCRV.svg",
+        "symbol": "CRV",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/CRVUSD/?exchange=CRYPTO",
+        "Name": "Curve DAO Token",
+        "Rank": "87",
+        "Market cap": "710.44M USD",
+        "Circ supply": "1.31B",
+        "Category": "Decentralized exchange, DeFi, DAO"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCBSV.svg",
+        "symbol": "BSV",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/BSVUSD/?exchange=CRYPTO",
+        "Name": "Bitcoin SV",
+        "Rank": "88",
+        "Market cap": "687.88M USD",
+        "Circ supply": "19.84M",
+        "Category": "Cryptocurrencies, Scaling"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCCAKE.svg",
+        "symbol": "CAKE",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/CAKEUSD/?exchange=CRYPTO",
+        "Name": "PancakeSwap",
+        "Rank": "89",
+        "Market cap": "681.84M USD",
+        "Circ supply": "292.82M",
+        "Category": "Decentralized exchange, DeFi"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCFLOKI.svg",
+        "symbol": "FLOKI",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/FLOKIUSD/?exchange=CRYPTO",
+        "Name": "FLOKI",
+        "Rank": "90",
+        "Market cap": "685.09M USD",
+        "Circ supply": "9.63T",
+        "Category": "Memes, Gaming, Metaverse"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCFLOW.svg",
+        "symbol": "FLOW",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/FLOWUSD/?exchange=CRYPTO",
+        "Name": "Flow",
+        "Rank": "91",
+        "Market cap": "677.54M USD",
+        "Circ supply": "1.57B",
+        "Category": "Smart contract platforms, NFTs & Collectibles, Sports, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCKAIA.svg",
+        "symbol": "KAIA",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/KAIAUSD/?exchange=CRYPTO",
+        "Name": "Kaia",
+        "Rank": "92",
+        "Market cap": "656.63M USD",
+        "Circ supply": "5.98B",
+        "Category": "Enterprise solutions, Layer 1"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCPAXG.svg",
+        "symbol": "PAXG",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/PAXGUSD/?exchange=CRYPTO",
+        "Name": "PAX Gold",
+        "Rank": "93",
+        "Market cap": "653.34M USD",
+        "Circ supply": "216.28K",
+        "Category": "Asset-backed Tokens"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCJASMY.svg",
+        "symbol": "JASMY",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/JASMYUSD/?exchange=CRYPTO",
+        "Name": "JasmyCoin",
+        "Rank": "94",
+        "Market cap": "629.53M USD",
+        "Circ supply": "49.44B",
+        "Category": "Internet of things"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCENS.svg",
+        "symbol": "ENS",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/ENSUSD/?exchange=CRYPTO",
+        "Name": "Ethereum Name Service",
+        "Rank": "95",
+        "Market cap": "629.3M USD",
+        "Circ supply": "35.6M",
+        "Category": "Identity, Web3, DAO"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCPYTH.svg",
+        "symbol": "PYTH",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/PYTHUSD/?exchange=CRYPTO",
+        "Name": "Pyth Network",
+        "Rank": "96",
+        "Market cap": "620.63M USD",
+        "Circ supply": "3.62B",
+        "Category": "Oracles, Interoperability"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCZEC.svg",
+        "symbol": "ZEC",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/ZECUSD/?exchange=CRYPTO",
+        "Name": "Zcash",
+        "Rank": "97",
+        "Market cap": "611.26M USD",
+        "Circ supply": "15.89M",
+        "Category": "Privacy, Cryptocurrencies, Layer 1, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCHNT.svg",
+        "symbol": "HNT",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/HNTUSD/?exchange=CRYPTO",
+        "Name": "Helium",
+        "Rank": "98",
+        "Market cap": "608.96M USD",
+        "Circ supply": "179.76M",
+        "Category": "Internet of things, Enterprise solutions, Web3, DePIN, Made in America"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCSPX6.svg",
+        "symbol": "SPX",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/SPX6USD/?exchange=CRYPTO",
+        "Name": "SPX6900",
+        "Rank": "99",
+        "Market cap": "592.42M USD",
+        "Circ supply": "930.99M",
+        "Category": "Memes"
+    },
+    {
+        "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCRAY.svg",
+        "symbol": "RAY",
+        "Trading_View_Link": "https://in.tradingview.com/symbols/RAYUSD/?exchange=CRYPTO",
+        "Name": "Raydium",
+        "Rank": "100",
+        "Market cap": "586.2M USD",
+        "Circ supply": "290.85M",
+        "Category": "Decentralized exchange, DeFi"
+    }
+]
