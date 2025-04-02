@@ -3,21 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="https://cdn.tailwindcss.com/3.4.16"> -->
-    <link rel="stylesheet" href="https://preline.co/assets/css/obfuscated.min.css">
-    <link rel="stylesheet" href="./assets/prelinestyles.css">
-    <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <title>Investment Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+      canvas{
+        width: 650px;
+        height: 400px
+      }
+    </style>
 </head>
 <body>
+    <h1>Investment Analysis</h1>
+    <canvas id="investment-chart" width="400px" height="200px"></canvas>
 
+    <script>
+        window.onload = function() {
+            // Retrieve the chart data from localStorage
+            const chartData = JSON.parse(localStorage.getItem('capabilityChartData'));
+            const stocksData = JSON.parse(localStorage.getItem('stocksData'));
 
-  
+            if (chartData && stocksData) {
+                // Create the chart with the retrieved data
+                const ctx = document.getElementById('investment-chart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: chartData,
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
 
+                // Optionally display the stocks data in a table (you can customize this)
+                const table = document.createElement('table');
+                const tableHeader = document.createElement('thead');
+                tableHeader.innerHTML = `
+                    <tr>
+                        <th>Stock Name</th>
+                        <th>Quantity</th>
+                        <th>Avg Purchase Cost</th>
+                        <th>Total Amount</th>
+                    </tr>
+                `;
+                table.appendChild(tableHeader);
+                const tableBody = document.createElement('tbody');
 
-  <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
-  <script src="https://preline.co/assets/vendor/preline/dist/index.js?v=1.0.0"></script>
-  <script src="./assets/preline/js/prelinejs1.js"></script>
+                stocksData.forEach(stock => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${stock.stockName}</td>
+                        <td>${stock.quantity}</td>
+                        <td>${stock.avgCost}</td>
+                        <td>${stock.amount}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+                table.appendChild(tableBody);
+                document.body.appendChild(table);
+            } else {
+                alert("No data available. Please submit the portfolio first.");
+            }
+        };
+    </script>
 </body>
 </html>

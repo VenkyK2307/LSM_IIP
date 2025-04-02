@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Manager</title>
+    <link rel="stylesheet" href="./assets/preline/prelin3css3.css">
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -270,26 +271,24 @@
 </head>
 
 <body>
-
-    <div class="banner">
-        <!-- Announcement Banner -->
-<div class="bg-gradient-to-r from-red-500 via-purple-400 to-blue-500">
+    <!-- Announcement Banner -->
+<div class="bg-linear-to-r from-red-500 via-purple-400 to-blue-500">
     <div class="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 mx-auto">
       <!-- Grid -->
       <div class="grid justify-center md:grid-cols-2 md:justify-between md:items-center gap-2">
         <div class="text-center md:text-start">
-          <p class="text-xs text-white/80 uppercase tracking-wider">
-            Project port-alchemy
+          <p class="text-xs text-white/80 uppercase">
+            Project Port-Alchemy
           </p>
           <p class="mt-1 text-white font-medium">
-            Get Customizable Investment Recommondations
+            Get Presonalized Recomondations
           </p>
         </div>
         <!-- End Col -->
   
         <div class="mt-3 text-center md:text-start md:flex md:justify-end md:items-center">
-          <a class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none" href="recom.html">
-            Recomondations 
+          <a class="py-2 px-3 md:py-3 md:px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+            Recomondations
           </a>
         </div>
         <!-- End Col -->
@@ -298,7 +297,8 @@
     </div>
   </div>
   <!-- End Announcement Banner -->
-    </div>
+
+
 
     <div class="head">
         <!-- Hero -->
@@ -655,6 +655,7 @@
                             <th>Quantity</th>
                             <th>Avg Purchase Cost</th>
                             <th>Invested Value</th>
+                          
                         </tr>
                         </thead>
                         <tbody id="stock-table-body"></tbody>
@@ -679,6 +680,100 @@
 
 
     <script src="./scripts/upload.js"> </script>
+
+   <script>
+    // Submit portfolio and show popup
+document.getElementById('submit-btn').addEventListener('click', function() {
+    const stocks = [];
+    const stockEntries = document.querySelectorAll('.stock-entry');
+    
+    stockEntries.forEach(function(entry) {
+        const stockName = entry.querySelector('.stock-name').value;
+        const quantity = entry.querySelector('.quantity').value;
+        const avgCost = entry.querySelector('.avg-cost').value;
+        
+        // Find stock details by name from stockData
+        const stockDetails = stockData.find(stock => stock.Name === stockName);
+        
+        if (stockDetails) {
+            const capability = stockDetails.Capability;
+            const amount = avgCost * quantity;
+
+            // Add stock data along with capability and calculated amount
+            stocks.push({ stockName, quantity, avgCost, capability, amount });
+        }
+    });
+
+    // Save the stocks array and capability data to localStorage
+    localStorage.setItem('portfolio', JSON.stringify(stocks));
+
+    // Populate the popup table
+    const tableBody = document.getElementById('stock-table-body');
+    tableBody.innerHTML = '';
+    stocks.forEach(function(stock) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${stock.stockName}</td>
+            <td>${stock.quantity}</td>
+            <td>${stock.avgCost}</td>
+            <td>${stock.amount}</td>
+        `;
+        tableBody.appendChild(row);
+    });
+
+    // Show the popup
+    document.getElementById('stocks-popup').style.display = 'flex';
+
+    // Now generate charts based on the stocks array (we'll split the amounts based on capability)
+    generateChart(stocks);
+});
+
+// Function to generate a chart based on stocks data (splitting amounts based on capabilities)
+function generateChart(stocks) {
+    const capabilityData = {};
+
+    // Group stock amounts by capability
+    stocks.forEach(stock => {
+        if (!capabilityData[stock.capability]) {
+            capabilityData[stock.capability] = 0;
+        }
+        capabilityData[stock.capability] += stock.amount;
+    });
+
+    // Prepare data for the chart
+    const chartData = {
+        labels: Object.keys(capabilityData), // Capability names
+        datasets: [{
+            label: 'Investment by Capability',
+            data: Object.values(capabilityData), // Amounts per capability
+            backgroundColor: ['rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'],
+            borderColor: ['rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)', 'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
+            borderWidth: 1
+        }]
+    };
+
+    // Get the context of the canvas element for the chart
+    const ctx = document.getElementById('investment-chart').getContext('2d');
+    
+    // Generate the chart
+    new Chart(ctx, {
+        type: 'bar',
+        data: chartData,
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Save the capability data for later use (e.g., in the analysis page)
+    localStorage.setItem('capabilityChartData', JSON.stringify(chartData));
+}
+
+   </script>
 
 
 <!-- Bootstrap JS -->
