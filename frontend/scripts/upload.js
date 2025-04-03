@@ -68,6 +68,8 @@ document.getElementById('submit-btn').addEventListener('click', function() {
             <td>${stock.quantity}</td>
             <td>${stock.avgCost}</td>
             <td>${stock.amount}</td>
+            
+            
        
         `;
         tableBody.appendChild(row);

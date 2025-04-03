@@ -79,30 +79,22 @@
      
       <!-- Form -->
       <form>
-        <div class="mx-auto max-w-2xl sm:flex sm:space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100">
-          <div class="w-full pb-2 sm:pb-0">
-            <label for="hs-hero-name-1" class="block text-sm font-medium"><span class="sr-only">Your name</span></label>
-            <input type="text" id="hs-hero-name-1" class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Your name">
-          </div>
-          <div class="pt-2 sm:pt-0 sm:ps-3 border-t border-gray-200 sm:border-t-0 sm:border-s w-full">
-            <label for="hs-hero-email-1" class="block text-sm font-medium"><span class="sr-only">Your email address</span></label>
-            <input type="email" id="hs-hero-email-1" class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Your email">
-          </div>
-          <div class="whitespace-nowrap pt-2 sm:pt-0 grid sm:block">
-            <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="low.html">
-              Get started
-            </a>
-            
-          </div>
+        <div class="mx-auto max-w-2xl flex flex-col sm:flex-row items-center justify-center sm:space-x-3 p-3 bg-white border border-gray-300 border-opacity-10 rounded-lg shadow-lg shadow-gray-100">
+          <div class="model">
+            <div class="text-center">
+              <button type="button" style="color: black; background-color: whitesmoke; border: 2px solid black;" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="fal" aria-controls="hs-sign-out-alert" data-hs-overlay="#hs-sign-out-alert">
+                Search Stocks
+              </button>
+            </div>
+        </div>
+        <div class="whitespace-nowrap pt-2 sm:pt-0 grid sm:block">
+          <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="list.html">
+            Get started
+          </a>
         </div>
       </form>
       <!-- End Form -->
-      <div class="model">
-        <div class="text-center">
-          <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-sign-out-alert" data-hs-overlay="#hs-sign-out-alert">
-            Search Stocks
-          </button>
-        </div>
+    
         
         <div id="hs-sign-out-alert" class="  hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto  " role="dialog" tabindex="-1" aria-labelledby="hs-sign-out-alert-label">
           <div class=" hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
@@ -168,7 +160,7 @@
 <!-- End Hero -->
   </div>
 
-  <div class="py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">Nifty Stats</div> <br>
+  <div class="py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">NSE Stats</div> <br>
 
 
   <div class="foot">
@@ -185,7 +177,7 @@
             <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" viewBox="0 0 16 16">
               <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
             </svg>
-            Past 5 Years Growth
+            Past 5 Years Nifty Growth
           </span>
         </p>
         <p class="mt-2 sm:mt-3 text-gray-500">of U.S. adults have bought from businesses using Space</p>
@@ -198,22 +190,22 @@
       <div class="grid gap-6 grid-cols-2 md:grid-cols-4 lg:grid-cols-3 sm:gap-8">
         <!-- Stats -->
         <div>
-          <p class="text-3xl font-semibold text-blue-600">99.95%</p>
-          <p class="mt-1 text-gray-500">in fulfilling orders</p>
+          <p class="text-3xl font-semibold text-blue-600">6819+</p>
+          <p class="mt-1 text-gray-500">Listed Companies</p>
         </div>
         <!-- End Stats -->
 
         <!-- Stats -->
         <div>
-          <p class="text-3xl font-semibold text-blue-600">2,000+</p>
-          <p class="mt-1 text-gray-500">partner with Preline</p>
+          <p class="text-3xl font-semibold text-blue-600">120+</p>
+          <p class="mt-1 text-gray-500">New companies added in 2024</p>
         </div>
         <!-- End Stats -->
 
         <!-- Stats -->
         <div>
-          <p class="text-3xl font-semibold text-blue-600">85%</p>
-          <p class="mt-1 text-gray-500">this year alone</p>
+          <p class="text-3xl font-semibold text-blue-600">4.8T USD+</p>
+          <p class="mt-1 text-gray-500">Combined Valuation</p>
         </div>
 
         
@@ -242,7 +234,9 @@
  
 
 
+ <script src="./assets/preline/js/prelinejs1.js"></script>
+ <script src="./assets/preline/js/prelinejs2.js"></script>
  
-  <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script> -->
 </body>
 </html>

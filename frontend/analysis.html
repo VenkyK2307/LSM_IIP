@@ -7,64 +7,230 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
-      canvas{
-        width: 650px;
-        height: 400px
-      }
+        canvas {
+            width: 100%;
+            height: 400px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .total-investment {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .percentage-table {
+            margin-top: 30px;
+        }
+
+        .suggestions {
+            margin-top: 30px;
+            font-size: 1.1em;
+            color: red;
+        }
     </style>
 </head>
 <body>
     <h1>Investment Analysis</h1>
-    <canvas id="investment-chart" width="400px" height="200px"></canvas>
+
+    <!-- Portfolio Table -->
+    <h3>Portfolio Overview</h3>
+    <table id="portfolio-table">
+        <thead>
+            <tr>
+                <th>Stock Name</th>
+                <th>Quantity</th>
+                <th>Avg Purchase Cost</th>
+                <th>Total Amount</th>
+                <th>Capability</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Donut Chart -->
+    <canvas id="investment-chart"></canvas>
+
+    <!-- Percentage Table -->
+    <div class="percentage-table">
+        <h3>Investment Percentages by Capability</h3>
+        <table id="percentage-table">
+            <thead>
+                <tr>
+                    <th>Capability</th>
+                    <th>Investment</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
     <script>
+        const companiesByCapability = {
+            S: [
+                "Bharti Airtel Ltd", "ICICI Bank Ltd", "ITC Ltd", "HCL Technologies Ltd",
+                "Sun Pharmaceutical Industries Ltd", "UltraTech Cement Ltd", "Coal India Ltd",
+                "Hindustan Unilever Ltd", "Bajaj Finance Ltd", "SBI Life Insurance Co Ltd"
+            ],
+            M: [
+                "Reliance Industries Ltd", "Tata Consultancy Services Ltd", "HDFC Bank Ltd", 
+                "Infosys Ltd", "State Bank of India", "Larsen & Toubro Ltd", "Maruti Suzuki India Ltd", 
+                "Mahindra & Mahindra Ltd", "NTPC Ltd", "Adani Enterprises Ltd"
+            ],
+            R: [
+                "Balkrishna Industries Ltd", "LIC of India", "Kotak Mahindra Bank Ltd", 
+                "Shriram Finance Ltd", "Dabur India Ltd", "Yes Bank Ltd", "IRCTC Ltd", 
+                "Jio Financial Services Ltd", "Tata Motors Ltd", "Indian Oil Corporation"
+            ],
+            HR: [
+                "Adani Green Energy Ltd", "Motherson Sumi Wiring India Ltd", "Idea Cellular (Vodafone Idea)", 
+                "Tata Chemicals Ltd", "Jubilant FoodWorks Ltd", "Biocon Limited", 
+                "Aditya Birla Fashion & Retail Ltd (ABFRL)", "Piramal Enterprises Ltd (PEL)", 
+                "Nykaa (FSN E-Commerce Ventures)", "SAIL (Steel Authority of India)"
+            ]
+        };
+
         window.onload = function() {
-            // Retrieve the chart data from localStorage
+            const portfolio = JSON.parse(localStorage.getItem('portfolio'));
             const chartData = JSON.parse(localStorage.getItem('capabilityChartData'));
-            const stocksData = JSON.parse(localStorage.getItem('stocksData'));
 
-            if (chartData && stocksData) {
-                // Create the chart with the retrieved data
-                const ctx = document.getElementById('investment-chart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'bar',
-                    data: chartData,
-                    options: {
-                        responsive: true,
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                });
+            if (portfolio && chartData) {
+                let totalInvestment = 0;
+                const capabilityInvestment = {
+                    S: 0,
+                    M: 0,
+                    R: 0,
+                    HR: 0
+                };
 
-                // Optionally display the stocks data in a table (you can customize this)
-                const table = document.createElement('table');
-                const tableHeader = document.createElement('thead');
-                tableHeader.innerHTML = `
-                    <tr>
-                        <th>Stock Name</th>
-                        <th>Quantity</th>
-                        <th>Avg Purchase Cost</th>
-                        <th>Total Amount</th>
-                    </tr>
-                `;
-                table.appendChild(tableHeader);
-                const tableBody = document.createElement('tbody');
+                // Portfolio table and capability investment calculation
+                const portfolioTableBody = document.getElementById('portfolio-table').getElementsByTagName('tbody')[0];
+                portfolio.forEach(stock => {
+                    totalInvestment += stock.amount;
+                    capabilityInvestment[stock.capability] += stock.amount;
 
-                stocksData.forEach(stock => {
+                    // Create portfolio table rows
                     const row = document.createElement('tr');
                     row.innerHTML = `
                         <td>${stock.stockName}</td>
                         <td>${stock.quantity}</td>
                         <td>${stock.avgCost}</td>
-                        <td>${stock.amount}</td>
+                        <td>$${stock.amount.toFixed(2)}</td>
+                        <td>${stock.capability}</td>
+                    `;
+                    portfolioTableBody.appendChild(row);
+                });
+
+                // Display total investment
+                const totalInvestmentDiv = document.createElement('div');
+                totalInvestmentDiv.classList.add('total-investment');
+                totalInvestmentDiv.innerHTML = `Total Investment: $${totalInvestment.toFixed(2)}`;
+                document.body.appendChild(totalInvestmentDiv);
+
+                // Create the donut chart
+                const ctx = document.getElementById('investment-chart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['S', 'M', 'R', 'HR'],
+                        datasets: [{
+                            label: 'Investment Percentage by Capability',
+                            data: [
+                                (capabilityInvestment.S / totalInvestment) * 100,
+                                (capabilityInvestment.M / totalInvestment) * 100,
+                                (capabilityInvestment.R / totalInvestment) * 100,
+                                (capabilityInvestment.HR / totalInvestment) * 100
+                            ],
+                            backgroundColor: ['#4CAF50', '#FFC107', '#F44336', '#2196F3'],
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(tooltipItem) {
+                                        return tooltipItem.label + ': ' + tooltipItem.raw.toFixed(2) + '%';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+
+                // Display the percentage table
+                const tableBody = document.getElementById('percentage-table').getElementsByTagName('tbody')[0];
+                for (let capability in capabilityInvestment) {
+                    const investmentAmount = capabilityInvestment[capability];
+                    const investmentPercentage = (investmentAmount / totalInvestment) * 100;
+
+                    // Create table rows for each capability
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${capability}</td>
+                        <td>$${investmentAmount.toFixed(2)}</td>
+                        <td>${investmentPercentage.toFixed(2)}%</td>
                     `;
                     tableBody.appendChild(row);
-                });
-                table.appendChild(tableBody);
-                document.body.appendChild(table);
+                }
+
+                // Display suggestions if any capability exceeds 35%
+                let suggestionText = '';
+                for (let capability in capabilityInvestment) {
+                    const investmentPercentage = (capabilityInvestment[capability] / totalInvestment) * 100;
+                    if (investmentPercentage > 35) {
+                        suggestionText += `<p><b>${capability} has ${investmentPercentage.toFixed(2)}% of the total investment. Consider redistributing your investments.</b></p>`;
+
+                        // Show appropriate stocks for the capability exceeding 35%
+                        let suggestedStocks = [];
+                        if (capability === 'HR') {
+                            suggestedStocks = companiesByCapability.S;  // Suggest safe stocks (S) if HR exceeds 35%
+                        } else if (capability === 'R') {
+                            suggestedStocks = companiesByCapability.M;  // Suggest M stocks if R exceeds 35%
+                        } else if (capability === 'M') {
+                            suggestedStocks = companiesByCapability.HR;  // Suggest HR stocks if M exceeds 35%
+                        } else if (capability === 'S') {
+                            suggestedStocks = companiesByCapability.R;  // Suggest R stocks if S exceeds 35%
+                        }
+
+                        // Display the stocks
+                        const stockList = document.createElement('ul');
+                        suggestedStocks.forEach(stock => {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = stock;
+                            stockList.appendChild(listItem);
+                        });
+                        document.body.appendChild(stockList);
+                    }
+                }
+
+                // Display the modification suggestions if needed
+                if (suggestionText) {
+                    const suggestionsDiv = document.createElement('div');
+                    suggestionsDiv.classList.add('suggestions');
+                    suggestionsDiv.innerHTML = suggestionText;
+                    document.body.appendChild(suggestionsDiv);
+                }
+
             } else {
                 alert("No data available. Please submit the portfolio first.");
             }

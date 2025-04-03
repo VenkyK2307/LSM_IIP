@@ -363,8 +363,12 @@
         <h1>Quiz Finished!</h1>
         <h2>Your RAT Score : </h2>
         <p id="scoreText" class="score"></p>
-        <a href="ana.html"><button ondblclick="showResults1()">View score</button></a>
-        <!-- <canvas id="scoreChart"></canvas> -->
+        <a href="ana.html">
+        <button style="background-color: var(--primary); color: white; font-size: 16px; font-weight: bold; border-radius: 8px; padding: 12px 24px ; " onclick="showResults1()">
+            Get Detaild Analysis 
+        </button>
+        </a>
+        <!-- <canvas id="scoreChart"</canvas> -->
     </div>
 
     
@@ -482,11 +486,9 @@
         }
 
         // Show Results and Store Score
-    function showResults() {
+    function showResults1() {
         let score = selectedAnswers.reduce((acc, val) => acc + (val || 0), 0);
-        
         localStorage.setItem('quizScore', score);
-        
         window.location.href = 'ana.html';
     }
 

@@ -183,10 +183,16 @@ z-index: 999;
                     gridItem.classList.add("grid-item");
 
                     gridItem.innerHTML = `
+                     
                         <div class="relative group border border-transparent hover:border-blue-500 radius 30px p-2">
                             <div class="v869m dpq4d a11ya xroga z1r3e dark:bg-neutral-800 dark:border-neutral-700">
                                 <div class="flex wwu1y " >
-                                    <img src="${stock.logo}" alt="${stock.Name}">
+                            
+                                                        <a href="${stock.Trading_View_Link}" class="flex-shrink-0">  
+                                    <button class="p-3 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center">  
+                                        <img src="${stock.logo}" alt="${stock.Name}" class="w-10 h-10 object-contain">  
+                                    </button>  
+                                </a> 
                                     <div class="btpiv truncate">
                                         <p class="block truncate ps4xk b7vor dark:text-neutral-300">
                                             ${stock.Name}
@@ -198,6 +204,7 @@ z-index: 999;
                                 </div>
                             </div>
                         </div>
+                        </a>
                     `;
 
                     stockList.appendChild(gridItem);

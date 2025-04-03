@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        canvas {
+            max-width: 400px;
+            margin: 20px auto;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+        .safe {
+            background-color: #A7D477;
+            color: #fff;
+        }
+        .moderate {
+            background-color: #FEFFA7;
+            color: #000;
+        }
+        .risky {
+            background-color: #F72C5B;
+            color: #fff;
+        }
+        .recommendations {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .recommendations h3 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Your Quiz Score</h1>
+    <p id="scoreDisplay" style="font-size: 40px; border: 2px solid black;"></p>
+    <p>Your Ideal Portfolio Allocation</p>
+    <canvas id="donutChart"></canvas>
+
+    <!-- Div to show risk category -->
+    <div id="riskCategory" class="result"></div>
+
+    <!-- Display the recommendations based on risk category -->
+    <div id="recommendations" class="recommendations"></div>
+
+    <script>
+        // Retrieve score from localStorage
+        const score = parseInt(localStorage.getItem('quizScore')) || 0;
+
+        // Display the score
+        document.getElementById('scoreDisplay').innerText = `Your Score: ${score} / 100`;
+
+        // Determine risk category and update the div
+        const riskCategoryDiv = document.getElementById('riskCategory');
+        const recommendationsDiv = document.getElementById('recommendations');
+
+        const recommendations = {
+            safe: [
+                "Fixed Deposits (FDs)",
+                "Government Bonds",
+                "PPF (Public Provident Fund)",
+                "Debt Mutual Funds",
+                "Corporate Bonds (AAA rated)"
+            ],
+            moderate: [
+                "Balanced Mutual Funds",
+                "Index Funds",
+                "Dividend Aristocrat Stocks",
+                "REITs (Real Estate Investment Trusts)",
+                "Gold ETFs"
+            ],
+            risky: [
+                "Growth Stocks (Tech/Pharma)",
+                "Sectoral Mutual Funds",
+                "Cryptocurrencies (BTC/ETH)",
+                "Small-Cap Stocks",
+                "International ETFs"
+            ]
+        };
+
+        if (score < 30) {
+            riskCategoryDiv.className = 'result safe';
+            riskCategoryDiv.innerText = 'You fall into the Safe category.';
+            recommendationsDiv.innerHTML = `
+                <h3>Safe Investment Options:</h3>
+                <ul>
+                    ${recommendations.safe.map(option => `<li>${option}</li>`).join('')}
+                </ul>
+            `;
+        } else if (score >= 30 && score < 60) {
+            riskCategoryDiv.className = 'result moderate';
+            riskCategoryDiv.innerText = 'You fall into the Moderate category.';
+            recommendationsDiv.innerHTML = `
+                <h3>Moderate Investment Options:</h3>
+                <ul>
+                    ${recommendations.moderate.map(option => `<li>${option}</li>`).join('')}
+                </ul>
+            `;
+        } else {
+            riskCategoryDiv.className = 'result risky';
+            riskCategoryDiv.innerText = 'You fall into the Risky category.';
+            recommendationsDiv.innerHTML = `
+                <h3>Risky Investment Options:</h3>
+                <ul>
+                    ${recommendations.risky.map(option => `<li>${option}</li>`).join('')}
+                </ul>
+            `;
+        }
+
+        // Donut Chart Data
+        const ctx = document.getElementById('donutChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Risk', 'Moderate', 'Safe'],
+                datasets: [{
+                    data: [score, (100 - score) / 2, (100 - score) / 2],
+                    backgroundColor: ['#F72C5B', '#FEFFA7', '#A7D477'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
