@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investment Analysis</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./assets/preline/prelinecss2.css">
+    <link rel="stylesheet" href="./assets/preline/prelinecss3.css">
+
 
     <style>
         canvas {
@@ -43,13 +46,115 @@
             font-size: 1.1em;
             color: red;
         }
+
+        .chart{
+          width: 300px;
+          height: 300px;
+        }
+
+        table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+thead {
+  background-color: #f5f5f5;
+}
+
+th, td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  color: #444;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease-in-out;
+}
+.chart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analysis{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+
+
+
+   
+
+        
+
+    
     </style>
 </head>
 <body>
-    <h1>Investment Analysis</h1>
+
+    <div class="banner">
+        <!-- Announcement Banner -->
+<div class="bg-linear-to-r from-red-500 via-purple-400 to-blue-500">
+    <div class="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 mx-auto">
+      <!-- Grid -->
+      <div class="grid justify-center md:grid-cols-2 md:justify-between md:items-center gap-2">
+        <div class="text-center md:text-start">
+          <p class="text-xs text-white/80 uppercase">
+            Project port Alchemy
+          </p>
+          <p class="mt-1 text-white font-medium">
+            Invest in Customized Investments
+          </p>
+        </div>
+        <!-- End Col -->
+  
+        <div class="mt-3 text-center md:text-start md:flex md:justify-end md:items-center">
+          <a class="py-2 px-3 md:py-3 md:px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none" href="recom.html">
+            Recomondations
+          </a>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Grid -->
+    </div>
+  </div>
+  <!-- End Announcement Banner -->
+    </div>
+    <!-- Hero -->
+<div class="overflow-hidden">
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-2">
+      <div class="relative mx-auto max-w-4xl grid space-y-5 sm:space-y-10">
+        <!-- Title -->
+        <div class="text-center">
+          
+          <h1 class="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight">
+             <span class="text-blue-500">Portfolio Overview.!</span>
+          </h1>
+        </div>
+        <!-- End Title -->
+  
+      
 
     <!-- Portfolio Table -->
-    <h3>Portfolio Overview</h3>
+     <div class="portfolio">
     <table id="portfolio-table">
         <thead>
             <tr>
@@ -62,24 +167,51 @@
         </thead>
         <tbody></tbody>
     </table>
+</div>
 
-    <!-- Donut Chart -->
-    <canvas id="investment-chart"></canvas>
 
-    <!-- Percentage Table -->
-    <div class="percentage-table">
-        <h3>Investment Percentages by Capability</h3>
-        <table id="percentage-table">
-            <thead>
-                <tr>
-                    <th>Capability</th>
-                    <th>Investment</th>
-                    <th>Percentage</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
+<div class="analysis">
+
+    <div class="chart">
+        <canvas id="investment-chart"></canvas>
+      </div>
+      <!-- Donut Chart -->
+      
+  
+      <!-- Percentage Table -->
+      <div class="percentage-table">
+
+        <p>Investment Percentages by Capability</p>
+        
+          <table id="percentage-table">
+              <thead>
+                  <tr>
+                      <th>Capability</th>
+                      <th>Investment</th>
+                      <th>Percentage</th>
+                  </tr>
+              </thead>
+              <tbody></tbody>
+          </table>
+      </div>
+
+      <!-- Just below your analysis div -->
+</div> <!-- closing .analysis -->
+
+<!-- New placeholders for JS content -->
+
+<hr>
+
+
+
+      
+
+</div>
+
+
+
+
+   
 
     <script>
         const companiesByCapability = {
@@ -131,7 +263,7 @@
                         <td>${stock.stockName}</td>
                         <td>${stock.quantity}</td>
                         <td>${stock.avgCost}</td>
-                        <td>$${stock.amount.toFixed(2)}</td>
+                        <td>₹${stock.amount.toFixed(2)}</td>
                         <td>${stock.capability}</td>
                     `;
                     portfolioTableBody.appendChild(row);
@@ -140,8 +272,21 @@
                 // Display total investment
                 const totalInvestmentDiv = document.createElement('div');
                 totalInvestmentDiv.classList.add('total-investment');
-                totalInvestmentDiv.innerHTML = `Total Investment: $${totalInvestment.toFixed(2)}`;
+                totalInvestmentDiv.style.display = 'flex';
+                totalInvestmentDiv.style.justifyContent = 'center';
+                totalInvestmentDiv.style.alignItems = 'center';
+                totalInvestmentDiv.innerHTML = `
+                <div>
+                    <h4 class="text-lg sm:text-xl font-semibold text-gray-800 dark:text-neutral-200">Total Investmenst : </h4>
+                    <p class="mt-2 sm:mt-3 text-4xl sm:text-6xl font-bold text-blue-600"> ₹${totalInvestment.toFixed(2)}</p>
+                </div>
+
+                `;
+
                 document.body.appendChild(totalInvestmentDiv);
+
+              
+
 
                 // Create the donut chart
                 const ctx = document.getElementById('investment-chart').getContext('2d');
@@ -164,7 +309,7 @@
                         responsive: true,
                         plugins: {
                             legend: {
-                                position: 'top',
+                                position: 'bottom',
                             },
                             tooltip: {
                                 callbacks: {
@@ -187,7 +332,7 @@
                     const row = document.createElement('tr');
                     row.innerHTML = `
                         <td>${capability}</td>
-                        <td>$${investmentAmount.toFixed(2)}</td>
+                        <td>₹${investmentAmount.toFixed(2)}</td>
                         <td>${investmentPercentage.toFixed(2)}%</td>
                     `;
                     tableBody.appendChild(row);
@@ -195,40 +340,95 @@
 
                 // Display suggestions if any capability exceeds 35%
                 let suggestionText = '';
-                for (let capability in capabilityInvestment) {
-                    const investmentPercentage = (capabilityInvestment[capability] / totalInvestment) * 100;
-                    if (investmentPercentage > 35) {
-                        suggestionText += `<p><b>${capability} has ${investmentPercentage.toFixed(2)}% of the total investment. Consider redistributing your investments.</b></p>`;
 
-                        // Show appropriate stocks for the capability exceeding 35%
-                        let suggestedStocks = [];
-                        if (capability === 'HR') {
-                            suggestedStocks = companiesByCapability.S;  // Suggest safe stocks (S) if HR exceeds 35%
-                        } else if (capability === 'R') {
-                            suggestedStocks = companiesByCapability.M;  // Suggest M stocks if R exceeds 35%
-                        } else if (capability === 'M') {
-                            suggestedStocks = companiesByCapability.HR;  // Suggest HR stocks if M exceeds 35%
-                        } else if (capability === 'S') {
-                            suggestedStocks = companiesByCapability.R;  // Suggest R stocks if S exceeds 35%
+                    for (let capability in capabilityInvestment) {
+                        const investmentPercentage = (capabilityInvestment[capability] / totalInvestment) * 100;
+
+                        if (investmentPercentage > 35) {
+                            // Add warning text
+                            suggestionText += `<p><b>${capability} has ${investmentPercentage.toFixed(2)}% of the total investment. Consider redistributing your investments.</b></p>`;
+
+                            // Determine suggested stocks
+                            let suggestedStocks = [];
+                            if (capability === 'HR') {
+                                suggestedStocks = companiesByCapability.S;
+                            } else if (capability === 'R') {
+                                suggestedStocks = companiesByCapability.M;
+                            } else if (capability === 'M') {
+                                suggestedStocks = companiesByCapability.HR;
+                            } else if (capability === 'S') {
+                                suggestedStocks = companiesByCapability.R;
+                            }
+
+                            // Create the stock list container (ul)
+                            const stockList = document.createElement('ul');
+                            stockList.style.display = 'flex';
+                            stockList.style.flexDirection = 'column';
+                            stockList.style.alignItems = 'center';
+                            stockList.style.border = '1px solid #ccc';
+                            stockList.style.padding = '10px';
+                            stockList.style.borderRadius = '8px';
+                            stockList.style.marginTop = '10px';
+                            stockList.style.width = '600px';
+                            stockList.style.marginLeft = 'auto';
+                            stockList.style.marginRight = 'auto';
+                            stockList.style.backgroundColor = '#f5f5f5';
+                            stockList.style.fontWeight = 'bold';
+
+                            // Create the "Recommended Stocks" heading
+                            const recommendedStocksHeading = document.createElement('h2');
+                            recommendedStocksHeading.textContent = 'Recommended Stocks : ';
+                            recommendedStocksHeading.style.textAlign = 'left';
+                            recommendedStocksHeading.style.marginBottom = '10px';
+                            recommendedStocksHeading.style.fontSize = '24px';  // You can adjust this value as needed
+                            recommendedStocksHeading.style.fontWeight = 'bold';
+                            recommendedStocksHeading.style.color = 'blue'; // Space between heading and list
+
+                            // Append the heading above the stock list
+                            stockList.prepend(recommendedStocksHeading);
+
+                            // Add stock list items (stocks)
+                            suggestedStocks.forEach(stock => {
+                                const listItem = document.createElement('li');
+                                listItem.textContent = stock;
+                                stockList.appendChild(listItem);
+                            });
+
+                            // Append the stock list to the body (or a specific container)
+                            document.body.appendChild(stockList);
                         }
-
-                        // Display the stocks
-                        const stockList = document.createElement('ul');
-                        suggestedStocks.forEach(stock => {
-                            const listItem = document.createElement('li');
-                            listItem.textContent = stock;
-                            stockList.appendChild(listItem);
-                        });
-                        document.body.appendChild(stockList);
                     }
-                }
+
 
                 // Display the modification suggestions if needed
                 if (suggestionText) {
                     const suggestionsDiv = document.createElement('div');
                     suggestionsDiv.classList.add('suggestions');
-                    suggestionsDiv.innerHTML = suggestionText;
+                    suggestionsDiv.innerHTML = `<a class="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800" href="#">
+                        <div class="p-4 md:p-5">
+                            <div class="flex gap-x-5">
+
+                            <div class="grow">
+                            <h3 class="text-2xl group-hover:text-blue-600 font-semibold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200">
+                                REDISTRIBUTION NEEDED :
+                            </h3>
+
+                                <p class="text-sm text-gray-500 dark:text-neutral-500">
+                                ${suggestionText}
+                                </p>
+                            </div>
+                            </div>
+                        </div>
+                        </a>
+                        `;
+                 
+                    
                     document.body.appendChild(suggestionsDiv);
+                    suggestionsDiv.style.display ='flex';
+                    suggestionsDiv.style.flexDirection = 'column';
+                    suggestionsDiv.style.alignItems = 'center';
+                    suggestionsDiv.style.paddingBottom = '20px';
+
                 }
 
             } else {
@@ -236,5 +436,12 @@
             }
         };
     </script>
+
+ 
+    
+
+    
+
+    <!-- <script src="./assets/preline/js/prelinejs1.js"></script> -->
 </body>
 </html>

@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Analysis</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="./assets/preline/tailwind4.js"></script> -->
+  
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
     <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
+    
         canvas {
             max-width: 400px;
             margin: 20px auto;
@@ -47,20 +47,246 @@
         .recommendations h3 {
             margin-bottom: 10px;
         }
+
+      
+    /* General body styling */
+    body {
+        text-align: center;
+        font-family: 'Roboto', Arial, sans-serif;
+        padding: 0px;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    /* Heading styling */
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #2c3e50;
+    }
+
+    /* Score display styling */
+    #scoreDisplay {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #34495e;
+        border: 0.02px solid #34495e;
+        padding: 10px;
+        margin-bottom: 20px;
+        display: inline-block;
+        border-radius: 8px;
+        background-color: #ecf0f1;
+    }
+
+    /* Chart canvas styling */
+    canvas {
+        max-width: 400px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Result box styling */
+    .result {
+        margin-top: 20px;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+    }
+
+    .safe {
+        background-color: #27ae60; /* Green */
+        color: white;
+
+        width: auto;
+        height: auto;
+    }
+
+    .moderate {
+        background-color: #f1c40f; /* Yellow */
+        color: black;
+        width: auto;
+        height: auto;
+    }
+
+    .risky {
+        background-color: #e74c3c; /* Red */
+        color: white;
+        width: auto;
+        height: auto;
+    }
+
+    /* Recommendations box styling */
+    .recommendations {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .recommendations h3 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        color: #2c3e50; /* Dark blue */
+    }
+
+    .recommendations ul {
+        list-style-type: disc; /* Bulleted list */
+        padding-left: 20px; /* Indent for bullets */
+    }
+
+    .recommendations li {
+        font-size: 1rem; /* Standard text size */
+        color: #34495e; /* Neutral dark gray */
+    }
+
+    /* Button styling (optional) */
+    button {
+        background-color: #3498db; /* Blue button */
+        color: white;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+    }
+
+    h3{
+        color:#155bd5 ;
+    }
+
+    .chart{
+        background-color: #ecf0f1;
+        padding: 10px;
+        border: grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        border-radius: 20px
+    
+    }
+ 
+
+
     </style>
 </head>
 <body>
+    <div class="bg-linear-to-r from-red-500 via-purple-400 to-blue-500">
+        <div class="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 mx-auto">
+          <!-- Grid -->
+          <div class="grid justify-center md:grid-cols-2 md:justify-between md:items-center gap-2">
+            <div class="text-center md:text-start">
+              <p class="text-xs text-white/80 uppercase">
+                Project Port-Alchemy
+              </p>
+              <p class="mt-1 text-white font-medium">
+                Get Presonalized Recomondations
+              </p>
+            </div>
+            <!-- End Col -->
+      
+            <div class="mt-3 text-center md:text-start md:flex md:justify-end md:items-center">
+              <a class="py-2 px-3 md:py-3 md:px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+                Recomondations
+              </a>
+            </div>
+            <!-- End Col -->
+          </div>
+          <!-- End Grid -->
+        </div>
+      </div>
 
-    <h1>Your Quiz Score</h1>
-    <p id="scoreDisplay" style="font-size: 40px; border: 2px solid black;"></p>
-    <p>Your Ideal Portfolio Allocation</p>
-    <canvas id="donutChart"></canvas>
 
-    <!-- Div to show risk category -->
-    <div id="riskCategory" class="result"></div>
+      <div class="search">
+        <!-- Hero -->
+        <div class="overflow-hidden">
+            <div class="max-w-[15rem] mx-auto px-4 sm:px-6 lg:px-8 py-2">
+            <div class="relative mx-auto max-w-4xl grid space-y-5 sm:space-y-10">
+                <!-- Title -->
+                <div class="text-center">
+                
+                <h1 class="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight">
+                    Risk Assessment Test <br> <span class="text-blue-500">Know your Risk..!</span>
+                </h1>
+            </div>
+   
+         </div>
+         </div>
+  <!-- End Hero -->
+      </div>
+    </div>
+    </div>
+  </div>
+  <!-- End Hero -->
+      </div>
+   
+    
+    
+
+   
+    <p id="scoreDisplay" style="font-size: 20px; "></p>
+
+    <!-- Hero -->
+<div class="relative overflow-hidden">
+    <div class="max-w-[5rem] mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-2">
+      <div class="text-center">
+        <div class="mt-7 sm:mt-4 mx-auto max-w-xl relative">
+          <!-- Form -->
+          <form>
+            <div class="relative z-10 flex gap-x-3 p-3 bg-white border border-gray-200 rounded-lg shadow-lg shadow-gray-100">
+              <div class="w-full">
+                <div class="chart">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-blue-500">
+                        Ideal Portfolio Allocation !
+                    </h3>
+                    <canvas id="donutChart"></canvas>
+                    <div id="riskCategory" class="result"></div>
+
+                </div>
+
+              </div>
+             
+            </div>
+          </form>
+          <!-- End Form -->
+      </div>
+    </div>
+  </div>
+
+  <div class="relative overflow-hidden">
+    <div class="max-w-[5rem] mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-2">
+      <div class="text-center">
+        <div class="mt-7 sm:mt-4 mx-auto max-w-xl relative">
+          <!-- Form -->
+          <form>
+            <div class="relative z-10 flex gap-x-3 p-3 bg-white border border-gray-200 rounded-lg shadow-lg shadow-gray-100">
+              <div class="w-full">
+                <div id="recommendations" class="recommendations"></div>
+              </div>
+            </div>
+          </form>
+          <!-- End Form -->
+      </div>
+    </div>
+  </div>
+
 
     <!-- Display the recommendations based on risk category -->
-    <div id="recommendations" class="recommendations"></div>
 
     <script>
         // Retrieve score from localStorage
@@ -99,16 +325,26 @@
 
         if (score < 30) {
             riskCategoryDiv.className = 'result safe';
-            riskCategoryDiv.innerText = 'You fall into the Safe category.';
+            riskCategoryDiv.innerText = 'Safe category.';
             recommendationsDiv.innerHTML = `
                 <h3>Safe Investment Options:</h3>
                 <ul>
-                    ${recommendations.safe.map(option => `<li>${option}</li>`).join('')}
+                    ${recommendations.safe.map(option => `<div class="flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl dark:bg-neutral-900 dark:border-neutral-800">
+      <div class="p-4 md:p-5 flex gap-x-4">
+        <div class="grow">
+          <div class="flex items-center gap-x-2">
+            <p class="text-xs uppercase text-gray-500 dark:text-neutral-500 : ">
+              ${option}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>`).join('')}
                 </ul>
             `;
         } else if (score >= 30 && score < 60) {
             riskCategoryDiv.className = 'result moderate';
-            riskCategoryDiv.innerText = 'You fall into the Moderate category.';
+            riskCategoryDiv.innerText = 'Moderate category.';
             recommendationsDiv.innerHTML = `
                 <h3>Moderate Investment Options:</h3>
                 <ul>
@@ -117,7 +353,7 @@
             `;
         } else {
             riskCategoryDiv.className = 'result risky';
-            riskCategoryDiv.innerText = 'You fall into the Risky category.';
+            riskCategoryDiv.innerText = 'Risky category.';
             recommendationsDiv.innerHTML = `
                 <h3>Risky Investment Options:</h3>
                 <ul>
@@ -148,6 +384,9 @@
             }
         });
     </script>
+
+    <script src="./assets/preline/js/prelinejs1.js"></script>
+    <script src="./assets/preline/js/prelinejs2.js"></script>
 
 </body>
 </html>
