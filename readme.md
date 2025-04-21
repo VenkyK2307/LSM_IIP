@@ -32,7 +32,7 @@ Port-Alchemy is a smart investment portfolio management system built to help use
 - **Backend:** JavaScript
 - **Machine Learning:** Python (Random Forest for stock classification)  
 - **APIs Used:** Financial Market Data APIs, News APIs  
-- **Database:** MongoDB / JSON-based storage (as applicable)
+- **Database:** JSON-based storage (as applicable)
 
 ---
 
